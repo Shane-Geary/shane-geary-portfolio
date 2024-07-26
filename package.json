@@ -1,20 +1,27 @@
 {
-  "name": "shane-geary-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+	"name": "shane-geary-portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "14.2.5",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"eslint": "^8.57.0",
+		"eslint-config-next": "^14.2.5",
+		"eslint-config-prettier": "^8.10.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.35.0",
+		"eslint-plugin-react-compiler": "^0.0.0-experimental-0998c1e-20240625",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-sort-exports": "^0.9.1",
+		"eslint-plugin-sort-keys-fix": "^1.1.2"
+	}
 }
