@@ -1,11 +1,23 @@
+import Image from 'next/image'
 import styles from './nav-bar.module.css'
+
+import logoSrc from '../../../public/gearz.JPG'
 
 export const NavBar = () => {
 	return (
 		<header className={styles['navbar']}>
-			<div className={styles['navbar-container']}>
-				<div className={styles['logo']}>MyWebsite</div>
-				<nav className={styles['nav-links']}>
+			<div className={styles['navbarContainer']}>
+				<div className={styles.logo}>
+					<Image
+						src={logoSrc}
+						alt='MyWebsite Logo'
+						layout='intrinsic'
+						width={75}
+						height={40}
+						style={{borderRadius: '40px'}}
+					/>
+				</div>
+				<nav className={styles['navLinks']}>
 					<a href='#home'>Home</a>
 					<a href='#about'>About</a>
 					<a href='#skills'>Skills</a>
