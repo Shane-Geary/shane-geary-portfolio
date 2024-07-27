@@ -111,6 +111,7 @@
 	border-left: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
+
 .downloadButton:after {
 	top: -2px;
 	right: -2px;
@@ -119,6 +120,7 @@
 	border-right: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
+
 .downloadButton span:nth-child(2) {
 	display: block;
 	text-align: center;
@@ -126,6 +128,7 @@
 	align-items: center;
 	margin-left: 8px;
 }
+
 .downloadButton span:nth-child(2):before {
 	bottom: -2px;
 	left: -2px;
@@ -134,6 +137,7 @@
 	border-left: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
+
 .downloadButton span:nth-child(2):after {
 	bottom: -2px;
 	right: -2px;
@@ -142,10 +146,12 @@
 	border-right: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
+
 .downloadButton:hover {
 	color: var(--header-white);
 	border-radius: 10px;
 }
+
 .downloadButton:hover:before,
 .downloadButton:hover:after {
 	border-color: var(--light-green);
@@ -153,6 +159,7 @@
 	height: 100%;
 	border-radius: 10px;
 }
+
 .downloadButton:hover span:nth-child(2):before,
 .downloadButton:hover span:nth-child(2):after {
 	border-color: var(--light-green);
@@ -160,6 +167,7 @@
 	height: 100%;
 	border-radius: 10px;
 }
+
 .downloadButton:hover span:nth-child(2)::before,
 .downloadButton:hover span:nth-child(2)::after {
 	width: 100%;
@@ -175,7 +183,7 @@
 	height: 0;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-top: 12px solid #fff; /* White color */
+	border-top: 12px solid var(--header-white);
 	transform: translateX(-50%);
 }
 
@@ -185,7 +193,7 @@
 	left: 50%;
 	width: 4px;
 	height: 13px;
-	background-color: #fff; /* White color */
+	background-color: var(--header-white);
 	transform: translateX(-50%);
 }
 
@@ -195,9 +203,10 @@
 	left: 50%;
 	width: 30px;
 	height: 2px;
-	background-color: #fff;
+	background-color: var(--header-white);
 	transform: translateX(-50%);
 }
+
 .buttonContainer:hover .arrow {
 	animation: moveArrow 1s ease forwards;
 }

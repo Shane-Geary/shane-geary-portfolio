@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import styles from './home-page.module.css'
 
 export const HomePage = () => {
