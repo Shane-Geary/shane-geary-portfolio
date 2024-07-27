@@ -62,7 +62,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--paladins-font);
 	font-size: 20px;
 	letter-spacing: 5px;
 	text-align: center;
@@ -207,11 +207,11 @@
 	transform: translateX(-50%);
 }
 
-.buttonContainer:hover .arrow {
+.downloadButton:hover .arrow {
 	animation: moveArrow 1s ease forwards;
 }
 
-.buttonContainer:hover .line {
+.downloadButton:hover .line {
 	animation: moveLine 1s ease forwards;
 }
 
