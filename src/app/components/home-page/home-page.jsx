@@ -2,8 +2,6 @@ import Image from 'next/image'
 
 import styles from './home-page.module.css'
 
-import downloadIcon from '../../../../public/download-icon.png'
-
 export const HomePage = () => {
 	return (
 		<div className={styles['heroSection']}>
@@ -21,8 +19,8 @@ export const HomePage = () => {
 								<div className={styles['line']}></div>
 								<div className={styles['base']}></div>
 							</div>
-							Resume
 						</span>
+						<span>Resume</span>
 					</button>
 				</div>
 			</div>

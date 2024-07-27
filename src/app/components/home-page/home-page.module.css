@@ -45,9 +45,9 @@
 }
 
 .downloadButton:before,
-.downloadButton span:before,
+.downloadButton span:nth-child(2):before,
 .downloadButton:after,
-.downloadButton span:after {
+.downloadButton span:nth-child(2):after {
 	display: block;
 	content: '';
 	width: 15px;
@@ -59,7 +59,9 @@
 }
 
 .downloadButton {
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	letter-spacing: 5px;
@@ -81,6 +83,26 @@
 	line-height: 30px;
 	transition: 0.75s ease;
 }
+
+.downloadButton > span:first-child {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	margin-right: 8px;
+}
+
+.downloadIcon {
+	width: 30px;
+	height: 30px;
+}
+
+.downloadButton > span:nth-child(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .downloadButton:before {
 	top: -2px;
 	left: -2px;
@@ -97,14 +119,14 @@
 	border-right: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
-.downloadButton span {
+.downloadButton span:nth-child(2) {
 	display: block;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
 	margin-left: 8px;
 }
-.downloadButton span:before {
+.downloadButton span:nth-child(2):before {
 	bottom: -2px;
 	left: -2px;
 	border-bottom: 2px solid var(--light-green);
@@ -112,7 +134,7 @@
 	border-left: 2px solid var(--light-green);
 	transition: 0.75s all;
 }
-.downloadButton span:after {
+.downloadButton span:nth-child(2):after {
 	bottom: -2px;
 	right: -2px;
 	border-bottom: 2px solid var(--light-green);
@@ -131,26 +153,18 @@
 	height: 100%;
 	border-radius: 10px;
 }
-.downloadButton:hover span:before,
-.downloadButton:hover span:after {
+.downloadButton:hover span:nth-child(2):before,
+.downloadButton:hover span:nth-child(2):after {
 	border-color: var(--light-green);
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
 }
-.downloadButton:hover span::before,
-.downloadButton:hover span::after {
+.downloadButton:hover span:nth-child(2)::before,
+.downloadButton:hover span:nth-child(2)::after {
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
-}
-
-.downloadIcon {
-	position: relative;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	/* background-color: var(--header-white); */
 }
 
 .arrow {
@@ -159,9 +173,9 @@
 	left: 50%;
 	width: 0;
 	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 15px solid #fff; /* White color */
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 12px solid #fff; /* White color */
 	transform: translateX(-50%);
 }
 
@@ -170,7 +184,7 @@
 	bottom: 20px;
 	left: 50%;
 	width: 4px;
-	height: 20px;
+	height: 13px;
 	background-color: #fff; /* White color */
 	transform: translateX(-50%);
 }
@@ -179,14 +193,17 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	width: 40px;
+	width: 30px;
 	height: 2px;
-	border-radius: 1px / 2px;
 	background-color: #fff;
 	transform: translateX(-50%);
 }
 .buttonContainer:hover .arrow {
 	animation: moveArrow 1s ease forwards;
+}
+
+.buttonContainer:hover .line {
+	animation: moveLine 1s ease forwards;
 }
 
 @keyframes moveArrow {
@@ -204,5 +221,23 @@
 	}
 	100% {
 		bottom: 10px;
+	}
+}
+
+@keyframes moveLine {
+	0% {
+		bottom: 20px;
+	}
+	25% {
+		bottom: 25px;
+	}
+	50% {
+		bottom: 20px;
+	}
+	75% {
+		bottom: 25px;
+	}
+	100% {
+		bottom: 20px;
 	}
 }
