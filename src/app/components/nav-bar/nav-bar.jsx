@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './nav-bar.module.css'
 
-import logoSrc from '../../../public/gearz.JPG'
+import logoSrc from '../../../../public/gearz.JPG'
 
 export const NavBar = () => {
 	return (

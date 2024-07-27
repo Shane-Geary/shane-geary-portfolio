@@ -1,0 +1,70 @@
+.heroSection {
+	display: flex;
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 4rem 0;
+	color: var(--header-white);
+	height: 50vh; /* Taking the top half of the viewport */
+	position: relative;
+}
+
+.nameContainer {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 2rem;
+}
+
+.buttonContainer {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 2rem;
+}
+
+.heroTitle {
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 1.2;
+	text-align: left;
+
+	@media (max-width: 768px) {
+		font-size: 3rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 2rem;
+	}
+}
+
+.downloadButton {
+	background-color: var(--header-green);
+	color: var(--header-white);
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition:
+		background-color 0.3s ease,
+		transform 0.3s ease;
+
+	@media (max-width: 768px) {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+	}
+
+	@media (max-width: 480px) {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}
+}
+
+.downloadButton:hover {
+	background-color: var(--light-green);
+	transform: scale(1.05);
+}
