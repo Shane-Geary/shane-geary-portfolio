@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './nav-bar.module.css'
+import styles from './nav-bar.module.scss'
 
 import logoSrc from '../../../../public/gearz.JPG'
 

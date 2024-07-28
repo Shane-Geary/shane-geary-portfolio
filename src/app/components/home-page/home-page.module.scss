@@ -29,6 +29,11 @@
 	font-weight: bold;
 	line-height: 1.2;
 	text-align: left;
+	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
 
 	@media (max-width: 768px) {
 		font-size: 3rem;
@@ -185,6 +190,10 @@
 	border-right: 8px solid transparent;
 	border-top: 12px solid var(--header-white);
 	transform: translateX(-50%);
+
+	&.clicked {
+		animation: moveArrow 1s ease forwards;
+	}
 }
 
 .line {

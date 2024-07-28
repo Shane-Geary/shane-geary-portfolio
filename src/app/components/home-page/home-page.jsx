@@ -1,9 +1,12 @@
-// import {useState} from 'react'
+'use client'
+import {useState} from 'react'
 
-import styles from './home-page.module.css'
+import classNames from 'classnames'
+
+import styles from './home-page.module.scss'
 
 export const HomePage = () => {
-	// const [downloadButtonClicked, setDownloadButtonClicked] = useState(false)
+	const [downloadButtonClicked, setDownloadButtonClicked] = useState(false)
 
 	return (
 		<div className={styles['heroSection']}>
@@ -16,15 +19,27 @@ export const HomePage = () => {
 				<div className={styles['buttonContainer']}>
 					<button
 						className={styles['downloadButton']}
-						// onMouseUp={() => {
-
-						// }}
+						onMouseUp={() => {
+							setDownloadButtonClicked(true)
+						}}
 					>
 						<span>
 							<div className={styles['downloadIcon']}>
-								<div className={styles['arrow']}></div>
-								<div className={styles['line']}></div>
-								<div className={styles['base']}></div>
+								<div
+									className={classNames(styles['arrow'], {
+										[styles['clicked']]: downloadButtonClicked
+									})}
+								/>
+								<div
+									className={classNames(styles['line'], {
+										[styles['clicked']]: downloadButtonClicked
+									})}
+								/>
+								<div
+									className={classNames(styles['base'], {
+										[styles['clicked']]: downloadButtonClicked
+									})}
+								/>
 							</div>
 						</span>
 						<span>Resume</span>
