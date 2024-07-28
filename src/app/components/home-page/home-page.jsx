@@ -12,35 +12,6 @@ export const HomePage = () => {
 			</div>
 			<div className={styles['heroRight']}>
 				<ResumeButton />
-				{/* <div className={styles['buttonContainer']}>
-					<button
-						className={styles['downloadButton']}
-						onAnimationEnd={() => {
-							setDownloadButtonClicked(false)
-							console.log('Download button animation ended')
-						}}
-						onMouseUp={() => {
-							setDownloadButtonClicked(true)
-							setTimeout(() => {
-								setDownloadButtonClicked(false)
-							}, 2000)
-							console.log('Download button clicked')
-						}}
-					>
-						<span>
-							<div className={styles['downloadIcon']}>
-								<div className={styles['arrow']} />
-								<div className={styles['line']} />
-								<div
-									className={classNames(styles['base'], {
-										[styles['clicked']]: downloadButtonClicked
-									})}
-								/>
-							</div>
-						</span>
-						<span>Resume</span>
-					</button>
-				</div> */}
 			</div>
 		</div>
 	)
