@@ -1,13 +1,8 @@
-'use client'
-import {useState} from 'react'
-
-import classNames from 'classnames'
+import {ResumeButton} from '../resume-button'
 
 import styles from './home-page.module.scss'
 
 export const HomePage = () => {
-	const [downloadButtonClicked, setDownloadButtonClicked] = useState(false)
-
 	return (
 		<div className={styles['heroSection']}>
 			<div className={styles['heroLeft']}>
@@ -16,7 +11,8 @@ export const HomePage = () => {
 				</h1>
 			</div>
 			<div className={styles['heroRight']}>
-				<div className={styles['buttonContainer']}>
+				<ResumeButton />
+				{/* <div className={styles['buttonContainer']}>
 					<button
 						className={styles['downloadButton']}
 						onAnimationEnd={() => {
@@ -44,7 +40,7 @@ export const HomePage = () => {
 						</span>
 						<span>Resume</span>
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
