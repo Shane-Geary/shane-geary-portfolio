@@ -6,24 +6,11 @@
 	text-align: left;
 }
 
-.aboutMeTitle {
-	font-size: 2rem;
-	margin-bottom: 1.5rem;
-	text-align: center;
-	position: relative;
-	bottom: 60px;
-
-	@media (max-width: 768px) {
-		font-size: 1.5rem;
-	}
-
-	@media (max-width: 480px) {
-		font-size: 1rem;
-	}
+.jobTitle {
+	color: var(--neutral-green);
 }
 
-.aboutMeContainer {
-	width: 50%;
+.aboutMeTextContainer {
 	max-height: 25vh;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
@@ -32,12 +19,12 @@
 }
 
 /* Hide scrollbar for Chrome, Safari, and Opera */
-.aboutMeContainer::-webkit-scrollbar {
+.aboutMeTextContainer::-webkit-scrollbar {
 	display: none;
 }
 
 /* Hide scrollbar for IE, Edge, and Firefox */
-.aboutMeContainer {
+.aboutMeTextContainer {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }

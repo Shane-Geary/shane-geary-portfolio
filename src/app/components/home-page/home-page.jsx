@@ -1,5 +1,8 @@
+import Image from 'next/image'
+
 import {ResumeButton} from '../resume-button'
 import {AboutMe} from '../about-me'
+import headshot from '../../../../public/shane-headshot.jpeg'
 
 import styles from './home-page.module.scss'
 
@@ -17,7 +20,22 @@ export const HomePage = () => {
 				</div>
 			</div>
 			<div className={styles['aboutMeContainer']}>
-				<AboutMe />
+				{/* <h2 className={styles['aboutMeTitle']}>About Me</h2> */}
+				<div className={styles['headshotPositionWrapper']}>
+					<Image
+						src={headshot}
+						alt='Shane Headshot'
+						width={200}
+						height={200}
+						style={{
+							borderRadius: '50%',
+							border: '2px solid var(--dark-green)'
+						}}
+					/>
+				</div>
+				<div className={styles['aboutMePositionWrapper']}>
+					<AboutMe />
+				</div>
 			</div>
 		</div>
 	)

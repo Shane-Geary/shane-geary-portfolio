@@ -3,14 +3,14 @@ import styles from './about-me.module.scss'
 export const AboutMe = () => {
 	return (
 		<div className={styles['aboutMeSection']}>
-			<h2 className={styles['aboutMeTitle']}>About Me</h2>
-			<div className={styles['aboutMeContainer']}>
+			<div className={styles['aboutMeTextContainer']}>
 				<div className={styles['aboutMeText']}>
-					Software Engineer experienced in ReactJS/NextJS/Typescript, HTML, CSS
-					and other frontend languages and technologies. Also experienced in and
-					geared towards cloud computing and IT, specializing in AWS. With 3
-					years tech startup experience, I have a proven track record of
-					innovative software solutions.
+					<span className={styles['jobTitle']}>Software Engineer</span>{' '}
+					experienced in ReactJS/NextJS/Typescript, HTML, CSS and other frontend
+					languages and technologies. Also experienced in and geared towards
+					cloud computing, specializing in AWS. With 3 years tech startup
+					experience, I have a proven track record of innovative software
+					solutions.
 					<br />
 					<br />
 					When I am not coding, I enjoy my love for music, both listening and
