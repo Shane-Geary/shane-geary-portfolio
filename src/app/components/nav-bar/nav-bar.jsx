@@ -10,10 +10,10 @@ export const NavBar = () => {
 				<div className={styles.logo}>
 					<Image
 						src={logoSrc}
-						alt='MyWebsite Logo'
-						layout='intrinsic'
+						alt='Shane AI'
+						priority={true}
 						width={75}
-						height={40}
+						height={75}
 						style={{borderRadius: '40px'}}
 					/>
 				</div>
