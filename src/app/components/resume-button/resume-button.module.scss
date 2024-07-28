@@ -179,7 +179,7 @@
 }
 
 .base.clicked::before {
-	animation: expandAndContract 1s ease 2;
+	animation: expandAndContract 0.7s ease 2;
 }
 
 .downloadButton:hover .arrow {
