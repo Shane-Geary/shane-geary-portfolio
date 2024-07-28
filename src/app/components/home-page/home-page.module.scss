@@ -190,10 +190,6 @@
 	border-right: 8px solid transparent;
 	border-top: 12px solid var(--header-white);
 	transform: translateX(-50%);
-
-	&.clicked {
-		animation: moveArrow 1s ease forwards;
-	}
 }
 
 .line {
@@ -214,14 +210,30 @@
 	height: 2px;
 	background-color: var(--header-white);
 	transform: translateX(-50%);
+	overflow: hidden;
+}
+
+.base::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	background-color: var(--header-green);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 1s ease;
+}
+
+.base.clicked::before {
+	animation: expandAndContract 1s ease 2;
 }
 
 .downloadButton:hover .arrow {
-	animation: moveArrow 1s ease forwards;
+	animation: moveArrow 1.3s ease infinite;
 }
 
 .downloadButton:hover .line {
-	animation: moveLine 1s ease forwards;
+	animation: moveLine 1.3s ease infinite;
 }
 
 @keyframes moveArrow {
@@ -257,5 +269,17 @@
 	}
 	100% {
 		bottom: 20px;
+	}
+}
+
+@keyframes expandAndContract {
+	0% {
+		width: 0;
+	}
+	50% {
+		width: 100%;
+	}
+	100% {
+		width: 0;
 	}
 }

@@ -19,22 +19,22 @@ export const HomePage = () => {
 				<div className={styles['buttonContainer']}>
 					<button
 						className={styles['downloadButton']}
+						onAnimationEnd={() => {
+							setDownloadButtonClicked(false)
+							console.log('Download button animation ended')
+						}}
 						onMouseUp={() => {
 							setDownloadButtonClicked(true)
+							setTimeout(() => {
+								setDownloadButtonClicked(false)
+							}, 2000)
+							console.log('Download button clicked')
 						}}
 					>
 						<span>
 							<div className={styles['downloadIcon']}>
-								<div
-									className={classNames(styles['arrow'], {
-										[styles['clicked']]: downloadButtonClicked
-									})}
-								/>
-								<div
-									className={classNames(styles['line'], {
-										[styles['clicked']]: downloadButtonClicked
-									})}
-								/>
+								<div className={styles['arrow']} />
+								<div className={styles['line']} />
 								<div
 									className={classNames(styles['base'], {
 										[styles['clicked']]: downloadButtonClicked
