@@ -1,7 +1,7 @@
 .aboutMeSection {
 	width: 100%;
 	max-width: var(--max-width);
-	margin: 0 auto;
+	padding-right: 2rem;
 	color: var(--header-white);
 	text-align: left;
 }
@@ -11,7 +11,7 @@
 }
 
 .aboutMeTextContainer {
-	max-height: 25vh;
+	max-height: 30vh;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
 	padding: 0.8rem;

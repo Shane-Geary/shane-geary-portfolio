@@ -20,7 +20,7 @@ export const HomePage = () => {
 				</div>
 			</div>
 			<div className={styles['aboutMeContainer']}>
-				{/* <h2 className={styles['aboutMeTitle']}>About Me</h2> */}
+				<h2 className={styles['aboutMeTitle']}>About Me</h2>
 				<div className={styles['headshotPositionWrapper']}>
 					<Image
 						src={headshot}
