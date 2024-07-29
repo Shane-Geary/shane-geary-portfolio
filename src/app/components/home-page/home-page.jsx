@@ -29,7 +29,8 @@ export const HomePage = () => {
 						height={200}
 						style={{
 							borderRadius: '50%',
-							border: '2px solid var(--dark-green)'
+							border: '2px solid var(--dark-green)',
+							boxShadow: 'var(--neon-shadow-neutral-green)'
 						}}
 					/>
 				</div>
