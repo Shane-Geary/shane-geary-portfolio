@@ -22,17 +22,20 @@ export const HomePage = () => {
 			<div className={styles['aboutMeContainer']}>
 				<h2 className={styles['aboutMeTitle']}>About Me</h2>
 				<div className={styles['headshotPositionWrapper']}>
-					<Image
-						src={headshot}
-						alt='Shane Headshot'
-						width={200}
-						height={200}
-						style={{
-							borderRadius: '50%',
-							border: '2px solid var(--dark-green)',
-							boxShadow: 'var(--neon-shadow-neutral-green)'
-						}}
-					/>
+					<div className={styles['headshotContainer']}>
+						<Image
+							src={headshot}
+							alt='Shane Headshot'
+							width={580}
+							height={580}
+							layout='responsive'
+							style={{
+								borderRadius: '50%'
+								// border: '2px solid var(--dark-green)',
+								// boxShadow: 'var(--neon-shadow-neutral-green)'
+							}}
+						/>
+					</div>
 				</div>
 				<div className={styles['aboutMePositionWrapper']}>
 					<AboutMe />

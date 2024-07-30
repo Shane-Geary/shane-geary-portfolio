@@ -7,7 +7,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 2rem 0;
+	padding: 6rem 0 2rem 0;
 	color: var(--header-white);
 	height: 50vh;
 	position: relative;
@@ -40,11 +40,11 @@
 	color: transparent;
 
 	@media (max-width: 768px) {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 2rem;
+		font-size: 1rem;
 	}
 }
 
@@ -89,4 +89,12 @@
 	justify-content: center;
 	position: relative;
 	bottom: 20%;
+}
+
+.headshotContainer {
+	width: 50%;
+	max-width: 300px;
+	border: 2px solid var(--neutral-green);
+	box-shadow: var(--neon-shadow-neutral-green);
+	border-radius: 50%;
 }
