@@ -1,13 +1,15 @@
-import Image from 'next/image'
 import styles from './page.module.scss'
 import {NavBar} from './components/nav-bar'
 import {HomePage} from './components/home-page'
 
 export default function Home() {
 	return (
-		<main className={styles['main']}>
+		<main className={styles['mainWrapper']}>
 			<NavBar />
-			<HomePage />
+			<div className={styles['pageContent']}>
+				<div className={styles['sizzleBorder']} />
+				<HomePage />
+			</div>
 		</main>
 	)
 }

@@ -1,9 +1,33 @@
-.main {
+.mainWrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	height: 100vh;
 	align-items: center;
 	padding: 6rem 2rem;
 	min-height: 100vh;
 	padding-top: 4rem;
+}
+
+.pageContent {
+	position: relative;
+	width: 90%;
+	// max-width: var(--max-width);
+	min-height: 80vh;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sizzleBorder {
+	border: 2px solid var(--light-green);
+	box-shadow: var(--neon-shadow-light-green);
+	border-radius: 20px;
+	width: 100%;
+	height: calc(100% - 4rem);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
 }
