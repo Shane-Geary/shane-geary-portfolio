@@ -32,9 +32,9 @@ export const NavBar = () => {
 						setIsHamburgerOpen(!isHamburgerOpen)
 					}}
 				>
-					<span className={styles['hamburgerLine']} />
-					<span className={styles['hamburgerLine']} />
-					<span className={styles['hamburgerLine']} />
+					{Array.from({length: 3}).map((_, index) => (
+						<span key={index} className={styles['hamburgerLine']} />
+					))}
 				</button>
 				<nav
 					className={classNames(styles['navLinks'], {
