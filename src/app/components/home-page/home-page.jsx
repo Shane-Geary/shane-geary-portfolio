@@ -31,8 +31,6 @@ export const HomePage = () => {
 							layout='responsive'
 							style={{
 								borderRadius: '50%'
-								// border: '2px solid var(--dark-green)',
-								// boxShadow: 'var(--neon-shadow-neutral-green)'
 							}}
 						/>
 					</div>

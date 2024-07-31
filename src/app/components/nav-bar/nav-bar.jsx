@@ -19,9 +19,9 @@ export const NavBar = () => {
 						src={logoSrc}
 						alt='Shane AI'
 						priority={true}
-						width={75}
-						height={75}
-						style={{borderRadius: '40px'}}
+						layout='fill'
+						objectFit='contain'
+						style={{borderRadius: '50%'}}
 					/>
 				</div>
 				<button
