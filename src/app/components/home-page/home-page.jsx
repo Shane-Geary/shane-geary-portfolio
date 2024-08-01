@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import Image from 'next/image'
 
 import {ResumeButton} from '../resume-button'
@@ -14,10 +14,13 @@ import styles from './home-page.module.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import next from 'next'
 
 export const HomePage = () => {
 	const [toggleSection, setToggleSection] = useState(false)
-	const [activeIndex, setActiveIndex] = useState(0)
+
+	const nextArrowRef = useRef(null)
+	const prevArrowRef = useRef(null)
 
 	return (
 		<div className={styles['homePage']}>
@@ -36,6 +39,21 @@ export const HomePage = () => {
 					prevEl: `className=${styles['swiper-button-prev']}`
 				}}
 				enabled
+				onSwiper={(swiper) => {
+					nextArrowRef.current = document.querySelector('.swiper-button-next')
+					prevArrowRef.current = document.querySelector('.swiper-button-prev')
+
+					prevArrowRef.current.style.opacity = 0
+				}}
+				onSlideChange={(e) => {
+					if (e.activeIndex === 0) {
+						prevArrowRef.current.style.opacity = 0
+						nextArrowRef.current.style.opacity = 1
+					} else {
+						prevArrowRef.current.style.opacity = 1
+						nextArrowRef.current.style.opacity = 0
+					}
+				}}
 			>
 				<SwiperSlide className={styles['slideOneWrapper']}>
 					<div
