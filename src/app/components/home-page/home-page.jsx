@@ -8,14 +8,12 @@ import headshot from '../../../../public/shane-headshot.jpeg'
 
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import SwiperCore, {Navigation} from 'swiper/modules'
 
 import styles from './home-page.module.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 export const HomePage = () => {
 	const [toggleSection, setToggleSection] = useState(false)
@@ -24,13 +22,12 @@ export const HomePage = () => {
 	return (
 		<div className={styles['homePage']}>
 			<Swiper
+				modules={[Navigation]}
 				direction='vertical'
 				autoplay={false}
 				spaceBetween={50}
 				slidesPerView={1}
 				navigation
-				pagination={{clickable: true}}
-				// scrollbar={{draggable: true}}
 				style={{height: '100vh', position: 'relative'}}
 				// allowSlideNext={false}
 				// allowSlidePrev={false}
@@ -38,6 +35,7 @@ export const HomePage = () => {
 					nextEl: `className=${styles['swiper-button-next']}`,
 					prevEl: `className=${styles['swiper-button-prev']}`
 				}}
+				enabled
 			>
 				<SwiperSlide className={styles['slideOneWrapper']}>
 					<div
