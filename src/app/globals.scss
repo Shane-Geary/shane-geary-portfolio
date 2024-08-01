@@ -45,3 +45,32 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: 50%;
+	height: 50%;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-size: 20px;
+	color: var(--dark-green);
+}
+
+/* Positioning the next arrow at the bottom-right */
+.swiper-button-next {
+	bottom: 10% !important;
+	top: auto !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+}
+
+/* Positioning the prev arrow at the bottom-left */
+.swiper-button-prev {
+	top: 25% !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+}
