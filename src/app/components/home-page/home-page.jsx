@@ -29,14 +29,19 @@ export const HomePage = () => {
 				className={classNames(styles['downArrowIcon'], {
 					[styles['downArrowIconOpen']]: toggleSection
 				})}
-				onClick={() => {
-					setToggleSection(!toggleSection)
-				}}
 			>
 				<span className={styles['downArrowLine1']} />
 				<span className={styles['downArrowLine2']} />
 				<span className={styles['downArrowLine3']} />
 			</button>
+			<div
+				className={classNames(styles['overlayElement'], {
+					[styles['overlayElementToggle']]: toggleSection
+				})}
+				onClick={() => {
+					setToggleSection(!toggleSection)
+				}}
+			/>
 			<div className={styles['aboutMeContainer']}>
 				<h2 className={styles['aboutMeTitle']}>About Me</h2>
 				<div className={styles['headshotPositionWrapper']}>
