@@ -31,6 +31,7 @@ export const HomePage = () => {
 				spaceBetween={50}
 				slidesPerView={1}
 				navigation
+				speed={500}
 				style={{height: '100vh', position: 'relative'}}
 				// allowSlideNext={false}
 				// allowSlidePrev={false}
@@ -42,6 +43,9 @@ export const HomePage = () => {
 				onSwiper={(swiper) => {
 					nextArrowRef.current = document.querySelector('.swiper-button-next')
 					prevArrowRef.current = document.querySelector('.swiper-button-prev')
+
+					prevArrowRef.current.style.transition = 'opacity 0.5s'
+					nextArrowRef.current.style.transition = 'opacity 0.3s'
 
 					prevArrowRef.current.style.opacity = 0
 				}}
