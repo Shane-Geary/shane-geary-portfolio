@@ -16,6 +16,12 @@
 		height: 100vh;
 		flex-direction: column;
 		justify-content: space-between;
+		opacity: 1;
+
+		&.heroSectionToggle {
+			display: none;
+			opacity: 0;
+		}
 	}
 }
 
@@ -142,9 +148,16 @@
 	color: var(--header-white);
 	height: 50vh;
 	position: relative;
+	transition: all 3s ease-in-out;
 
 	@media (max-width: 480px) {
 		display: none;
+		opacity: 0;
+
+		&.aboutMeContainerToggle {
+			display: flex;
+			opacity: 1;
+		}
 	}
 }
 

@@ -15,7 +15,11 @@ export const HomePage = () => {
 
 	return (
 		<div className={styles['homePage']}>
-			<div className={styles['heroSection']}>
+			<div
+				className={classNames(styles['heroSection'], {
+					[styles['heroSectionToggle']]: toggleSection
+				})}
+			>
 				<div className={styles['heroLeft']}>
 					<h1 className={styles['heroTitle']}>
 						Shane T<br /> Geary
@@ -42,7 +46,11 @@ export const HomePage = () => {
 					setToggleSection(!toggleSection)
 				}}
 			/>
-			<div className={styles['aboutMeContainer']}>
+			<div
+				className={classNames(styles['aboutMeContainer'], {
+					[styles['aboutMeContainerToggle']]: toggleSection
+				})}
+			>
 				<h2 className={styles['aboutMeTitle']}>About Me</h2>
 				<div className={styles['headshotPositionWrapper']}>
 					<div className={styles['headshotContainer']}>
