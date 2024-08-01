@@ -4,6 +4,11 @@
 	padding-right: 2rem;
 	color: var(--header-white);
 	text-align: left;
+
+	@media (max-width: 480px) {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
 }
 
 .jobTitle {
