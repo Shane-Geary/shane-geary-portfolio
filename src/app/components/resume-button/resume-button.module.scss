@@ -1,7 +1,6 @@
 .buttonContainer {
-	max-width: 75%;
 	text-align: center;
-	padding: 20px;
+	margin: 0 auto;
 }
 
 .downloadButton:before,
@@ -10,8 +9,8 @@
 .downloadButton span:nth-child(2):after {
 	display: block;
 	content: '';
-	width: 1em;
-	height: 1em;
+	width: 1rem;
+	height: 1rem;
 	position: absolute;
 	text-align: center;
 	justify-content: center;
@@ -23,24 +22,24 @@
 	align-items: center;
 	justify-content: center;
 	font-family: var(--paladins-font);
-	font-size: 1.15em;
-	letter-spacing: 0.3125em;
+	font-size: 1.25rem;
+	letter-spacing: 0.3125rem;
 	text-align: center;
 	position: relative;
-	min-width: 6.25em;
-	min-height: 0.625em;
-	margin: 1.25em;
+	min-width: 6.25rem;
+	min-height: 0.625rem;
+	margin: 1.25rem;
 	background: none;
 	border: none;
 	text-decoration: none;
 	cursor: pointer;
 	color: var(--light-green);
-	border-radius: 0.625em;
-	padding: 0.75em 1.25em;
+	border-radius: 0.625rem;
+	padding: 0.75rem 1.25rem;
 	box-sizing: content-box;
-	border: 0.125em solid transparent;
+	border: 0.125rem solid transparent;
 	text-align: center;
-	line-height: 1.875em;
+	line-height: 1.875rem;
 	transition: 0.75s ease;
 }
 
@@ -49,12 +48,12 @@
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	margin-right: 0.5em;
+	margin-right: 0.5rem;
 }
 
 .downloadIcon {
-	width: 1.875em;
-	height: 1.875em;
+	width: 1.875rem;
+	height: 1.875rem;
 }
 
 .downloadButton > span:nth-child(2) {
@@ -64,20 +63,20 @@
 }
 
 .downloadButton:before {
-	top: -0.125em;
-	left: -0.125em;
-	border-top: 0.125em solid var(--light-green);
-	border-top-left-radius: 0.5em;
-	border-left: 0.125em solid var(--light-green);
+	top: -0.125rem;
+	left: -0.125rem;
+	border-top: 0.125rem solid var(--light-green);
+	border-top-left-radius: 0.5rem;
+	border-left: 0.125rem solid var(--light-green);
 	transition: 0.75s all;
 }
 
 .downloadButton:after {
-	top: -0.125em;
-	right: -0.125em;
-	border-top: 0.125em solid var(--light-green);
-	border-top-right-radius: 0.5em;
-	border-right: 0.125em solid var(--light-green);
+	top: -0.125rem;
+	right: -0.125rem;
+	border-top: 0.125rem solid var(--light-green);
+	border-top-right-radius: 0.5rem;
+	border-right: 0.125rem solid var(--light-green);
 	transition: 0.75s all;
 }
 
@@ -86,30 +85,30 @@
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-	margin-left: 0.5em;
+	margin-left: 0.5rem;
 }
 
 .downloadButton span:nth-child(2):before {
-	bottom: -0.125em;
-	left: -0.125em;
-	border-bottom: 0.125em solid var(--light-green);
-	border-bottom-left-radius: 0.5em;
-	border-left: 0.125em solid var(--light-green);
+	bottom: -0.125rem;
+	left: -0.125rem;
+	border-bottom: 0.125rem solid var(--light-green);
+	border-bottom-left-radius: 0.5rem;
+	border-left: 0.125rem solid var(--light-green);
 	transition: 0.75s all;
 }
 
 .downloadButton span:nth-child(2):after {
-	bottom: -0.125em;
-	right: -0.125em;
-	border-bottom: 0.125em solid var(--light-green);
-	border-bottom-right-radius: 0.5em;
-	border-right: 0.125em solid var(--light-green);
+	bottom: -0.125rem;
+	right: -0.125rem;
+	border-bottom: 0.125rem solid var(--light-green);
+	border-bottom-right-radius: 0.5rem;
+	border-right: 0.125rem solid var(--light-green);
 	transition: 0.75s all;
 }
 
 .downloadButton:hover {
 	color: var(--header-white);
-	border-radius: 0.625em;
+	border-radius: 0.625rem;
 }
 
 .downloadButton:hover:before,
@@ -117,7 +116,7 @@
 	border-color: var(--light-green);
 	width: 100%;
 	height: 100%;
-	border-radius: 0.625em;
+	border-radius: 0.625rem;
 }
 
 .downloadButton:hover span:nth-child(2):before,
@@ -125,34 +124,34 @@
 	border-color: var(--light-green);
 	width: 100%;
 	height: 100%;
-	border-radius: 0.625em;
+	border-radius: 0.625rem;
 }
 
 .downloadButton:hover span:nth-child(2)::before,
 .downloadButton:hover span:nth-child(2)::after {
 	width: 100%;
 	height: 100%;
-	border-radius: 0.625em;
+	border-radius: 0.625rem;
 }
 
 .arrow {
 	position: absolute;
-	bottom: 0.625em;
+	bottom: 0.625rem;
 	left: 50%;
 	width: 0;
 	height: 0;
-	border-left: 0.5em solid transparent;
-	border-right: 0.5em solid transparent;
-	border-top: 0.75em solid var(--header-white);
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-top: 0.75rem solid var(--header-white);
 	transform: translateX(-50%);
 }
 
 .line {
 	position: absolute;
-	bottom: 1.25em;
+	bottom: 1.25rem;
 	left: 50%;
-	width: 0.25em;
-	height: 0.8125em;
+	width: 0.25rem;
+	height: 0.8125rem;
 	background-color: var(--header-white);
 	transform: translateX(-50%);
 }
@@ -161,8 +160,8 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	width: 1.875em;
-	height: 0.125em;
+	width: 1.875rem;
+	height: 0.125rem;
 	background-color: var(--header-white);
 	transform: translateX(-50%);
 	overflow: hidden;
@@ -193,37 +192,37 @@
 
 @keyframes moveArrow {
 	0% {
-		bottom: 0.625em;
+		bottom: 0.625rem;
 	}
 	25% {
-		bottom: 0.9375em;
+		bottom: 0.9375rem;
 	}
 	50% {
-		bottom: 0.625em;
+		bottom: 0.625rem;
 	}
 	75% {
-		bottom: 0.9375em;
+		bottom: 0.9375rem;
 	}
 	100% {
-		bottom: 0.625em;
+		bottom: 0.625rem;
 	}
 }
 
 @keyframes moveLine {
 	0% {
-		bottom: 1.25em;
+		bottom: 1.25rem;
 	}
 	25% {
-		bottom: 1.5625em;
+		bottom: 1.5625rem;
 	}
 	50% {
-		bottom: 1.25em;
+		bottom: 1.25rem;
 	}
 	75% {
-		bottom: 1.5625em;
+		bottom: 1.5625rem;
 	}
 	100% {
-		bottom: 1.25em;
+		bottom: 1.25rem;
 	}
 }
 
@@ -241,25 +240,25 @@
 
 @media (max-width: 480px) {
 	.downloadButton {
-		font-size: 1em;
-		padding: 0.5em 1em;
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
 	}
 
 	.downloadIcon {
-		width: 1.25em;
-		height: 1.25em;
+		width: 1.25rem;
+		height: 1.25rem;
 	}
 
 	.arrow {
-		border-top-width: 0.625em;
+		border-top-width: 0.625rem;
 	}
 
 	.line {
-		width: 0.1875em;
-		height: 0.625em;
+		width: 0.1875rem;
+		height: 0.625rem;
 	}
 
 	.base {
-		width: 1.25em;
+		width: 1.25rem;
 	}
 }
