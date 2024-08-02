@@ -65,7 +65,6 @@ export const HomePage = () => {
 					nextArrowRef.current.style.transition = 'opacity 0.3s'
 
 					prevArrowRef.current.style.opacity = 0
-					nextArrowRef.current.style.opacity = 0
 				}}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {

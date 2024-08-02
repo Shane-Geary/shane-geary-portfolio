@@ -61,6 +61,11 @@ a {
 	border-radius: 10%;
 	padding: 4px;
 	box-shadow: var(--neon-shadow-light-green);
+	visibility: hidden;
+
+	@media (max-width: 480px) {
+		visibility: visible;
+	}
 }
 
 /* Positioning the next arrow at the bottom-right */
