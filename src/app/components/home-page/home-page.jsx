@@ -16,8 +16,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export const HomePage = () => {
-	const [toggleSection, setToggleSection] = useState(false)
-
 	const [viewportWidth, setViewportWidth] = useState(0)
 
 	const nextArrowRef = useRef(null)
@@ -25,7 +23,6 @@ export const HomePage = () => {
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
-		console.log('view width', viewportWidth)
 
 		if (window.innerWidth <= 480) {
 			nextArrowRef.current.style.opacity = 1
@@ -41,8 +38,6 @@ export const HomePage = () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [viewportWidth])
-
-	console.log(viewportWidth)
 
 	return (
 		<div className={styles['homePage']}>
@@ -71,11 +66,6 @@ export const HomePage = () => {
 
 					prevArrowRef.current.style.opacity = 0
 					nextArrowRef.current.style.opacity = 0
-
-					// if (viewportWidth <= 480) {
-					// 	nextArrowRef.current.style.opacity = 1
-					// 	// prevArrowRef.current.style.opacity = 1
-					// }
 				}}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {
@@ -88,11 +78,7 @@ export const HomePage = () => {
 				}}
 			>
 				<SwiperSlide className={styles['slideOneWrapper']}>
-					<div
-						className={classNames(styles['heroSection'], {
-							[styles['heroSectionToggle']]: toggleSection
-						})}
-					>
+					<div className={styles['heroSection']}>
 						<div className={styles['heroLeft']}>
 							<h1 className={styles['heroTitle']}>
 								Shane T<br /> Geary
@@ -104,11 +90,7 @@ export const HomePage = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={styles['slideTwoWrapper']}>
-					<div
-						className={classNames(styles['aboutMeContainer'], {
-							[styles['aboutMeContainerToggle']]: toggleSection
-						})}
-					>
+					<div className={styles['aboutMeContainer']}>
 						<h2 className={styles['aboutMeTitle']}>About Me</h2>
 						<div className={styles['headshotPositionWrapper']}>
 							<div className={styles['headshotContainer']}>
