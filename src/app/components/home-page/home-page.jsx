@@ -40,7 +40,7 @@ export const HomePage = () => {
 					prevEl: `className=${styles['swiper-button-prev']}`
 				}}
 				enabled
-				onSwiper={(swiper) => {
+				onSwiper={() => {
 					nextArrowRef.current = document.querySelector('.swiper-button-next')
 					prevArrowRef.current = document.querySelector('.swiper-button-prev')
 

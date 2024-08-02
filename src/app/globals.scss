@@ -48,10 +48,9 @@ a {
 
 .swiper-button-next,
 .swiper-button-prev {
-	width: 50%;
-	height: 50%;
+	width: 0% !important;
+	height: 100%;
 	border-radius: 50%;
-	position: absolute;
 }
 
 .swiper-button-next::after,
@@ -70,11 +69,13 @@ a {
 	top: auto !important;
 	left: 50% !important;
 	transform: rotate(90deg);
+	margin-bottom: 1rem !important;
 }
 
 /* Positioning the prev arrow at the bottom-left */
 .swiper-button-prev {
-	top: 25% !important;
+	top: 20% !important;
 	left: 50% !important;
 	transform: rotate(90deg);
+	margin-top: 0.8rem !important;
 }
