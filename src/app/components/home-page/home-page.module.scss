@@ -18,25 +18,6 @@
 	}
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-	color: #fff; /* Set color of arrows */
-	font-size: 24px; /* Set size of arrows */
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%) rotate(180deg); /* Flip vertically */
-}
-
-.swiper-button-next {
-	right: 10px; /* Position for next arrow */
-	transform: translateY(-50%) rotate(180deg); /* Flip vertically */
-}
-
-.swiper-button-prev {
-	left: 10px; /* Position for prev arrow */
-	transform: translateY(-50%) rotate(180deg); /* Flip vertically */
-}
-
 .heroSection {
 	display: flex;
 	width: 100%;

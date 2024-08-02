@@ -1,5 +1,5 @@
 'use client'
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import Image from 'next/image'
 
 import {ResumeButton} from '../resume-button'
@@ -14,13 +14,35 @@ import styles from './home-page.module.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import next from 'next'
 
 export const HomePage = () => {
 	const [toggleSection, setToggleSection] = useState(false)
 
+	const [viewportWidth, setViewportWidth] = useState(0)
+
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
+
+	useEffect(() => {
+		setViewportWidth(window.innerWidth)
+		console.log('view width', viewportWidth)
+
+		if (window.innerWidth <= 480) {
+			nextArrowRef.current.style.opacity = 1
+		}
+
+		const handleResize = () => {
+			setViewportWidth(window.innerWidth)
+		}
+
+		window.addEventListener('resize', handleResize)
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [viewportWidth])
+
+	console.log(viewportWidth)
 
 	return (
 		<div className={styles['homePage']}>
@@ -33,8 +55,8 @@ export const HomePage = () => {
 				navigation
 				speed={500}
 				style={{height: '100vh', position: 'relative'}}
-				// allowSlideNext={false}
-				// allowSlidePrev={false}
+				allowSlideNext={viewportWidth <= 480 ? true : false}
+				allowSlidePrev={viewportWidth <= 480 ? true : false}
 				Navigation={{
 					nextEl: `className=${styles['swiper-button-next']}`,
 					prevEl: `className=${styles['swiper-button-prev']}`
@@ -48,6 +70,12 @@ export const HomePage = () => {
 					nextArrowRef.current.style.transition = 'opacity 0.3s'
 
 					prevArrowRef.current.style.opacity = 0
+					nextArrowRef.current.style.opacity = 0
+
+					// if (viewportWidth <= 480) {
+					// 	nextArrowRef.current.style.opacity = 1
+					// 	// prevArrowRef.current.style.opacity = 1
+					// }
 				}}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {
@@ -102,33 +130,6 @@ export const HomePage = () => {
 					</div>
 				</SwiperSlide>
 			</Swiper>
-			<div
-				className={
-					styles['navigationArrow'] + ' ' + styles['navigationArrowNext']
-				}
-			/>
-			<div
-				className={
-					styles['navigationArrow'] + ' ' + styles['navigationArrowPrev']
-				}
-			/>
-			{/* <button
-				className={classNames(styles['downArrowIcon'], {
-					[styles['downArrowIconOpen']]: toggleSection
-				})}
-			>
-				<span className={styles['downArrowLine1']} />
-				<span className={styles['downArrowLine2']} />
-				<span className={styles['downArrowLine3']} />
-			</button>
-			<div
-				className={classNames(styles['overlayElement'], {
-					[styles['overlayElementToggle']]: toggleSection
-				})}
-				onClick={() => {
-					setToggleSection(!toggleSection)
-				}}
-			/> */}
 		</div>
 	)
 }
