@@ -28,7 +28,7 @@ export const HomePage = () => {
 				modules={[Navigation]}
 				direction='vertical'
 				autoplay={false}
-				spaceBetween={50}
+				spaceBetween={10}
 				slidesPerView={1}
 				navigation
 				speed={500}

@@ -56,11 +56,11 @@ a {
 .swiper-button-next::after,
 .swiper-button-prev::after {
 	font-size: 20px;
-	color: var(--dark-green);
+	color: var(--neutral-green);
 	border: 1px solid var(--neutral-green);
 	border-radius: 10%;
 	padding: 4px;
-	box-shadow: var(--neon-shadow-neutral-green);
+	box-shadow: var(--neon-shadow-light-green);
 }
 
 /* Positioning the next arrow at the bottom-right */
