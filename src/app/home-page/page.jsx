@@ -2,11 +2,10 @@
 import {useState, useRef, useEffect} from 'react'
 import Image from 'next/image'
 
-import {ResumeButton} from '../resume-button'
-import {AboutMe} from '../about-me'
-import headshot from '../../../../public/shane-headshot.jpeg'
+import {ResumeButton} from '../components/resume-button/resume-button'
+import {AboutMe} from '../about-me/page'
+import headshot from '../../../public/shane-headshot.jpeg'
 
-import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper/modules'
 
@@ -23,7 +22,6 @@ export const HomePage = () => {
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
-		console.log(prevArrowRef.current.style.opacity)
 
 		if (window.innerWidth <= 480 && prevArrowRef.current.style.opacity === 1) {
 			nextArrowRef.current.style.opacity = 1
