@@ -2,7 +2,7 @@
 import {useState, useRef, useEffect} from 'react'
 import Image from 'next/image'
 
-import {ResumeButton} from '../components/resume-button/resume-button'
+import {ResumeButton} from '../components/resume-button/resume-button.jsx'
 import {AboutMe} from '../about-me/page'
 import headshot from '../../../public/shane-headshot.jpeg'
 
@@ -14,7 +14,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-export const HomePage = () => {
+export default function HomePage() {
 	const [viewportWidth, setViewportWidth] = useState(0)
 
 	const nextArrowRef = useRef(null)
