@@ -23,8 +23,9 @@ export const HomePage = () => {
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
+		console.log(prevArrowRef.current.style.opacity)
 
-		if (window.innerWidth <= 480) {
+		if (window.innerWidth <= 480 && prevArrowRef.current.style.opacity === 1) {
 			nextArrowRef.current.style.opacity = 1
 		}
 
@@ -61,7 +62,7 @@ export const HomePage = () => {
 					nextArrowRef.current = document.querySelector('.swiper-button-next')
 					prevArrowRef.current = document.querySelector('.swiper-button-prev')
 
-					prevArrowRef.current.style.transition = 'opacity 0.5s'
+					prevArrowRef.current.style.transition = 'opacity 0.3s'
 					nextArrowRef.current.style.transition = 'opacity 0.3s'
 
 					prevArrowRef.current.style.opacity = 0
