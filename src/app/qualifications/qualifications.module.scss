@@ -25,9 +25,13 @@
 	}
 }
 
+.flatironSlide {
+	padding: 0 2rem 0 2rem;
+}
+
 .flatironContainer {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 	height: 100%;
@@ -35,6 +39,29 @@
 	margin: 0 auto;
 	padding: 0 0 2rem 0;
 	position: relative;
+}
+
+.flatironTextSection {
+	width: 30%;
+	margin-right: 0.6rem;
+	text-align: left;
+	position: relative;
+	color: var(--header-white);
+	max-height: 50vh;
+	overflow-y: auto;
+	border: 2px solid var(--light-green);
+	box-shadow: var(--neon-shadow-light-green);
+	padding: 0.8rem;
+	border-radius: 20px;
+
+	// @media (max-width: 480px) {
+	// 	padding-right: 1rem;
+	// 	padding-left: 1rem;
+	// }
+}
+
+.flatironText {
+	font-size: 0.8rem;
 }
 
 .flatironCertImageWrapper {
@@ -55,16 +82,59 @@
 	}
 }
 
-.flatironTextSection {
-	width: 50%;
-	max-width: var(--max-width);
-	padding-left: 2rem;
-	text-align: left;
-	position: relative;
-	color: var(--header-white);
+.swiperButtonNext,
+.swiperButtonPrev {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: auto 0px auto 0px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	// background-color: var(--light-green);
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+	cursor: pointer;
+	font-family: swiper-icons;
+	font-size: var(--swiper-navigation-size);
+	text-transform: none !important;
+	letter-spacing: 0;
+	font-variant: initial;
+	line-height: 1;
+	color: var(--neutral-green);
+	border: 1px solid var(--neutral-green);
+	border-radius: 10%;
+	padding: 4px;
+	box-shadow: var(--neon-shadow-light-green);
 
 	@media (max-width: 480px) {
-		padding-right: 1rem;
-		padding-left: 1rem;
+		// visibility: visible;
 	}
+}
+
+.swiperButtonPrev::after {
+	content: 'prev';
+}
+
+.swiperButtonNext::after {
+	content: 'next';
+}
+
+.swiperButtonNext {
+	bottom: 20% !important;
+	top: 0 !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+	margin-bottom: 1rem !important;
+}
+
+.swiperButtonPrev {
+	top: 20% !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+	margin-top: 0.8rem !important;
 }
