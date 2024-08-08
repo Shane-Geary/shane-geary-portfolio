@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import GlowstikFontLogo from '../../../public/Glowstik_Logo_Door.svg'
 import GlowstikLogo from '../../../public/Glowstik_Logo.svg'
@@ -19,6 +20,13 @@ export default function Projects() {
 				</div>
 			</div>
 			<div className={styles['glowstikTextSection']}>
+				<Link
+					className={styles['glowstikUrlWrapper']}
+					href={'https://www.glowstik.com/'}
+					target='_blank'
+				>
+					https://www.glowstik.com/
+				</Link>
 				<div className={styles['glowstikTextContainer']}>
 					<div className={styles['glowstikLogoWrapper']}>
 						<Image
@@ -36,6 +44,9 @@ export default function Projects() {
 						area, so they can find anything, sell anything, meet anyone or share
 						anything.
 					</div>
+				</div>
+				<div className={styles['projectTitleWrapper']}>
+					Software Engineer - Founding Team
 				</div>
 			</div>
 		</div>

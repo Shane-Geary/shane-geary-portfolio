@@ -36,6 +36,17 @@
 	}
 }
 
+.glowstikUrlWrapper {
+	position: absolute;
+	font-size: 1rem;
+	max-width: var(--max-width);
+	bottom: 100%;
+	left: 25%;
+	transform: translateX(-25%);
+	margin-bottom: 2rem;
+	text-decoration: underline;
+}
+
 .glowstikTextContainer {
 	border: 2px solid var(--glowstik-pink);
 	box-shadow: var(--neon-shadow-glowstik-pink);
@@ -69,4 +80,14 @@
 	@media (max-width: 480px) {
 		font-size: 8px;
 	}
+}
+
+.projectTitleWrapper {
+	position: absolute;
+	font-size: 1rem;
+	top: 100%;
+	left: 20%;
+	transform: translateX(-20%);
+	margin-top: 1.2rem;
+	color: var(--neutral-green);
 }
