@@ -5,9 +5,8 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 2rem 0 6rem 0;
+	padding: 6rem 0 2rem 0;
 	color: var(--header-white);
-	height: 100%;
 	position: relative;
 }
 
@@ -25,13 +24,11 @@
 }
 
 .glowstikTextSection {
-	display: flex;
-	justify-content: flex-end; /* Aligns the content to the right */
 	width: 50%;
 	max-width: var(--max-width);
 	padding-right: 2rem;
-	color: var(--header-white);
 	text-align: left;
+	position: relative;
 
 	@media (max-width: 480px) {
 		padding-right: 1rem;
@@ -40,28 +37,20 @@
 }
 
 .glowstikTextContainer {
-	max-height: 30vh;
-	overflow-y: auto;
 	border: 2px solid var(--glowstik-pink);
 	box-shadow: var(--neon-shadow-glowstik-pink);
 	padding: 0.8rem;
 	border-radius: 20px;
-	display: flex;
-	flex: 1;
-}
-
-.contentContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
+	position: relative;
+	max-height: 50vh;
+	overflow-y: auto;
 }
 
 .glowstikLogoWrapper {
-	flex-shrink: 0;
-	width: 25%;
-	min-width: 200px;
-	margin: 0 0.5rem;
+	float: left;
+	width: 15%;
+	min-width: 100px;
+	margin: 0 1rem 0.5rem 0;
 	background-image: url('/map-mask-132.svg');
 	background-size: cover;
 	background-position: center;
@@ -70,10 +59,9 @@
 
 .glowstikText {
 	font-size: 12px;
-	line-height: 1.6;
-	max-width: 100%;
+	line-height: 1.8;
 	text-align: left;
-
+	color: var(--header-white);
 	@media (max-width: 768px) {
 		font-size: 10px;
 	}

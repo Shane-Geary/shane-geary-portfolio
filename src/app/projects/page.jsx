@@ -20,23 +20,21 @@ export default function Projects() {
 			</div>
 			<div className={styles['glowstikTextSection']}>
 				<div className={styles['glowstikTextContainer']}>
-					<div className={styles['contentContainer']}>
-						<div className={styles['glowstikLogoWrapper']}>
-							<Image
-								src={GlowstikLogo}
-								width={1024}
-								height={1024}
-								layout='responsive'
-							/>
-						</div>
-						<div className={styles['glowstikText']}>
-							Glowstiks patented technology cloaks your location and doesn’t
-							share personal information. As a result, all the opportunities are
-							matched and shown on a map so people can go to areas of
-							opportunity. People can safely broadcast messages in real-time to
-							other people in their area, so they can find anything, sell
-							anything, meet anyone or share anything.
-						</div>
+					<div className={styles['glowstikLogoWrapper']}>
+						<Image
+							src={GlowstikLogo}
+							width={1024}
+							height={1024}
+							layout='responsive'
+						/>
+					</div>
+					<div className={styles['glowstikText']}>
+						Glowstiks patented technology cloaks your location and doesn’t share
+						personal information. As a result, all the opportunities are matched
+						and shown on a map so people can go to areas of opportunity. People
+						can safely broadcast messages in real-time to other people in their
+						area, so they can find anything, sell anything, meet anyone or share
+						anything.
 					</div>
 				</div>
 			</div>
