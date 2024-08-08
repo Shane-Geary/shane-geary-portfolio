@@ -5,7 +5,7 @@ import Image from 'next/image'
 import styles from './qualifications.module.scss'
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import SwiperCore, {Navigation} from 'swiper/modules'
+import SwiperCore, {Navigation, Pagination} from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -23,7 +23,7 @@ export default function Qualifications() {
 		<div className={styles['qualificationsWrapper']}>
 			<div className={styles['qualificationsTitleWrapper']}>Qualifications</div>
 			<Swiper
-				modules={[Navigation]}
+				modules={[Navigation, Pagination]}
 				direction='vertical'
 				autoplay={false}
 				spaceBetween={10}
@@ -33,6 +33,12 @@ export default function Qualifications() {
 				navigation={{
 					nextEl: '#swiperButtonNextID',
 					prevEl: '#swiperButtonPrevID'
+				}}
+				pagination={{
+					bulletActiveClass: styles['activeBullet'],
+					bulletClass: styles['bullet'],
+					clickable: true,
+					verticalClass: styles['paginationVertical']
 				}}
 				enabled
 				onSwiper={() => {
