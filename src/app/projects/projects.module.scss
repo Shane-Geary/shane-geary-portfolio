@@ -1,8 +1,36 @@
 .projectsContainer {
+	width: 100%;
+	height: 100%;
+}
+
+.projectsTitleWrapper {
+	position: absolute;
+	font-size: 3rem;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 1.2rem;
+	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+
+	@media (max-width: 768px) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 2rem;
+	}
+}
+
+.glowstikProjectContainer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	height: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 6rem 0 2rem 0;
