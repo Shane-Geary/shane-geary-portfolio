@@ -33,14 +33,38 @@
 	height: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	// padding: 6rem 0 2rem 0;
+	padding: 0 0 2rem 0;
 	position: relative;
 }
 
 .flatironCertImageWrapper {
 	width: 50%;
-	// max-width: 300px;
-	// border: 2px solid var(--neutral-green);
-	// box-shadow: var(--neon-shadow-neutral-green);
-	// border-radius: 50%;
+	padding-right: 2rem;
+	cursor: pointer;
+	position: relative;
+
+	&.fullscreenImage {
+		position: fixed;
+		display: block;
+		width: 80vw;
+		height: 80vh;
+		z-index: 1001;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.flatironTextSection {
+	width: 50%;
+	max-width: var(--max-width);
+	padding-left: 2rem;
+	text-align: left;
+	position: relative;
+	color: var(--header-white);
+
+	@media (max-width: 480px) {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
 }
