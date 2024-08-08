@@ -1,6 +1,7 @@
 'use client'
 import {useState} from 'react'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from './nav-bar.module.scss'
 
@@ -41,12 +42,10 @@ export const NavBar = () => {
 						[styles['navLinksOpen']]: isHamburgerOpen
 					})}
 				>
-					<a href='/'>Home</a>
-					{/* <a href='#about'>About</a> */}
-					<a href='#skills'>Skills</a>
-					<a href='/projects'>Projects</a>
-					{/* <a href='#blog'>Blog</a> */}
-					<a href='#contact'>Contact</a>
+					<Link href='/'>Home</Link>
+					<Link href='/projects'>Projects</Link>
+					<Link href='/qualifications'>Qualifications</Link>
+					<Link href='/contact'>Contact</Link>
 				</nav>
 			</div>
 		</header>
