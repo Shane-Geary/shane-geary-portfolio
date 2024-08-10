@@ -1,5 +1,6 @@
 'use client'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import {useRouter} from 'next/navigation'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,6 +11,7 @@ import classNames from 'classnames'
 import logoSrc from '../../../../public/gearz.JPG'
 
 export const NavBar = () => {
+	const router = useRouter()
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
 	return (
@@ -41,6 +43,9 @@ export const NavBar = () => {
 					className={classNames(styles['navLinks'], {
 						[styles['navLinksOpen']]: isHamburgerOpen
 					})}
+					onClick={() => {
+						setIsHamburgerOpen(false)
+					}}
 				>
 					<Link href='/'>Home</Link>
 					<Link href='/projects'>Projects</Link>
