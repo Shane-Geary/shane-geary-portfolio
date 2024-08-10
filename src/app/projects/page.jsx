@@ -33,6 +33,7 @@ export default function Projects() {
 					<div className={styles['glowstikTextContainer']}>
 						<div className={styles['glowstikLogoWrapper']}>
 							<Image
+								alt='Glowstik Logo'
 								src={GlowstikLogo}
 								width={1024}
 								height={1024}
