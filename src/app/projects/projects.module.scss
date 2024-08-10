@@ -16,12 +16,17 @@
 	background-clip: text;
 	color: transparent;
 
+	@media (min-width: 1024px) {
+		font-size: 3rem;
+	}
+
 	@media (max-width: 768px) {
-		font-size: 2rem;
+		font-size: 1.6rem;
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 2rem;
+		font-size: 1rem;
 	}
 }
 
@@ -36,10 +41,17 @@
 	padding: 10rem 0 2rem 0;
 	color: var(--header-white);
 	position: relative;
+
+	@media (max-width: 480px) {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		height: 90%;
+	}
 }
 
 .logoPositionContainer {
-	flex: 1;
+	flex: 0.5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -48,7 +60,10 @@
 .glowstikFontLogoWrapper {
 	width: 60%;
 	max-width: 400px;
-	border-radius: 20px;
+	@media (max-width: 480px) {
+		width: 50%;
+		margin-top: 1rem;
+	}
 }
 
 .glowstikTextSection {
@@ -59,8 +74,11 @@
 	position: relative;
 
 	@media (max-width: 480px) {
-		padding-right: 1rem;
-		padding-left: 1rem;
+		margin-right: 0;
+		margin-bottom: 0;
+		width: 90%;
+		max-height: 25vh;
+		padding: 0.5rem;
 	}
 }
 
@@ -73,6 +91,13 @@
 	transform: translateX(-25%);
 	margin-bottom: 2rem;
 	text-decoration: underline;
+
+	@media (max-width: 480px) {
+		font-size: 0.4rem;
+		bottom: 80%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .glowstikTextContainer {
@@ -83,6 +108,11 @@
 	position: relative;
 	max-height: 50vh;
 	overflow-y: auto;
+
+	@media (max-width: 480px) {
+		max-height: 25vh;
+		padding: 0.5rem;
+	}
 }
 
 /* Hide scrollbar for Chrome, Safari, and Opera */
@@ -105,6 +135,12 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	@media (max-width: 480px) {
+		width: 10%;
+		min-width: 50px;
+		margin: 0 0.5rem 0.2rem 0;
+	}
 }
 
 .glowstikText {
@@ -129,4 +165,12 @@
 	transform: translateX(-20%);
 	margin-top: 1.2rem;
 	color: var(--neutral-green);
+
+	@media (max-width: 480px) {
+		font-size: 0.4rem;
+		top: auto;
+		margin-top: 0.8rem;
+		left: 30%;
+		transform: translateX(-30%);
+	}
 }
