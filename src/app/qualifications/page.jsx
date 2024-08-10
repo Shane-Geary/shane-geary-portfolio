@@ -35,10 +35,10 @@ export default function Qualifications() {
 					prevEl: '#swiperButtonPrevID'
 				}}
 				pagination={{
-					bulletActiveClass: styles['activeBullet'],
-					bulletClass: styles['bullet'],
+					bulletActiveClass: 'activeBullet',
+					bulletClass: 'bullet',
 					clickable: true,
-					verticalClass: styles['paginationVertical']
+					verticalClass: 'paginationVertical'
 				}}
 				enabled
 				onSwiper={() => {
