@@ -11,7 +11,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import FlatironCertificate from '../../../public/shane-flatiron-certificate.JPG'
+import FlatironCertificate from '../../../public/shane-flatiron-certificate.png'
 
 export default function Qualifications() {
 	const [imageFullscreen, setImageFullscreen] = useState(false)
@@ -81,9 +81,10 @@ export default function Qualifications() {
 							}}
 						>
 							<Image
+								alt='Flatiron Certificate'
 								src={FlatironCertificate}
-								width={1584}
-								height={1224}
+								width={100}
+								height={100}
 								layout='responsive'
 							/>
 						</div>

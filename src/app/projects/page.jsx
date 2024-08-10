@@ -14,6 +14,7 @@ export default function Projects() {
 				<div className={styles['logoPositionContainer']}>
 					<div className={styles['glowstikFontLogoWrapper']}>
 						<Image
+							alt='Glowstik Font Logo'
 							src={GlowstikFontLogo}
 							width={1100}
 							height={260}
