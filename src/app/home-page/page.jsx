@@ -2,8 +2,8 @@
 import {useState, useRef, useEffect} from 'react'
 import Image from 'next/image'
 
-import {ResumeButton} from '../components/resume-button/resume-button.jsx'
-import {AboutMe} from '../components/about-me/about-me.jsx'
+import {ResumeButton} from '../../components/resume-button/resume-button.jsx'
+import {AboutMe} from '../../components/about-me/about-me.jsx'
 import headshot from '../../../public/shane-headshot.jpeg'
 
 import {Swiper, SwiperSlide} from 'swiper/react'

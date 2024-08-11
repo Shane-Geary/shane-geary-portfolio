@@ -8,7 +8,7 @@ import styles from './nav-bar.module.scss'
 
 import classNames from 'classnames'
 
-import logoSrc from '../../../../public/gearz.JPG'
+import logoSrc from '../../../public/gearz.JPG'
 
 export const NavBar = () => {
 	const router = useRouter()
