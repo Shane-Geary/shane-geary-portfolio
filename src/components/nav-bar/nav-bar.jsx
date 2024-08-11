@@ -1,6 +1,5 @@
 'use client'
-import {useState, useEffect} from 'react'
-import {useRouter} from 'next/navigation'
+import {useState} from 'react'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,7 +10,6 @@ import classNames from 'classnames'
 import logoSrc from '../../../public/gearz.JPG'
 
 export const NavBar = () => {
-	const router = useRouter()
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
 	return (
@@ -20,9 +18,11 @@ export const NavBar = () => {
 				<div className={styles['logo']}>
 					<Image
 						src={logoSrc}
+						width={512}
+						height={512}
 						alt='Shane AI'
 						priority={true}
-						layout='fill'
+						layout='responsive'
 						objectFit='contain'
 						style={{borderRadius: '50%'}}
 					/>
