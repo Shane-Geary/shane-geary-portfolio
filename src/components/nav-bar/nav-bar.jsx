@@ -49,7 +49,7 @@ export const NavBar = () => {
 				>
 					<Link href='/'>Home</Link>
 					<Link href='/projects'>Projects</Link>
-					<Link href='/qualifications'>Qualifications</Link>
+					<Link href='/qualifications?section=flatiron'>Qualifications</Link>
 					<Link href='/contact'>Contact</Link>
 				</nav>
 			</div>

@@ -1,8 +1,10 @@
 'use client'
 import {useRef} from 'react'
+import {useSearchParams} from 'next/navigation'
 import Image from 'next/legacy/image'
 
 import Flatiron from './flatiron/page'
+import AWSCerts from './aws-certifications/aws-certifications'
 
 import styles from './qualifications.module.scss'
 import classNames from 'classnames'
@@ -16,6 +18,12 @@ import 'swiper/css/pagination'
 export default function Qualifications() {
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
+	const searchParams = useSearchParams()
+
+	const slideRoutes = ['flatiron', 'aws-certifications']
+
+	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
+	console.log('initialSlideIndex', initialSlideIndex)
 
 	return (
 		<div className={styles['qualificationsWrapper']}>
@@ -27,6 +35,7 @@ export default function Qualifications() {
 				spaceBetween={10}
 				slidesPerView={1}
 				speed={500}
+				initialSlide={initialSlideIndex}
 				style={{height: '100vh', position: 'relative'}}
 				navigation={{
 					nextEl: '#swiperButtonNextID',
@@ -52,17 +61,29 @@ export default function Qualifications() {
 					if (e.activeIndex === 0) {
 						prevArrowRef.current.style.opacity = 0
 						nextArrowRef.current.style.opacity = 1
+
+						window.history.pushState(
+							{},
+							'',
+							`?section=${slideRoutes[e.activeIndex]}`
+						)
 					} else {
 						prevArrowRef.current.style.opacity = 1
 						nextArrowRef.current.style.opacity = 0
+
+						window.history.pushState(
+							{},
+							'',
+							`?section=${slideRoutes[e.activeIndex]}`
+						)
 					}
 				}}
 			>
 				<SwiperSlide className={styles['flatironSlide']}>
 					<Flatiron />
 				</SwiperSlide>
-				<SwiperSlide>
-					<div>YO</div>
+				<SwiperSlide className={styles['flatironSlide']}>
+					<AWSCerts />
 				</SwiperSlide>
 				<div
 					ref={prevArrowRef}
