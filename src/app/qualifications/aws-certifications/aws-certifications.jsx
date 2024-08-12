@@ -12,12 +12,7 @@ export default function AWSCerts() {
 					projects."
 				</div>
 			</div>
-			<div
-				className={styles['awsIframeContainer']}
-				// onClick={() => {
-				// 	setImageFullscreen(!imageFullscreen)
-				// }}
-			>
+			<div className={styles['awsIframeContainer']}>
 				<iframe src='/AWSCCP.pdf' />
 			</div>
 		</div>
