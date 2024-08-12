@@ -71,8 +71,8 @@ export default function Projects() {
 								<Image
 									alt='Glowstik Font Logo'
 									src={GlowstikFontLogo}
-									width={1100}
-									height={260}
+									// width={1100}
+									// height={260}
 									layout='responsive'
 								/>
 							</div>
