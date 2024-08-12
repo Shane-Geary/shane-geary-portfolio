@@ -1,7 +1,7 @@
 .navbar {
 	background-color: var(--background-clr);
 	color: var(--header-white);
-	padding: 16px 32px;
+	padding: 1rem 0 1rem 0;
 	width: 100%;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	position: fixed;
@@ -10,7 +10,7 @@
 	z-index: 9999;
 
 	@media (max-width: 480px) {
-		padding: 8px 16px;
+		padding: 1rem 1rem 0 1rem;
 	}
 }
 
@@ -68,7 +68,6 @@
 }
 
 .logo {
-	display: flex;
 	flex-grow: 0.5;
 	width: 10%;
 	max-width: 75px;

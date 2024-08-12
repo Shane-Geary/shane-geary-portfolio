@@ -1,6 +1,6 @@
 'use client'
 import {useState, useRef} from 'react'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import GlowstikFontLogo from '../../../public/Glowstik_Logo_Door.svg'

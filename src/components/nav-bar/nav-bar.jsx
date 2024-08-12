@@ -2,7 +2,7 @@
 import {useState} from 'react'
 
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import styles from './nav-bar.module.scss'
 
 import classNames from 'classnames'
@@ -21,9 +21,9 @@ export const NavBar = () => {
 						width={512}
 						height={512}
 						alt='Shane AI'
-						priority={true}
+						// priority={true}
 						layout='responsive'
-						objectFit='contain'
+						// objectFit='contain'
 						style={{borderRadius: '50%'}}
 					/>
 				</div>

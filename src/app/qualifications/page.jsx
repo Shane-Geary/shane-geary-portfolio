@@ -1,6 +1,8 @@
 'use client'
-import {useState, useRef} from 'react'
-import Image from 'next/image'
+import {useRef} from 'react'
+import Image from 'next/legacy/image'
+
+import Flatiron from './flatiron/page'
 
 import styles from './qualifications.module.scss'
 import classNames from 'classnames'
@@ -11,11 +13,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import FlatironCertificate from '../../../public/shane-flatiron-certificate.png'
-
 export default function Qualifications() {
-	const [imageFullscreen, setImageFullscreen] = useState(false)
-
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
@@ -61,34 +59,7 @@ export default function Qualifications() {
 				}}
 			>
 				<SwiperSlide className={styles['flatironSlide']}>
-					<div className={styles['flatironContainer']}>
-						<div className={styles['flatironTextSection']}>
-							{/* <div className={styles['flatironTitleWrapper']}>
-								Software Engineering Certificate
-							</div> */}
-							<div className={styles['flatironText']}>
-								Rigorous coding bootcamp where I learned the fundamentals of web
-								development languages. Such as HTML, CSS, JavaScript, ReactJS,
-								etc.
-							</div>
-						</div>
-						<div
-							className={classNames(styles['flatironCertImageWrapper'], {
-								[styles['fullscreenImage']]: imageFullscreen
-							})}
-							onClick={() => {
-								setImageFullscreen(!imageFullscreen)
-							}}
-						>
-							<Image
-								alt='Flatiron Certificate'
-								src={FlatironCertificate}
-								width={100}
-								height={100}
-								layout='responsive'
-							/>
-						</div>
-					</div>
+					<Flatiron />
 				</SwiperSlide>
 				<SwiperSlide>
 					<div>YO</div>
