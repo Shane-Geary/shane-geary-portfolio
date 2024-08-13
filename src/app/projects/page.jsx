@@ -33,6 +33,7 @@ export default function Projects() {
 				// TODO - Navigation/Pagination disabled until additional projects are added
 				allowSlideNext={false}
 				allowSlidePrev={false}
+				allowTouchMove={false}
 				// navigation={{
 				// 	nextEl: '#swiperButtonNextID',
 				// 	prevEl: '#swiperButtonPrevID'

@@ -15,11 +15,6 @@
 
 	@media (max-width: 480px) {
 		height: 100dvh !important;
-
-		&.scrollContainerTouched {
-			touch-action: none;
-			pointer-events: none;
-		}
 	}
 }
 
@@ -145,4 +140,60 @@
 	border: 2px solid var(--neutral-green);
 	box-shadow: var(--neon-shadow-neutral-green);
 	border-radius: 50%;
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: auto 0px auto 0px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 300ms ease-in-out;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+	cursor: pointer;
+	font-family: swiper-icons;
+	font-size: var(--swiper-navigation-size);
+	text-transform: none !important;
+	letter-spacing: 0;
+	font-variant: initial;
+	line-height: 1;
+	color: var(--neutral-green);
+	border: 1px solid var(--neutral-green);
+	border-radius: 10%;
+	padding: 4px;
+	box-shadow: var(--neon-shadow-light-green);
+}
+
+.swiperButtonPrev::after {
+	content: 'prev';
+}
+
+.swiperButtonNext::after {
+	content: 'next';
+	animation: pulse-border-shadow 1s infinite ease-in-out;
+}
+
+.swiperButtonNext {
+	bottom: 10% !important;
+	top: 0 !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+	margin-bottom: 1.5rem !important;
+}
+
+.swiperButtonPrev {
+	top: 20% !important;
+	left: 50% !important;
+	transform: rotate(90deg);
+	margin-top: 1.6rem !important;
 }

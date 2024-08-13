@@ -17,7 +17,6 @@ import 'swiper/css/pagination'
 
 export default function HomePage() {
 	const [viewportWidth, setViewportWidth] = useState(0)
-	const [scrollContainerTouched, setScrollContainerTouched] = useState(false)
 
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
@@ -49,37 +48,47 @@ export default function HomePage() {
 				autoplay={false}
 				spaceBetween={10}
 				slidesPerView={1}
-				navigation
 				speed={500}
 				style={{height: '100dvh', position: 'relative'}}
 				allowSlideNext={viewportWidth <= 480 ? true : false}
 				allowSlidePrev={viewportWidth <= 480 ? true : false}
-				// allowSlideNext={false}
-				// allowSlidePrev={false}
-				allowTouchMove={scrollContainerTouched ? false : true}
-				Navigation={{
-					nextEl: `className=${styles['swiper-button-next']}`,
-					prevEl: `className=${styles['swiper-button-prev']}`
+				allowTouchMove={false}
+				navigation={{
+					nextEl: '#swiperButtonNextID',
+					prevEl: '#swiperButtonPrevID'
 				}}
 				enabled
 				onSwiper={() => {
-					nextArrowRef.current = document.querySelector('.swiper-button-next')
-					prevArrowRef.current = document.querySelector('.swiper-button-prev')
+					nextArrowRef.current = document.getElementById('swiperButtonNextID')
+					prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-					prevArrowRef.current.style.transition = 'opacity 0.3s'
-					nextArrowRef.current.style.transition = 'opacity 0.3s'
-
-					prevArrowRef.current.style.opacity = 0
+					nextArrowRef.current.style.visibility = 'visible'
+					nextArrowRef.current.style.opacity = 1
 				}}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {
+						prevArrowRef.current.style.visibility = 'hidden'
+						nextArrowRef.current.style.visibility = 'visible'
+
 						prevArrowRef.current.style.opacity = 0
 						nextArrowRef.current.style.opacity = 1
 					} else {
+						prevArrowRef.current.style.visibility = 'visible'
+						nextArrowRef.current.style.visibility = 'hidden'
+
 						prevArrowRef.current.style.opacity = 1
 						nextArrowRef.current.style.opacity = 0
 					}
 				}}
+				// onSlideChange={(e) => {
+				// 	if (e.activeIndex === 0) {
+				// 		prevArrowRef.current.style.opacity = 0
+				// 		nextArrowRef.current.style.opacity = 1
+				// 	} else {
+				// 		prevArrowRef.current.style.opacity = 1
+				// 		nextArrowRef.current.style.opacity = 0
+				// 	}
+				// }}
 			>
 				<SwiperSlide className={styles['slideOneWrapper']}>
 					<div className={styles['heroSection']}>
@@ -93,11 +102,7 @@ export default function HomePage() {
 						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide
-					className={classNames(styles['slideTwoWrapper'], {
-						[styles['scrollContainerTouched']]: scrollContainerTouched
-					})}
-				>
+				<SwiperSlide className={styles['slideTwoWrapper']}>
 					<div className={styles['aboutMeContainer']}>
 						<h2 className={styles['aboutMeTitle']}>About Me</h2>
 						<div className={styles['headshotPositionWrapper']}>
@@ -115,10 +120,20 @@ export default function HomePage() {
 							</div>
 						</div>
 						<div className={styles['aboutMePositionWrapper']}>
-							<AboutMe {...{setScrollContainerTouched}} />
+							<AboutMe />
 						</div>
 					</div>
 				</SwiperSlide>
+				<div
+					ref={prevArrowRef}
+					id='swiperButtonPrevID'
+					className={styles['swiperButtonPrev']}
+				/>
+				<div
+					ref={nextArrowRef}
+					id='swiperButtonNextID'
+					className={styles['swiperButtonNext']}
+				/>
 			</Swiper>
 		</div>
 	)

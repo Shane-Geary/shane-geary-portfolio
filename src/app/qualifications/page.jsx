@@ -37,6 +37,9 @@ export default function Qualifications() {
 				speed={500}
 				initialSlide={initialSlideIndex}
 				style={{height: '100dvh', position: 'relative'}}
+				allowSlideNext
+				allowSlidePrev
+				allowTouchMove={false}
 				navigation={{
 					nextEl: '#swiperButtonNextID',
 					prevEl: '#swiperButtonPrevID'
