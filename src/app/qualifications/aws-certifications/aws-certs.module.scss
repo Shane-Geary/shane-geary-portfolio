@@ -22,7 +22,6 @@
 	width: 30%;
 	margin-left: 0.6rem;
 	text-align: left;
-	color: var(--header-white);
 	max-height: 40dvh;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
@@ -51,18 +50,17 @@
 }
 
 .awsText {
-	font-size: 1rem;
+	font-size: 12px;
 	line-height: 1.8;
 	max-width: 800px;
 	margin: 0 auto;
-
+	color: var(--header-white);
 	@media (max-width: 768px) {
-		font-size: 0.4rem;
+		font-size: 10px;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 0.35rem;
-		line-height: 1.6;
+		font-size: 8px;
 	}
 }
 
