@@ -51,10 +51,12 @@
 
 	@media (max-width: 480px) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, auto);
+		grid-template-rows: repeat(4, auto);
 		height: 70%;
 		width: 100%;
 		margin: 0;
+		top: 10%;
+		grid-gap: 0;
 	}
 }
 
@@ -111,6 +113,7 @@
 
 	@media (max-width: 480px) {
 		grid-column: 1;
+		grid-row: 3;
 		width: 20vw;
 		height: 20vw;
 	}
@@ -144,6 +147,7 @@
 
 	@media (max-width: 480px) {
 		grid-column: 2;
+		grid-row: 2;
 		width: 20vw;
 		height: 20vw;
 	}
@@ -179,6 +183,7 @@
 		width: 20vw;
 		height: 20vw;
 		grid-column: 2;
+		grid-row: 4;
 	}
 
 	&:hover .text {
