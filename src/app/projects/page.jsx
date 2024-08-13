@@ -23,46 +23,49 @@ export default function Projects() {
 		<div className={styles['projectsContainer']}>
 			<div className={styles['projectsTitleWrapper']}>Projects</div>
 			<Swiper
-				modules={[Navigation, Pagination]}
+				// modules={[Navigation, Pagination]}
 				direction='vertical'
 				autoplay={false}
 				spaceBetween={10}
 				slidesPerView={1}
 				speed={500}
 				style={{height: '100vh', position: 'relative'}}
-				navigation={{
-					nextEl: '#swiperButtonNextID',
-					prevEl: '#swiperButtonPrevID'
-				}}
-				pagination={{
-					bulletActiveClass: 'activeBullet',
-					bulletClass: 'bullet',
-					clickable: true,
-					verticalClass: styles['customPaginationVertical']
-				}}
-				enabled
-				onSwiper={() => {
-					nextArrowRef.current = document.getElementById('swiperButtonNextID')
-					prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+				// TODO - Navigation/Pagination disabled until additional projects are added
+				allowSlideNext={false}
+				allowSlidePrev={false}
+				// navigation={{
+				// 	nextEl: '#swiperButtonNextID',
+				// 	prevEl: '#swiperButtonPrevID'
+				// }}
+				// pagination={{
+				// 	bulletActiveClass: 'activeBullet',
+				// 	bulletClass: 'bullet',
+				// 	clickable: true,
+				// 	verticalClass: styles['customPaginationVertical']
+				// }}
+				// enabled
+				// onSwiper={() => {
+				// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
+				// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-					nextArrowRef.current.style.visibility = 'visible'
-					nextArrowRef.current.style.opacity = 1
-				}}
-				onSlideChange={(e) => {
-					if (e.activeIndex === 0) {
-						prevArrowRef.current.style.visibility = 'hidden'
-						nextArrowRef.current.style.visibility = 'visible'
+				// 	nextArrowRef.current.style.visibility = 'visible'
+				// 	nextArrowRef.current.style.opacity = 1
+				// }}
+				// onSlideChange={(e) => {
+				// 	if (e.activeIndex === 0) {
+				// 		prevArrowRef.current.style.visibility = 'hidden'
+				// 		nextArrowRef.current.style.visibility = 'visible'
 
-						prevArrowRef.current.style.opacity = 0
-						nextArrowRef.current.style.opacity = 1
-					} else {
-						prevArrowRef.current.style.visibility = 'visible'
-						nextArrowRef.current.style.visibility = 'hidden'
+				// 		prevArrowRef.current.style.opacity = 0
+				// 		nextArrowRef.current.style.opacity = 1
+				// 	} else {
+				// 		prevArrowRef.current.style.visibility = 'visible'
+				// 		nextArrowRef.current.style.visibility = 'hidden'
 
-						prevArrowRef.current.style.opacity = 1
-						nextArrowRef.current.style.opacity = 0
-					}
-				}}
+				// 		prevArrowRef.current.style.opacity = 1
+				// 		nextArrowRef.current.style.opacity = 0
+				// 	}
+				// }}
 			>
 				<SwiperSlide className={styles['glowstikSlide']}>
 					<div className={styles['glowstikProjectContainer']}>
