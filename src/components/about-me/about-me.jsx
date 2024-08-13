@@ -1,10 +1,18 @@
 import styles from './about-me.module.scss'
 
-export const AboutMe = ({aboutMeContainerRef}) => {
-	console.log('aboutMeContainerRef:', aboutMeContainerRef)
+export const AboutMe = ({setScrollContainerTouched}) => {
+	console.log('scrollContainerTouched:', setScrollContainerTouched)
 	return (
 		<div className={styles['aboutMeSection']}>
-			<div ref={aboutMeContainerRef} className={styles['aboutMeTextContainer']}>
+			<div
+				className={styles['aboutMeTextContainer']}
+				onTouchStart={() => {
+					setScrollContainerTouched(true)
+				}}
+				onTouchEnd={() => {
+					setScrollContainerTouched(false)
+				}}
+			>
 				<div className={styles['aboutMeText']}>
 					<span className={styles['jobTitle']}>Software Engineer</span>{' '}
 					experienced in ReactJS/NextJS/Typescript, HTML, CSS and other frontend

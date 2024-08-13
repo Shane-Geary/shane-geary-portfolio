@@ -16,10 +16,11 @@ import 'swiper/css/pagination'
 
 export default function HomePage() {
 	const [viewportWidth, setViewportWidth] = useState(0)
+	const [scrollContainerTouched, setScrollContainerTouched] = useState(false)
 
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
-	const aboutMeContainerRef = useRef(null)
+	// const aboutMeContainerRef = useRef(null)
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
@@ -39,31 +40,6 @@ export default function HomePage() {
 		}
 	}, [viewportWidth])
 
-	useEffect(() => {
-		const container = aboutMeContainerRef?.current
-
-		const handleTouchStart = (e) => {
-			if (
-				container.scrollTop > 0 ||
-				container.scrollHeight > container.clientHeight
-			) {
-				e.stopPropagation()
-			}
-		}
-
-		if (container) {
-			container.addEventListener('touchstart', handleTouchStart, {
-				passive: false
-			})
-		}
-
-		return () => {
-			if (container) {
-				container.removeEventListener('touchstart', handleTouchStart)
-			}
-		}
-	}, [])
-
 	return (
 		<div className={styles['homePage']}>
 			<Swiper
@@ -75,8 +51,12 @@ export default function HomePage() {
 				navigation
 				speed={500}
 				style={{height: '100dvh', position: 'relative'}}
-				allowSlideNext={viewportWidth <= 480 ? true : false}
-				allowSlidePrev={viewportWidth <= 480 ? true : false}
+				allowSlideNext={
+					viewportWidth <= 480 ? true : false || !scrollContainerTouched
+				}
+				allowSlidePrev={
+					viewportWidth <= 480 ? true : false || !scrollContainerTouched
+				}
 				Navigation={{
 					nextEl: `className=${styles['swiper-button-next']}`,
 					prevEl: `className=${styles['swiper-button-prev']}`
@@ -131,7 +111,7 @@ export default function HomePage() {
 							</div>
 						</div>
 						<div className={styles['aboutMePositionWrapper']}>
-							<AboutMe {...{aboutMeContainerRef}} />
+							<AboutMe {...{setScrollContainerTouched}} />
 						</div>
 					</div>
 				</SwiperSlide>
