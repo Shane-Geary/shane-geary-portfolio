@@ -50,7 +50,12 @@ export const ResumeButton = () => {
 					console.log('Mouse left')
 					setDownloadButtonHovered(false)
 				}}
-				onTouchStart={handleButtonClick}
+				// onTouchStart={handleButtonClick}
+				onClick={() => {
+					if (window.innerHeight <= 480) {
+						handleButtonClick()
+					}
+				}}
 				// onTouchEnd={handleTouchEnd}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
