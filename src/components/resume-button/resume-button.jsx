@@ -16,13 +16,23 @@ export const ResumeButton = () => {
 		button.classList.add(styles['hoverEffect'])
 
 		setTimeout(() => {
-			// Ensure class is removed before updating the
 			button.classList.remove(styles['hoverEffect'])
 			button.classList.remove(styles['hovered'])
 			setDownloadButtonHovered(false)
 			button.blur()
 			setDownloadButtonClicked(false)
 		}, 1500)
+	}
+
+	const downloadPDF = (timeout) => {
+		setTimeout(() => {
+			const a = document.createElement('a')
+			a.target = '_blank'
+			a.href = '/Shane-Geary-Resume.pdf'
+			a.download = 'Shane-Geary-Resume.pdf'
+			a.click()
+			a.remove()
+		}, timeout)
 	}
 
 	return (
@@ -39,6 +49,9 @@ export const ResumeButton = () => {
 					console.log('Mouse left')
 					setDownloadButtonHovered(false)
 				}}
+				onMouseDown={() => {
+					downloadPDF(0)
+				}}
 				onTouchStart={(e) => {
 					e.preventDefault()
 					handleButtonClick()
@@ -50,14 +63,7 @@ export const ResumeButton = () => {
 					button.blur()
 					setDownloadButtonHovered(false)
 
-					setTimeout(() => {
-						const a = document.createElement('a')
-						a.target = '_blank'
-						a.href = '/Shane-Geary-Resume.pdf'
-						a.download = 'Shane-Geary-Resume.pdf'
-						a.click()
-						a.remove()
-					}, 2000)
+					downloadPDF(2000)
 				}}
 			>
 				<span>
