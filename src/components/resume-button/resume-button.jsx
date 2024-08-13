@@ -17,10 +17,10 @@ export const ResumeButton = () => {
 
 		setTimeout(() => {
 			button.classList.remove(styles['hoverEffect'])
+			button.classList.remove(styles['hovered'])
 			button.blur()
 			setDownloadButtonClicked(false)
-			setDownloadButtonHovered(false)
-		}, 2000) // 750ms to match the transition duration
+		}, 2000)
 
 		// const a = document.createElement('a')
 		// a.target = '_blank'
