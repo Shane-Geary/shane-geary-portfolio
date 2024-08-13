@@ -16,6 +16,7 @@ export const ResumeButton = () => {
 		button.classList.add(styles['hoverEffect'])
 
 		setTimeout(() => {
+			setDownloadButtonHovered(false)
 			button.classList.remove(styles['hoverEffect'])
 			button.classList.remove(styles['hovered'])
 			button.blur()
@@ -56,9 +57,6 @@ export const ResumeButton = () => {
 					if (window.innerHeight <= 480) {
 						handleButtonClick()
 					}
-				}}
-				onTouchEnd={(e) => {
-					e.target.blur()
 				}}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
