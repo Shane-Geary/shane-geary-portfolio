@@ -44,6 +44,9 @@ export const ResumeButton = () => {
 					setDownloadButtonHovered(false)
 				}}
 				onTouchStart={handleButtonClick}
+				onTouchEnd={() => {
+					setDownloadButtonHovered(false)
+				}}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
 				// 	const a = document.createElement('a')
