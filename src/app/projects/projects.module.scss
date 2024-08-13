@@ -98,7 +98,7 @@
 		margin-right: 0;
 		margin-bottom: 0;
 		width: 90%;
-		max-height: 25vh;
+		max-height: 25dvh;
 		padding: 0.5rem 0.5rem 0.5rem 1.2rem;
 	}
 }
@@ -132,15 +132,15 @@
 	padding: 0.8rem;
 	border-radius: 20px;
 	position: relative;
-	max-height: 50vh;
+	max-height: 50dvh;
 	overflow-y: auto;
 
 	@media (max-width: 768px) {
-		max-height: 35vh;
+		max-height: 35dvh;
 	}
 
 	@media (max-width: 480px) {
-		max-height: 25vh;
+		max-height: 25dvh;
 		padding: 0.5rem;
 	}
 }

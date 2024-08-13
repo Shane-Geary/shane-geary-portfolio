@@ -48,7 +48,7 @@ export default function HomePage() {
 				slidesPerView={1}
 				navigation
 				speed={500}
-				style={{height: '100vh', position: 'relative'}}
+				style={{height: '100dvh', position: 'relative'}}
 				allowSlideNext={viewportWidth <= 480 ? true : false}
 				allowSlidePrev={viewportWidth <= 480 ? true : false}
 				Navigation={{

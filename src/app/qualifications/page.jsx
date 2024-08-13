@@ -36,7 +36,7 @@ export default function Qualifications() {
 				slidesPerView={1}
 				speed={500}
 				initialSlide={initialSlideIndex}
-				style={{height: '100vh', position: 'relative'}}
+				style={{height: '100dvh', position: 'relative'}}
 				navigation={{
 					nextEl: '#swiperButtonNextID',
 					prevEl: '#swiperButtonPrevID'

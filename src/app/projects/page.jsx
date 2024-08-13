@@ -29,7 +29,7 @@ export default function Projects() {
 				spaceBetween={10}
 				slidesPerView={1}
 				speed={500}
-				style={{height: '100vh', position: 'relative'}}
+				style={{height: '100dvh', position: 'relative'}}
 				// TODO - Navigation/Pagination disabled until additional projects are added
 				allowSlideNext={false}
 				allowSlidePrev={false}
