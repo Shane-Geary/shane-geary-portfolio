@@ -16,9 +16,10 @@ export const ResumeButton = () => {
 		button.classList.add(styles['hoverEffect'])
 
 		setTimeout(() => {
-			setDownloadButtonHovered(false)
+			// Ensure class is removed before updating the state
 			button.classList.remove(styles['hoverEffect'])
 			button.classList.remove(styles['hovered'])
+			setDownloadButtonHovered(false)
 			button.blur()
 			setDownloadButtonClicked(false)
 		}, 2000)
