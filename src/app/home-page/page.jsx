@@ -19,6 +19,7 @@ export default function HomePage() {
 
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
+	const aboutMeContainerRef = useRef(null)
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
@@ -37,6 +38,31 @@ export default function HomePage() {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [viewportWidth])
+
+	useEffect(() => {
+		const container = aboutMeContainerRef?.current
+
+		const handleTouchStart = (e) => {
+			if (
+				container.scrollTop > 0 ||
+				container.scrollHeight > container.clientHeight
+			) {
+				e.stopPropagation()
+			}
+		}
+
+		if (container) {
+			container.addEventListener('touchstart', handleTouchStart, {
+				passive: false
+			})
+		}
+
+		return () => {
+			if (container) {
+				container.removeEventListener('touchstart', handleTouchStart)
+			}
+		}
+	}, [])
 
 	return (
 		<div className={styles['homePage']}>
@@ -105,7 +131,7 @@ export default function HomePage() {
 							</div>
 						</div>
 						<div className={styles['aboutMePositionWrapper']}>
-							<AboutMe />
+							<AboutMe {...{aboutMeContainerRef}} />
 						</div>
 					</div>
 				</SwiperSlide>

@@ -1,9 +1,10 @@
 import styles from './about-me.module.scss'
 
-export const AboutMe = () => {
+export const AboutMe = ({aboutMeContainerRef}) => {
+	console.log('aboutMeContainerRef:', aboutMeContainerRef)
 	return (
 		<div className={styles['aboutMeSection']}>
-			<div className={styles['aboutMeTextContainer']}>
+			<div ref={aboutMeContainerRef} className={styles['aboutMeTextContainer']}>
 				<div className={styles['aboutMeText']}>
 					<span className={styles['jobTitle']}>Software Engineer</span>{' '}
 					experienced in ReactJS/NextJS/Typescript, HTML, CSS and other frontend
