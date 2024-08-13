@@ -42,11 +42,9 @@ export const ResumeButton = () => {
 					[styles['hovered']]: downloadButtonHovered
 				})}
 				onMouseEnter={() => {
-					console.log('Mouse entered')
 					setDownloadButtonHovered(true)
 				}}
 				onMouseLeave={() => {
-					console.log('Mouse left')
 					setDownloadButtonHovered(false)
 				}}
 				onMouseDown={() => {

@@ -8,7 +8,6 @@ import headshot from '../../../public/shane-headshot.jpeg'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper/modules'
-import classNames from 'classnames'
 
 import styles from './home-page.module.scss'
 import 'swiper/css'
@@ -20,17 +19,14 @@ export default function HomePage() {
 
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
-	// const aboutMeContainerRef = useRef(null)
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
-		console.log('Viewport width:', window.innerWidth)
 
 		nextArrowRef.current = document.getElementById('swiperButtonNextID')
 		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
 		if (viewportWidth <= 480) {
-			console.log('Viewport width is less than 480')
 			nextArrowRef.current.style.visibility = 'visible'
 			nextArrowRef.current.style.opacity = 1
 		} else {
@@ -67,19 +63,6 @@ export default function HomePage() {
 					prevEl: '#swiperButtonPrevID'
 				}}
 				enabled
-				// onSwiper={() => {
-				// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
-				// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
-
-				// 	if (viewportWidth <= 480) {
-				// 		console.log('Viewport width is less than 480')
-				// 		nextArrowRef.current.style.visibility = 'visible'
-				// 		nextArrowRef.current.style.opacity = 1
-				// 	} else {
-				// 		nextArrowRef.current.style.visibility = 'hidden'
-				// 		nextArrowRef.current.style.opacity = 0
-				// 	}
-				// }}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0 && viewportWidth <= 480) {
 						prevArrowRef.current.style.visibility = 'hidden'
@@ -95,15 +78,6 @@ export default function HomePage() {
 						nextArrowRef.current.style.opacity = 0
 					}
 				}}
-				// onSlideChange={(e) => {
-				// 	if (e.activeIndex === 0) {
-				// 		prevArrowRef.current.style.opacity = 0
-				// 		nextArrowRef.current.style.opacity = 1
-				// 	} else {
-				// 		prevArrowRef.current.style.opacity = 1
-				// 		nextArrowRef.current.style.opacity = 0
-				// 	}
-				// }}
 			>
 				<SwiperSlide className={styles['slideOneWrapper']}>
 					<div className={styles['heroSection']}>
