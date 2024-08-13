@@ -7,6 +7,7 @@ import styles from './resume-button.module.scss'
 
 export const ResumeButton = () => {
 	const [downloadButtonClicked, setDownloadButtonClicked] = useState(false)
+	const [downloadButtonHovered, setDownloadButtonHovered] = useState(false)
 
 	const handleButtonClick = () => {
 		setDownloadButtonClicked(true)
@@ -31,8 +32,17 @@ export const ResumeButton = () => {
 	return (
 		<div className={styles['buttonContainer']}>
 			<button
-				className={styles['downloadButton']}
-				// onClick={handleButtonClick}
+				className={classNames(styles['downloadButton'], {
+					[styles['hovered']]: downloadButtonHovered
+				})}
+				onMouseEnter={(e) => {
+					console.log('Mouse entered')
+					setDownloadButtonHovered(true)
+				}}
+				onMouseLeave={(e) => {
+					console.log('Mouse left')
+					setDownloadButtonHovered(false)
+				}}
 				onTouchStart={handleButtonClick}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
