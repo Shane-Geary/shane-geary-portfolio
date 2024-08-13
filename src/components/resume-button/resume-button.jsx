@@ -17,6 +17,7 @@ export const ResumeButton = () => {
 
 		setTimeout(() => {
 			button.classList.remove(styles['hoverEffect'])
+			button.blur()
 			setDownloadButtonClicked(false)
 		}, 2000) // 750ms to match the transition duration
 
@@ -29,11 +30,11 @@ export const ResumeButton = () => {
 		console.log('Download button clicked')
 	}
 
-	const handleTouchEnd = () => {
-		setDownloadButtonHovered(false)
-		const button = document.querySelector(`.${styles['downloadButton']}`)
-		button.classList.remove(styles['hoverEffect'])
-	}
+	// const handleTouchEnd = () => {
+	// 	setDownloadButtonHovered(false)
+	// 	const button = document.querySelector(`.${styles['downloadButton']}`)
+	// 	button.classList.remove(styles['hoverEffect'])
+	// }
 
 	return (
 		<div className={styles['buttonContainer']}>
@@ -50,7 +51,7 @@ export const ResumeButton = () => {
 					setDownloadButtonHovered(false)
 				}}
 				onTouchStart={handleButtonClick}
-				onTouchEnd={handleTouchEnd}
+				// onTouchEnd={handleTouchEnd}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
 				// 	const a = document.createElement('a')
