@@ -19,6 +19,7 @@ export const ResumeButton = () => {
 			button.classList.remove(styles['hoverEffect'])
 			button.blur()
 			setDownloadButtonClicked(false)
+			setDownloadButtonHovered(false)
 		}, 2000) // 750ms to match the transition duration
 
 		// const a = document.createElement('a')
@@ -56,7 +57,9 @@ export const ResumeButton = () => {
 						handleButtonClick()
 					}
 				}}
-				// onTouchEnd={handleTouchEnd}
+				onTouchEnd={(e) => {
+					e.target.blur()
+				}}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
 				// 	const a = document.createElement('a')
