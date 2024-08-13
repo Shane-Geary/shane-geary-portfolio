@@ -9,6 +9,9 @@ export const AboutMe = ({setScrollContainerTouched}) => {
 				onTouchStart={() => {
 					setScrollContainerTouched(true)
 				}}
+				onTouchMove={() => {
+					setScrollContainerTouched(true)
+				}}
 				onTouchEnd={() => {
 					setScrollContainerTouched(false)
 				}}
