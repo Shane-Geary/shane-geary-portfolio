@@ -16,7 +16,7 @@ export const ResumeButton = () => {
 		button.classList.add(styles['hoverEffect'])
 
 		setTimeout(() => {
-			// Ensure class is removed before updating the state
+			// Ensure class is removed before updating the
 			button.classList.remove(styles['hoverEffect'])
 			button.classList.remove(styles['hovered'])
 			setDownloadButtonHovered(false)
@@ -24,20 +24,14 @@ export const ResumeButton = () => {
 			setDownloadButtonClicked(false)
 		}, 2000)
 
-		// const a = document.createElement('a')
-		// a.target = '_blank'
-		// a.href = '/Shane-Geary-Resume.pdf'
-		// a.download = 'Shane-Geary-Resume.pdf'
-		// a.click()
-		// a.remove()
+		const a = document.createElement('a')
+		a.target = '_blank'
+		a.href = '/Shane-Geary-Resume.pdf'
+		a.download = 'Shane-Geary-Resume.pdf'
+		a.click()
+		a.remove()
 		console.log('Download button clicked')
 	}
-
-	// const handleTouchEnd = () => {
-	// 	setDownloadButtonHovered(false)
-	// 	const button = document.querySelector(`.${styles['downloadButton']}`)
-	// 	button.classList.remove(styles['hoverEffect'])
-	// }
 
 	return (
 		<div className={styles['buttonContainer']}>
@@ -45,11 +39,11 @@ export const ResumeButton = () => {
 				className={classNames(styles['downloadButton'], {
 					[styles['hovered']]: downloadButtonHovered
 				})}
-				onMouseEnter={(e) => {
+				onMouseEnter={() => {
 					console.log('Mouse entered')
 					setDownloadButtonHovered(true)
 				}}
-				onMouseLeave={(e) => {
+				onMouseLeave={() => {
 					console.log('Mouse left')
 					setDownloadButtonHovered(false)
 				}}
@@ -64,18 +58,6 @@ export const ResumeButton = () => {
 					button.blur()
 					setDownloadButtonHovered(false)
 				}}
-				// onClick={() => {
-				// 	setDownloadButtonClicked(true)
-				// 	const a = document.createElement('a')
-				// 	a.href = '/Shane-Geary-Resume.pdf'
-				// 	a.download = 'Shane-Geary-Resume.pdf'
-				// 	a.click()
-				// 	a.remove()
-				// 	setTimeout(() => {
-				// 		setDownloadButtonClicked(false)
-				// 	}, 2000)
-				// 	console.log('Download button clicked')
-				// }}
 			>
 				<span>
 					<div className={styles['downloadIcon']}>
