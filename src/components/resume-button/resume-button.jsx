@@ -32,7 +32,8 @@ export const ResumeButton = () => {
 		<div className={styles['buttonContainer']}>
 			<button
 				className={styles['downloadButton']}
-				onClick={handleButtonClick}
+				// onClick={handleButtonClick}
+				onTouchStart={handleButtonClick}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
 				// 	const a = document.createElement('a')
