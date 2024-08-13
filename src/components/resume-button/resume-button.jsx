@@ -53,11 +53,16 @@ export const ResumeButton = () => {
 					console.log('Mouse left')
 					setDownloadButtonHovered(false)
 				}}
-				// onTouchStart={handleButtonClick}
-				onClick={() => {
-					if (window.innerHeight <= 480) {
-						handleButtonClick()
-					}
+				onTouchStart={(e) => {
+					e.preventDefault()
+					handleButtonClick()
+				}}
+				onTouchEnd={(e) => {
+					e.preventDefault()
+					// Manually remove focus when touch ends
+					const button = e.currentTarget
+					button.blur()
+					setDownloadButtonHovered(false)
 				}}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
