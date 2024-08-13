@@ -8,6 +8,7 @@ import headshot from '../../../public/shane-headshot.jpeg'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper/modules'
+import classNames from 'classnames'
 
 import styles from './home-page.module.scss'
 import 'swiper/css'
@@ -93,7 +94,11 @@ export default function HomePage() {
 						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className={styles['slideTwoWrapper']}>
+				<SwiperSlide
+					className={classNames(styles['slideTwoWrapper'], {
+						[styles['scrollContainerTouched']]: scrollContainerTouched
+					})}
+				>
 					<div className={styles['aboutMeContainer']}>
 						<h2 className={styles['aboutMeTitle']}>About Me</h2>
 						<div className={styles['headshotPositionWrapper']}>
