@@ -52,10 +52,11 @@ export default function HomePage() {
 				navigation
 				speed={500}
 				style={{height: '100dvh', position: 'relative'}}
-				// allowSlideNext={viewportWidth <= 480 ? true : false}
-				// allowSlidePrev={viewportWidth <= 480 ? true : false}
-				allowSlideNext={false}
-				allowSlidePrev={false}
+				allowSlideNext={viewportWidth <= 480 ? true : false}
+				allowSlidePrev={viewportWidth <= 480 ? true : false}
+				// allowSlideNext={false}
+				// allowSlidePrev={false}
+				allowTouchMove={false}
 				Navigation={{
 					nextEl: `className=${styles['swiper-button-next']}`,
 					prevEl: `className=${styles['swiper-button-prev']}`
