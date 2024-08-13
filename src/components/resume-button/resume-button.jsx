@@ -17,14 +17,14 @@ export const ResumeButton = () => {
 		setTimeout(() => {
 			button.classList.remove(styles['hoverEffect'])
 			setDownloadButtonClicked(false)
-		}, 750) // 750ms to match the transition duration
+		}, 2000) // 750ms to match the transition duration
 
-		const a = document.createElement('a')
-		a.href = '/Shane-Geary-Resume.pdf'
-		a.download = 'Shane-Geary-Resume.pdf'
-		a.target = '_blank'
-		a.click()
-		a.remove()
+		// const a = document.createElement('a')
+		// a.target = '_blank'
+		// a.href = '/Shane-Geary-Resume.pdf'
+		// a.download = 'Shane-Geary-Resume.pdf'
+		// a.click()
+		// a.remove()
 		console.log('Download button clicked')
 	}
 
