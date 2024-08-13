@@ -22,7 +22,7 @@ export const ResumeButton = () => {
 			setDownloadButtonHovered(false)
 			button.blur()
 			setDownloadButtonClicked(false)
-		}, 2000)
+		}, 1500)
 	}
 
 	return (
@@ -49,7 +49,8 @@ export const ResumeButton = () => {
 					const button = e.currentTarget
 					button.blur()
 					setDownloadButtonHovered(false)
-
+				}}
+				onClick={() => {
 					setTimeout(() => {
 						const a = document.createElement('a')
 						a.target = '_blank'
