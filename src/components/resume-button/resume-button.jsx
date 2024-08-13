@@ -49,8 +49,7 @@ export const ResumeButton = () => {
 					const button = e.currentTarget
 					button.blur()
 					setDownloadButtonHovered(false)
-				}}
-				onClick={() => {
+
 					setTimeout(() => {
 						const a = document.createElement('a')
 						a.target = '_blank'
