@@ -56,7 +56,7 @@ export default function HomePage() {
 				allowSlidePrev={viewportWidth <= 480 ? true : false}
 				// allowSlideNext={false}
 				// allowSlidePrev={false}
-				allowTouchMove={false}
+				allowTouchMove={scrollContainerTouched ? false : true}
 				Navigation={{
 					nextEl: `className=${styles['swiper-button-next']}`,
 					prevEl: `className=${styles['swiper-button-prev']}`
