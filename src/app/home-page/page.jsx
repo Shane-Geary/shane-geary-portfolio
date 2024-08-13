@@ -24,9 +24,18 @@ export default function HomePage() {
 
 	useEffect(() => {
 		setViewportWidth(window.innerWidth)
+		console.log('Viewport width:', window.innerWidth)
 
-		if (window.innerWidth <= 480 && prevArrowRef.current.style.opacity === 1) {
+		nextArrowRef.current = document.getElementById('swiperButtonNextID')
+		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+
+		if (viewportWidth <= 480) {
+			console.log('Viewport width is less than 480')
+			nextArrowRef.current.style.visibility = 'visible'
 			nextArrowRef.current.style.opacity = 1
+		} else {
+			nextArrowRef.current.style.visibility = 'hidden'
+			nextArrowRef.current.style.opacity = 0
 		}
 
 		const handleResize = () => {
@@ -58,15 +67,21 @@ export default function HomePage() {
 					prevEl: '#swiperButtonPrevID'
 				}}
 				enabled
-				onSwiper={() => {
-					nextArrowRef.current = document.getElementById('swiperButtonNextID')
-					prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+				// onSwiper={() => {
+				// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
+				// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-					nextArrowRef.current.style.visibility = 'visible'
-					nextArrowRef.current.style.opacity = 1
-				}}
+				// 	if (viewportWidth <= 480) {
+				// 		console.log('Viewport width is less than 480')
+				// 		nextArrowRef.current.style.visibility = 'visible'
+				// 		nextArrowRef.current.style.opacity = 1
+				// 	} else {
+				// 		nextArrowRef.current.style.visibility = 'hidden'
+				// 		nextArrowRef.current.style.opacity = 0
+				// 	}
+				// }}
 				onSlideChange={(e) => {
-					if (e.activeIndex === 0) {
+					if (e.activeIndex === 0 && viewportWidth <= 480) {
 						prevArrowRef.current.style.visibility = 'hidden'
 						nextArrowRef.current.style.visibility = 'visible'
 
