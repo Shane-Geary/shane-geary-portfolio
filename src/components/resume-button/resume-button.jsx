@@ -23,14 +23,6 @@ export const ResumeButton = () => {
 			button.blur()
 			setDownloadButtonClicked(false)
 		}, 2000)
-
-		const a = document.createElement('a')
-		a.target = '_blank'
-		a.href = '/Shane-Geary-Resume.pdf'
-		a.download = 'Shane-Geary-Resume.pdf'
-		a.click()
-		a.remove()
-		console.log('Download button clicked')
 	}
 
 	return (
@@ -57,6 +49,15 @@ export const ResumeButton = () => {
 					const button = e.currentTarget
 					button.blur()
 					setDownloadButtonHovered(false)
+
+					setTimeout(() => {
+						const a = document.createElement('a')
+						a.target = '_blank'
+						a.href = '/Shane-Geary-Resume.pdf'
+						a.download = 'Shane-Geary-Resume.pdf'
+						a.click()
+						a.remove()
+					}, 2000)
 				}}
 			>
 				<span>
