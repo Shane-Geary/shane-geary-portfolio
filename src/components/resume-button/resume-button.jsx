@@ -29,6 +29,12 @@ export const ResumeButton = () => {
 		console.log('Download button clicked')
 	}
 
+	const handleTouchEnd = () => {
+		setDownloadButtonHovered(false)
+		const button = document.querySelector(`.${styles['downloadButton']}`)
+		button.classList.remove(styles['hoverEffect'])
+	}
+
 	return (
 		<div className={styles['buttonContainer']}>
 			<button
@@ -44,9 +50,7 @@ export const ResumeButton = () => {
 					setDownloadButtonHovered(false)
 				}}
 				onTouchStart={handleButtonClick}
-				onTouchEnd={() => {
-					setDownloadButtonHovered(false)
-				}}
+				onTouchEnd={handleTouchEnd}
 				// onClick={() => {
 				// 	setDownloadButtonClicked(true)
 				// 	const a = document.createElement('a')
