@@ -12,12 +12,13 @@ export const ResumeButton = () => {
 		<div className={styles['buttonContainer']}>
 			<button
 				className={styles['downloadButton']}
-				onAnimationEnd={() => {
-					setDownloadButtonClicked(false)
-					console.log('Download button animation ended')
-				}}
-				onMouseUp={() => {
+				onClick={() => {
 					setDownloadButtonClicked(true)
+					const a = document.createElement('a')
+					a.href = '/Shane-Geary-Resume.pdf'
+					a.download = 'Shane-Geary-Resume.pdf'
+					a.click()
+					a.remove()
 					setTimeout(() => {
 						setDownloadButtonClicked(false)
 					}, 2000)
