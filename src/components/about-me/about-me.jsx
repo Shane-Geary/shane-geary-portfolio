@@ -1,7 +1,7 @@
 import styles from './about-me.module.scss'
 
 export const AboutMe = ({setScrollContainerTouched}) => {
-	console.log('scrollContainerTouched:', setScrollContainerTouched)
+	console.log('scrollContainerTouched')
 	return (
 		<div className={styles['aboutMeSection']}>
 			<div
