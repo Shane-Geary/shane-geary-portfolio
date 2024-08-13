@@ -22,6 +22,7 @@ export const ResumeButton = () => {
 		const a = document.createElement('a')
 		a.href = '/Shane-Geary-Resume.pdf'
 		a.download = 'Shane-Geary-Resume.pdf'
+		a.target = '_blank'
 		a.click()
 		a.remove()
 		console.log('Download button clicked')
