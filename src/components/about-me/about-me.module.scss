@@ -22,15 +22,14 @@
 	box-shadow: var(--neon-shadow-light-green);
 	padding: 0.8rem;
 	border-radius: 20px;
-}
+	touch-action: pan-y;
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
-.aboutMeTextContainer::-webkit-scrollbar {
-	display: none;
-}
+	/* Hide scrollbar for Chrome, Safari, and Opera */
+	::-webkit-scrollbar {
+		display: none;
+	}
 
-/* Hide scrollbar for IE, Edge, and Firefox */
-.aboutMeTextContainer {
+	/* Hide scrollbar for IE, Edge, and Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
