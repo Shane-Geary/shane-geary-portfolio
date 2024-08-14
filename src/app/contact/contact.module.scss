@@ -205,7 +205,11 @@
 	position: relative;
 	background-color: var(--header-white);
 	border-radius: 50%;
-	margin-right: 0.2rem;
+	margin-right: 0.5rem;
+
+	@media (max-width: 480px) {
+		margin-right: 0.2rem;
+	}
 }
 
 .text {
