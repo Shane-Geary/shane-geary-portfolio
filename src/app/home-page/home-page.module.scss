@@ -23,7 +23,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 6rem 0 2rem 0;
+	padding: 4rem 0 2rem 0;
 	color: var(--header-white);
 	height: 50dvh;
 	position: relative;
@@ -79,7 +79,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 2rem 0 6rem 0;
+	padding: 2rem 0 4rem 0;
 	color: var(--header-white);
 	height: 50dvh;
 	position: relative;
@@ -88,7 +88,6 @@
 		height: 100dvh;
 		flex-direction: column;
 		justify-content: center;
-		margin-top: 10%;
 	}
 }
 
@@ -192,8 +191,8 @@
 }
 
 .swiperButtonPrev {
-	top: 20% !important;
+	top: 10dvh !important;
 	left: 50% !important;
 	transform: rotate(90deg);
-	margin-top: 1.6rem !important;
+	margin-top: 2.5rem !important;
 }
