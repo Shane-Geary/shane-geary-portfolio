@@ -1,5 +1,5 @@
 'use client'
-import {useRef} from 'react'
+import {useRef, useEffect} from 'react'
 import {useSearchParams} from 'next/navigation'
 import Image from 'next/legacy/image'
 
@@ -24,6 +24,25 @@ export default function Qualifications() {
 
 	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
 	console.log('initialSlideIndex', initialSlideIndex)
+
+	useEffect(() => {
+		nextArrowRef.current = document.getElementById('swiperButtonNextID')
+		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+
+		if (initialSlideIndex === 0) {
+			nextArrowRef.current.style.visibility = 'visible'
+			nextArrowRef.current.style.opacity = 1
+
+			prevArrowRef.current.style.visibility = 'hidden'
+			prevArrowRef.current.style.opacity = 0
+		} else {
+			nextArrowRef.current.style.visibility = 'hidden'
+			nextArrowRef.current.style.opacity = 0
+
+			prevArrowRef.current.style.visibility = 'visible'
+			prevArrowRef.current.style.opacity = 1
+		}
+	}, [])
 
 	return (
 		<div className={styles['qualificationsWrapper']}>
@@ -51,19 +70,13 @@ export default function Qualifications() {
 					verticalClass: 'paginationVertical'
 				}}
 				enabled
-				onSwiper={() => {
-					nextArrowRef.current = document.getElementById('swiperButtonNextID')
-					prevArrowRef.current = document.getElementById('swiperButtonPrevID')
-
-					prevArrowRef.current.style.transition = 'opacity 0.3s'
-					nextArrowRef.current.style.transition = 'opacity 0.3s'
-
-					prevArrowRef.current.style.opacity = 0
-				}}
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {
 						prevArrowRef.current.style.opacity = 0
+						prevArrowRef.current.style.visibility = 'hidden'
+
 						nextArrowRef.current.style.opacity = 1
+						nextArrowRef.current.style.visibility = 'visible'
 
 						window.history.pushState(
 							{},
@@ -72,7 +85,10 @@ export default function Qualifications() {
 						)
 					} else {
 						prevArrowRef.current.style.opacity = 1
+						prevArrowRef.current.style.visibility = 'visible'
+
 						nextArrowRef.current.style.opacity = 0
+						nextArrowRef.current.style.visibility = 'hidden'
 
 						window.history.pushState(
 							{},

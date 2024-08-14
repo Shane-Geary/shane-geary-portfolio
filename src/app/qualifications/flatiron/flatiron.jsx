@@ -30,8 +30,6 @@ export default function Flatiron() {
 				<Image
 					alt='Flatiron Certificate'
 					src={FlatironCertificate}
-					// width={100}
-					// height={100}
 					layout='responsive'
 				/>
 			</div>
