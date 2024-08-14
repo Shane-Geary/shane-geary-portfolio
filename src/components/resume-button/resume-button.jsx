@@ -21,7 +21,7 @@ export const ResumeButton = () => {
 			setDownloadButtonHovered(false)
 			button.blur()
 			setDownloadButtonClicked(false)
-		}, 1500)
+		}, 1200)
 	}
 
 	const downloadPDF = (timeout) => {
@@ -61,7 +61,7 @@ export const ResumeButton = () => {
 					button.blur()
 					setDownloadButtonHovered(false)
 
-					downloadPDF(2000)
+					downloadPDF(1700)
 				}}
 			>
 				<span>
