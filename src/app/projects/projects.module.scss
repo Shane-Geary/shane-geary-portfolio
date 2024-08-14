@@ -22,7 +22,7 @@
 
 	@media (max-width: 768px) {
 		font-size: 1.6rem;
-		margin-top: 2rem;
+		margin-top: 0.5rem;
 	}
 
 	@media (max-width: 480px) {
@@ -55,7 +55,7 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 0;
-		height: 75%;
+		height: 60%;
 	}
 }
 
@@ -70,7 +70,7 @@
 	}
 
 	@media (max-width: 480px) {
-		flex: 0.5;
+		flex: 1;
 	}
 }
 
@@ -79,7 +79,7 @@
 	max-width: 400px;
 	@media (max-width: 480px) {
 		width: 60vw;
-		margin-top: 1rem;
+		margin-top: 5dvh;
 	}
 }
 
