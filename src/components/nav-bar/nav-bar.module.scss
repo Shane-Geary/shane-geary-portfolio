@@ -76,6 +76,11 @@
 	position: relative;
 	border-radius: 50%;
 	overflow: hidden;
+
+	@media (max-width: 480px) {
+		width: 8%;
+		max-width: 60px;
+	}
 }
 
 .navLinks {
