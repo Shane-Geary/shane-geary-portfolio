@@ -1,9 +1,25 @@
+import Image from 'next/image'
+
+import headshot from '../../../public/shane-headshot.jpeg'
+
 import styles from './about-me.module.scss'
 
 export const AboutMe = () => {
 	return (
 		<div className={styles['aboutMeSection']}>
 			<div className={styles['aboutMeTextContainer']}>
+				<div className={styles['headshotContainer']}>
+					<Image
+						src={headshot}
+						alt='Shane Headshot'
+						width={580}
+						height={580}
+						layout='responsive'
+						style={{
+							borderRadius: '50%'
+						}}
+					/>
+				</div>
 				<div className={styles['aboutMeText']}>
 					<span className={styles['jobTitle']}>Software Engineer</span>{' '}
 					experienced in ReactJS/NextJS/Typescript, HTML, CSS and other frontend

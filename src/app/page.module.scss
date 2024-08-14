@@ -12,7 +12,7 @@
 .pageContent {
 	position: relative;
 	width: 90%;
-	min-height: 80dvh;
+	min-height: 85dvh;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -24,7 +24,7 @@
 	box-shadow: var(--neon-shadow-light-green);
 	border-radius: 20px;
 	width: 100%;
-	height: calc(100% - 5dvh);
+	height: calc(100% - 6dvh);
 	position: absolute;
 	bottom: 0;
 	left: 0;

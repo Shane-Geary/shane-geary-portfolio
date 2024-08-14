@@ -1,5 +1,5 @@
 .aboutMeSection {
-	width: 100%;
+	width: 80%;
 	max-width: var(--max-width);
 	padding-right: 2rem;
 	color: var(--header-white);
@@ -17,8 +17,10 @@
 	}
 
 	@media (max-width: 480px) {
-		padding-right: 1rem;
-		padding-left: 1rem;
+		padding-right: 0;
+		padding-left: 0;
+		position: relative;
+		top: 10dvh;
 	}
 }
 
@@ -27,13 +29,39 @@
 }
 
 .aboutMeTextContainer {
-	max-height: 30dvh;
+	height: 25vh;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
 	box-shadow: var(--neon-shadow-light-green);
 	padding: 0.8rem;
 	border-radius: 20px;
 	touch-action: pan-y;
+
+	@media (max-width: 480px) {
+		height: 40vh;
+	}
+}
+
+.headshotContainer {
+	float: left;
+	width: 15%;
+	min-width: 100px;
+	margin: 0 1rem 0.3rem 0;
+	border-radius: 100%;
+	border: 2px solid var(--neutral-green);
+	box-shadow: var(--neon-shadow-neutral-green);
+
+	@media (max-width: 768px) {
+		width: 10%;
+		min-width: 50px;
+		margin: 0 0.8rem 0 0;
+	}
+
+	@media (max-width: 480px) {
+		width: 10%;
+		min-width: 45px;
+		margin: 0 0.6rem 0.5rem 0;
+	}
 }
 
 .aboutMeText {
@@ -41,6 +69,7 @@
 	line-height: 1.8;
 	max-width: 800px;
 	margin: 0 auto;
+	color: var(--header-white);
 	@media (max-width: 768px) {
 		font-size: 10px;
 	}

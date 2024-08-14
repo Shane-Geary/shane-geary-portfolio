@@ -1,10 +1,8 @@
 'use client'
 import {useState, useRef, useEffect} from 'react'
-import Image from 'next/legacy/image'
 
 import {ResumeButton} from '../../components/resume-button/resume-button.jsx'
 import {AboutMe} from '../../components/about-me/about-me.jsx'
-import headshot from '../../../public/shane-headshot.jpeg'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper/modules'
@@ -94,20 +92,6 @@ export default function HomePage() {
 				<SwiperSlide className={styles['slideTwoWrapper']}>
 					<div className={styles['aboutMeContainer']}>
 						<h2 className={styles['aboutMeTitle']}>About Me</h2>
-						<div className={styles['headshotPositionWrapper']}>
-							<div className={styles['headshotContainer']}>
-								<Image
-									src={headshot}
-									alt='Shane Headshot'
-									width={580}
-									height={580}
-									layout='responsive'
-									style={{
-										borderRadius: '50%'
-									}}
-								/>
-							</div>
-						</div>
 						<div className={styles['aboutMePositionWrapper']}>
 							<AboutMe />
 						</div>
