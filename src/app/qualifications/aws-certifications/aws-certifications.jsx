@@ -13,7 +13,7 @@ export default function AWSCerts() {
 				</div>
 			</div>
 			<div className={styles['awsIframeContainer']}>
-				<iframe src='/AWSCCP.pdf#zoom=Fit' height={'100%'} width={'100%'} />
+				<iframe src='/AWSCCP.pdf' />
 			</div>
 		</div>
 	)
