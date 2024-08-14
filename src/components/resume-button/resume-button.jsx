@@ -61,7 +61,7 @@ export const ResumeButton = () => {
 					button.blur()
 					setDownloadButtonHovered(false)
 
-					downloadPDF(1700)
+					downloadPDF(1500)
 				}}
 			>
 				<span>
