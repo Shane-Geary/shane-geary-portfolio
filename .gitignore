@@ -34,3 +34,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backend
+# Ignore node_modules and build artifacts
+node_modules/
+cdk.out/
+
+# Ignore environment-specific files
+.env
+
+# Ignore CDK context files (auto-generated)
+cdk.context.json
+
+# Ignore AWS SAM build directory (if using SAM alongside CDK)
+.aws-sam/
