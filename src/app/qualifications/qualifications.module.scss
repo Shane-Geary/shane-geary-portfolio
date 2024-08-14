@@ -84,7 +84,15 @@
 	top: 20% !important;
 	left: 50% !important;
 	transform: rotate(90deg);
-	margin-top: 0.8rem !important;
+	margin-top: 0 !important;
+
+	@media (max-width: 768px) {
+		margin-top: 1.6rem !important;
+	}
+
+	@media (max-width: 480px) {
+		margin-top: 0 !important;
+	}
 }
 
 @keyframes pulse-border-shadow {
