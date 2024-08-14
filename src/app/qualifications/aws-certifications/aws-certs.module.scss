@@ -31,7 +31,7 @@
 
 	@media (max-width: 480px) {
 		margin-left: 0;
-		margin-bottom: 0;
+		margin-bottom: 1rem;
 		width: 90%;
 		max-height: 20dvh;
 		padding: 0.5rem;
@@ -71,8 +71,8 @@
 	position: relative;
 
 	@media (max-width: 480px) {
-		width: 80%;
+		width: 70%;
 		padding-right: 0;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 }
