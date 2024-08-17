@@ -22,6 +22,7 @@ export default function RootLayout({children}) {
 					<div className={styles['pageContent']}>
 						<div className={styles['sizzleBorder']} />
 						{children}
+						<Analytics />
 					</div>
 				</main>
 			</body>
