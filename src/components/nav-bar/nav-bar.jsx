@@ -12,6 +12,25 @@ import logoSrc from '../../../public/gearz.JPG'
 export const NavBar = () => {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
+	const navArray = [
+		{
+			name: 'Home',
+			href: '/'
+		},
+		{
+			name: 'Projects',
+			href: '/projects'
+		},
+		{
+			name: 'Qualifications',
+			href: {pathname: '/qualifications', query: {section: 'flatiron'}}
+		},
+		{
+			name: 'Contact',
+			href: '/contact'
+		}
+	]
+
 	return (
 		<header className={styles['navbar']}>
 			<div className={styles['navbarContainer']}>
@@ -43,18 +62,27 @@ export const NavBar = () => {
 					className={classNames(styles['navLinks'], {
 						[styles['navLinksOpen']]: isHamburgerOpen
 					})}
-					onClick={() => {
+					onClick={(event) => {
 						setIsHamburgerOpen(false)
+
+						for (let navItem of navArray) {
+							if (event.target.innerText !== navItem.name) {
+								event.target.parentElement.children[
+									navArray.indexOf(navItem)
+								].style.color = 'var(--header-white)'
+							} else {
+								event.target.style.color = 'var(--header-green)'
+							}
+						}
 					}}
 				>
-					<Link href='/'>Home</Link>
-					<Link href='/projects'>Projects</Link>
-					<Link
-						href={{pathname: '/qualifications', query: {section: 'flatiron'}}}
-					>
-						Qualifications
-					</Link>
-					<Link href='/contact'>Contact</Link>
+					{navArray.map((navItem, index) => {
+						return (
+							<Link key={index} href={navItem.href} prefetch>
+								{navItem.name}
+							</Link>
+						)
+					})}
 				</nav>
 			</div>
 		</header>
