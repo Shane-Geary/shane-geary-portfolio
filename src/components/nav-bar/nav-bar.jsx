@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react'
+import {useState, useEffect, useRef} from 'react'
 
 import Link from 'next/link'
 import Image from 'next/legacy/image'
@@ -10,16 +10,18 @@ import classNames from 'classnames'
 import logoSrc from '../../../public/gearz.JPG'
 
 export const NavBar = () => {
+	const navLinkRef = useRef(null)
+
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
 	const navArray = [
 		{
 			name: 'Home',
-			href: '/'
+			href: {pathname: '/'}
 		},
 		{
 			name: 'Projects',
-			href: '/projects'
+			href: {pathname: '/projects'}
 		},
 		{
 			name: 'Qualifications',
@@ -27,9 +29,17 @@ export const NavBar = () => {
 		},
 		{
 			name: 'Contact',
-			href: '/contact'
+			href: {pathname: '/contact'}
 		}
 	]
+
+	useEffect(() => {
+		for (let navItem of navLinkRef.current.children) {
+			if (window.location.pathname === navItem.pathname) {
+				navItem.style.color = 'var(--header-green)'
+			}
+		}
+	}, [])
 
 	return (
 		<header className={styles['navbar']}>
@@ -59,8 +69,10 @@ export const NavBar = () => {
 					))}
 				</button>
 				<nav
+					ref={navLinkRef}
 					className={classNames(styles['navLinks'], {
-						[styles['navLinksOpen']]: isHamburgerOpen
+						[styles['navLinksOpen']]: isHamburgerOpen,
+						[styles['active']]: navLinkRef.current
 					})}
 					onClick={(event) => {
 						setIsHamburgerOpen(false)

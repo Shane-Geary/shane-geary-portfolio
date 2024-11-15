@@ -91,6 +91,10 @@
 	flex-grow: 0.3;
 	justify-content: space-between;
 
+	&.active {
+		color: var(--header-green);
+	}
+
 	@media (max-width: 768px) {
 		gap: 12px;
 		flex-grow: 0.3;
@@ -170,5 +174,5 @@
 }
 
 .navLinks a:hover {
-	color: var(--header-green);
+	color: var(--header-green) !important;
 }
