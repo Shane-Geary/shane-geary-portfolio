@@ -1,12 +1,14 @@
 .qualificationsWrapper {
 	width: 100%;
 	height: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
 .qualificationsTitleWrapper {
 	position: absolute;
 	font-size: 3rem;
-	top: 10%;
+	top: 12%;
 	left: 50%;
 	transform: translateX(-50%);
 	margin-top: 1.2rem;
@@ -34,79 +36,210 @@
 	padding: 0 2rem 0 2rem;
 }
 
-.swiperButtonNext,
-.swiperButtonPrev {
+.prevArrowContainer {
 	position: absolute;
-	z-index: 1;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	margin: auto 0px auto 0px;
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-}
-
-.swiperButtonNext::after,
-.swiperButtonPrev::after {
-	cursor: pointer;
-	font-family: swiper-icons;
-	font-size: var(--swiper-navigation-size);
-	text-transform: none !important;
-	letter-spacing: 0;
-	font-variant: initial;
-	line-height: 1;
-	color: var(--neutral-green);
-	border: 1px solid var(--neutral-green);
+	overflow: hidden;
+	height: calc(10% - 5dvh);
+	width: 100%;
+	top: 6%;
+	left: 0;
+	// background-color: var(--neutral-green);
+	background: linear-gradient(to top, var(--neutral-green) 0%, black 90%);
+	border-bottom: 1px solid var(--light-green);
+	border-top: 0px solid transparent;
 	border-radius: 10%;
-	padding: 4px;
-	box-shadow: var(--neon-shadow-light-green);
+	box-shadow: var(--neon-shadow-light-green-bottom);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: -50%;
+		width: 50%;
+		height: 5px;
+		background: linear-gradient(
+			to right,
+			transparent,
+			var(--header-green),
+			transparent
+		);
+		animation: sensorLight 4s linear infinite;
+	}
+
+	@keyframes sensorLight {
+		0% {
+			left: -50%; // Start from the left side off the screen
+		}
+		50% {
+			left: 100%; // Move to the right side of the container
+		}
+		100% {
+			left: -50%; // Move back to the left side off the screen
+		}
+	}
 }
 
-.swiperButtonPrev::after {
-	content: 'prev';
+.swiper-button-prev {
+	background-image: url(../../../public/arrows.png) !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	border-radius: 80%;
+	transform: rotate(-90deg);
+	// transform: translateY(10%);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	position: absolute;
+	top: 10%;
 }
 
-.swiperButtonNext::after {
-	content: 'next';
-	animation: pulse-border-shadow 1s infinite ease-in-out;
+.nextArrowContainer {
+	position: absolute;
+	overflow: hidden;
+	height: calc(10% - 5dvh);
+	width: 100%;
+	bottom: calc(10% + 5dvh);
+	left: 0;
+	background: linear-gradient(to bottom, var(--neutral-green) 0%, black 90%);
+	border-top: 1px solid var(--light-green);
+	border-bottom: 2px solid black;
+	border-radius: 10%;
+	box-shadow: var(--neon-shadow-light-green-top);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 50%;
+		height: 5px;
+		background: linear-gradient(
+			to right,
+			transparent,
+			var(--header-green),
+			transparent
+		);
+		animation: sensorLight 4s linear infinite;
+	}
+
+	@keyframes sensorLight {
+		0% {
+			left: -50%; // Start from the left side off the screen
+		}
+		50% {
+			left: 100%; // Move to the right side of the container
+		}
+		100% {
+			left: -50%; // Move back to the left side off the screen
+		}
+	}
 }
 
-.swiperButtonNext {
-	bottom: 20% !important;
-	top: 0 !important;
-	left: 50% !important;
+.swiper-button-next {
+	background-image: url(../../../public/arrows.png) !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	border-radius: 80%;
 	transform: rotate(90deg);
-	margin-bottom: 1.5rem !important;
+	// transform: translateY(10%);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	position: absolute;
+	bottom: 10%;
 }
 
-.swiperButtonPrev {
-	top: 20% !important;
-	left: 50% !important;
-	transform: rotate(90deg);
-	margin-top: 0 !important;
-
-	@media (max-width: 768px) {
-		margin-top: 1.6rem !important;
-	}
-
-	@media (max-width: 480px) {
-		margin-top: 1.8rem !important;
-		top: 10% !important;
-	}
+.swiper-button-next::after {
+	display: none;
 }
 
-@keyframes pulse-border-shadow {
-	0%,
-	100% {
-		border: 1px solid var(--neutral-green);
-		box-shadow: var(--neon-shadow-light-green);
-	}
-	50% {
-		border: 1px solid var(--light-green);
-		box-shadow:
-			0 0 2px 2px var(--light-green),
-			0 0 4px 4px var(--light-green),
-			0 0 6px 6px var(--light-green);
-	}
+.swiper-button-prev::after {
+	display: none;
 }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+// 	position: absolute;
+// 	z-index: 1;
+// 	top: 0px;
+// 	bottom: 0px;
+// 	right: 0px;
+// 	margin: auto 0px auto 0px;
+// 	width: 24px;
+// 	height: 24px;
+// 	border-radius: 50%;
+// }
+
+// .swiperButtonNext::after,
+// .swiperButtonPrev::after {
+// 	cursor: pointer;
+// 	font-family: swiper-icons;
+// 	font-size: var(--swiper-navigation-size);
+// 	text-transform: none !important;
+// 	letter-spacing: 0;
+// 	font-variant: initial;
+// 	line-height: 1;
+// 	color: var(--neutral-green);
+// 	border: 1px solid var(--neutral-green);
+// 	border-radius: 0;
+// 	padding: 50vw 50vh 50vw 4px;
+// 	box-shadow: var(--neon-shadow-light-green);
+// }
+
+// .swiperButtonPrev::after {
+// 	content: 'prev';
+// }
+
+// .swiperButtonNext::after {
+// 	content: 'next';
+// 	animation: pulse-border-shadow 1s infinite ease-in-out;
+// }
+
+// .swiperButtonNext {
+// 	bottom: 20% !important;
+// 	top: 0 !important;
+// 	left: 50% !important;
+// 	transform: rotate(90deg);
+// 	margin-bottom: 1.5rem !important;
+// }
+
+// .swiperButtonPrev {
+// 	top: 20% !important;
+// 	left: 50% !important;
+// 	transform: rotate(90deg);
+// 	margin-top: 0 !important;
+
+// 	@media (max-width: 768px) {
+// 		margin-top: 1.6rem !important;
+// 	}
+
+// 	@media (max-width: 480px) {
+// 		margin-top: 1.8rem !important;
+// 		top: 10% !important;
+// 	}
+// }
+
+// @keyframes pulse-border-shadow {
+// 	0%,
+// 	100% {
+// 		border: 1px solid var(--neutral-green);
+// 		box-shadow: var(--neon-shadow-light-green);
+// 	}
+// 	50% {
+// 		border: 1px solid var(--light-green);
+// 		box-shadow:
+// 			0 0 2px 2px var(--light-green),
+// 			0 0 4px 4px var(--light-green),
+// 			0 0 6px 6px var(--light-green);
+// 	}
+// }

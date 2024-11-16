@@ -25,24 +25,24 @@ export default function Qualifications() {
 	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
 	console.log('initialSlideIndex', initialSlideIndex)
 
-	useEffect(() => {
-		nextArrowRef.current = document.getElementById('swiperButtonNextID')
-		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+	// useEffect(() => {
+	// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
+	// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-		if (initialSlideIndex === 0) {
-			nextArrowRef.current.style.visibility = 'visible'
-			nextArrowRef.current.style.opacity = 1
+	// 	if (initialSlideIndex === 0) {
+	// 		nextArrowRef.current.style.visibility = 'visible'
+	// 		nextArrowRef.current.style.opacity = 1
 
-			prevArrowRef.current.style.visibility = 'hidden'
-			prevArrowRef.current.style.opacity = 0
-		} else {
-			nextArrowRef.current.style.visibility = 'hidden'
-			nextArrowRef.current.style.opacity = 0
+	// 		prevArrowRef.current.style.visibility = 'hidden'
+	// 		prevArrowRef.current.style.opacity = 0
+	// 	} else {
+	// 		nextArrowRef.current.style.visibility = 'hidden'
+	// 		nextArrowRef.current.style.opacity = 0
 
-			prevArrowRef.current.style.visibility = 'visible'
-			prevArrowRef.current.style.opacity = 1
-		}
-	}, [])
+	// 		prevArrowRef.current.style.visibility = 'visible'
+	// 		prevArrowRef.current.style.opacity = 1
+	// 	}
+	// }, [])
 
 	return (
 		<div className={styles['qualificationsWrapper']}>
@@ -72,11 +72,11 @@ export default function Qualifications() {
 				enabled
 				onSlideChange={(e) => {
 					if (e.activeIndex === 0) {
-						prevArrowRef.current.style.opacity = 0
-						prevArrowRef.current.style.visibility = 'hidden'
+						// prevArrowRef.current.style.opacity = 0
+						// prevArrowRef.current.style.visibility = 'hidden'
 
-						nextArrowRef.current.style.opacity = 1
-						nextArrowRef.current.style.visibility = 'visible'
+						// nextArrowRef.current.style.opacity = 1
+						// nextArrowRef.current.style.visibility = 'visible'
 
 						window.history.pushState(
 							{},
@@ -84,11 +84,11 @@ export default function Qualifications() {
 							`?section=${slideRoutes[e.activeIndex]}`
 						)
 					} else {
-						prevArrowRef.current.style.opacity = 1
-						prevArrowRef.current.style.visibility = 'visible'
+						// prevArrowRef.current.style.opacity = 1
+						// prevArrowRef.current.style.visibility = 'visible'
 
-						nextArrowRef.current.style.opacity = 0
-						nextArrowRef.current.style.visibility = 'hidden'
+						// nextArrowRef.current.style.opacity = 0
+						// nextArrowRef.current.style.visibility = 'hidden'
 
 						window.history.pushState(
 							{},
@@ -107,13 +107,17 @@ export default function Qualifications() {
 				<div
 					ref={prevArrowRef}
 					id='swiperButtonPrevID'
-					className={styles['swiperButtonPrev']}
-				/>
+					className={styles['prevArrowContainer']}
+				>
+					<div className={styles['swiper-button-prev']} />
+				</div>
 				<div
 					ref={nextArrowRef}
 					id='swiperButtonNextID'
-					className={styles['swiperButtonNext']}
-				/>
+					className={styles['nextArrowContainer']}
+				>
+					<div className={styles['swiper-button-next']} />
+				</div>
 			</Swiper>
 		</div>
 	)
