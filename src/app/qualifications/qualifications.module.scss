@@ -39,48 +39,21 @@
 .prevArrowContainer {
 	position: absolute;
 	overflow: hidden;
-	height: calc(10% - 5dvh);
+	height: calc(12% - 5dvh);
+	top: 0;
 	width: 100%;
-	top: 6%;
 	left: 0;
 	// background-color: var(--neutral-green);
 	background: linear-gradient(to top, var(--neutral-green) 0%, black 90%);
 	border-bottom: 1px solid var(--light-green);
 	border-top: 0px solid transparent;
+	border-top-right-radius: 50%;
 	border-radius: 10%;
 	box-shadow: var(--neon-shadow-light-green-bottom);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: -50%;
-		width: 50%;
-		height: 5px;
-		background: linear-gradient(
-			to right,
-			transparent,
-			var(--header-green),
-			transparent
-		);
-		animation: sensorLight 4s linear infinite;
-	}
-
-	@keyframes sensorLight {
-		0% {
-			left: -50%; // Start from the left side off the screen
-		}
-		50% {
-			left: 100%; // Move to the right side of the container
-		}
-		100% {
-			left: -50%; // Move back to the left side off the screen
-		}
-	}
 }
 
 .swiper-button-prev {
@@ -101,9 +74,9 @@
 .nextArrowContainer {
 	position: absolute;
 	overflow: hidden;
-	height: calc(10% - 5dvh);
+	height: calc(12% - 5dvh);
 	width: 100%;
-	bottom: calc(10% + 5dvh);
+	bottom: 0;
 	left: 0;
 	background: linear-gradient(to bottom, var(--neutral-green) 0%, black 90%);
 	border-top: 1px solid var(--light-green);
@@ -114,34 +87,6 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -50%;
-		width: 50%;
-		height: 5px;
-		background: linear-gradient(
-			to right,
-			transparent,
-			var(--header-green),
-			transparent
-		);
-		animation: sensorLight 4s linear infinite;
-	}
-
-	@keyframes sensorLight {
-		0% {
-			left: -50%; // Start from the left side off the screen
-		}
-		50% {
-			left: 100%; // Move to the right side of the container
-		}
-		100% {
-			left: -50%; // Move back to the left side off the screen
-		}
-	}
 }
 
 .swiper-button-next {

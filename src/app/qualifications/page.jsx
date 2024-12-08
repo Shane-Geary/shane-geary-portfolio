@@ -55,7 +55,7 @@ export default function Qualifications() {
 				slidesPerView={1}
 				speed={500}
 				initialSlide={initialSlideIndex}
-				style={{height: '100dvh', position: 'relative'}}
+				style={{height: '100%', position: 'relative'}}
 				allowSlideNext
 				allowSlidePrev
 				allowTouchMove={false}
