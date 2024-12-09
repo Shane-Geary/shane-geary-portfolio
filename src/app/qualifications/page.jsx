@@ -9,11 +9,10 @@ import AWSCerts from './aws-certifications/aws-certifications'
 import styles from './qualifications.module.scss'
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import SwiperCore, {Navigation, Pagination} from 'swiper/modules'
+import SwiperCore, {Navigation} from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 
 export default function Qualifications() {
 	const nextArrowRef = useRef(null)
@@ -48,7 +47,7 @@ export default function Qualifications() {
 		<div className={styles['qualificationsWrapper']}>
 			<div className={styles['qualificationsTitleWrapper']}>Qualifications</div>
 			<Swiper
-				modules={[Navigation, Pagination]}
+				modules={[Navigation]}
 				direction='vertical'
 				autoplay={false}
 				spaceBetween={10}
