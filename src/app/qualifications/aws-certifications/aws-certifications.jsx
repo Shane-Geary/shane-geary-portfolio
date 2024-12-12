@@ -6,7 +6,6 @@ import AWSCCPCert from '../../../../public/aws-certified-cloud-practitioner.png'
 export default function AWSCerts() {
 	return (
 		<div className={styles['awsContainer']}>
-			{/* <div className={styles['awsTextSectionWrapper']}> */}
 			<div className={styles['awsTextSection']}>
 				<div className={styles['awsCCPContainer']}>
 					<Image
@@ -31,9 +30,8 @@ export default function AWSCerts() {
 					)
 				}}
 			>
-				Verify Here
+				<span className={styles['verifyText']}>Verify</span> Here
 			</div>
-			{/* </div> */}
 		</div>
 	)
 }
