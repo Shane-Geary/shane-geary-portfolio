@@ -37,74 +37,74 @@
 	padding: 0 2rem 0 2rem;
 }
 
-.prevArrowContainer {
-	position: absolute;
-	overflow: hidden;
-	height: calc(12% - 5dvh);
-	top: 0;
-	width: 100%;
-	left: 0;
-	background: linear-gradient(to top, var(--neutral-green) 0%, black 90%);
-	border-bottom: 2px solid var(--light-green);
-	border-radius: 25%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
+// .prevArrowContainer {
+// 	position: absolute;
+// 	overflow: hidden;
+// 	height: calc(12% - 5dvh);
+// 	top: 0;
+// 	width: 100%;
+// 	left: 0;
+// 	background: linear-gradient(to top, var(--neutral-green) 0%, black 90%);
+// 	border-bottom: 2px solid var(--light-green);
+// 	border-radius: 25%;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	cursor: pointer;
+// }
 
-.swiper-button-prev {
-	background-image: url(../../../public/arrows.png) !important;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	border-radius: 80%;
-	transform: rotate(-90deg);
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	position: absolute;
-	top: 10%;
-}
+// .swiper-button-prev {
+// 	background-image: url(../../../public/arrows.png) !important;
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	background-position: center;
+// 	border-radius: 80%;
+// 	transform: rotate(-90deg);
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 10;
+// 	position: absolute;
+// 	top: 10%;
+// }
 
-.nextArrowContainer {
-	position: absolute;
-	overflow: hidden;
-	height: calc(12% - 5dvh);
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(to bottom, var(--neutral-green) 0%, black 90%);
-	border-top: 2px solid var(--light-green);
-	border-radius: 25%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
+// .nextArrowContainer {
+// 	position: absolute;
+// 	overflow: hidden;
+// 	height: calc(12% - 5dvh);
+// 	width: 100%;
+// 	bottom: 0;
+// 	left: 0;
+// 	background: linear-gradient(to bottom, var(--neutral-green) 0%, black 90%);
+// 	border-top: 2px solid var(--light-green);
+// 	border-radius: 25%;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	cursor: pointer;
+// }
 
-.swiper-button-next {
-	background-image: url(../../../public/arrows.png) !important;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	border-radius: 80%;
-	transform: rotate(90deg);
-	// transform: translateY(10%);
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	position: absolute;
-	bottom: 10%;
-}
+// .swiper-button-next {
+// 	background-image: url(../../../public/arrows.png) !important;
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	background-position: center;
+// 	border-radius: 80%;
+// 	transform: rotate(90deg);
+// 	// transform: translateY(10%);
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 10;
+// 	position: absolute;
+// 	bottom: 10%;
+// }
 
-.swiper-button-next::after {
-	display: none;
-}
+// .swiper-button-next::after {
+// 	display: none;
+// }
 
-.swiper-button-prev::after {
-	display: none;
-}
+// .swiper-button-prev::after {
+// 	display: none;
+// }
 
 // .swiper-button-next,
 // .swiper-button-prev {

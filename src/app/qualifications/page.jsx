@@ -3,6 +3,7 @@ import {useRef, useEffect} from 'react'
 import {useSearchParams} from 'next/navigation'
 import Image from 'next/legacy/image'
 
+import SlidesContainer from '@/components/slides-container/slides-container'
 import Flatiron from './flatiron/page'
 import AWSCerts from './aws-certifications/aws-certifications'
 
@@ -46,7 +47,47 @@ export default function Qualifications() {
 	return (
 		<div className={styles['qualificationsWrapper']}>
 			<div className={styles['qualificationsTitleWrapper']}>Qualifications</div>
-			<Swiper
+			<SlidesContainer
+				swiperProps={{
+					initialSlide: initialSlideIndex,
+					// allowSlideNext,
+					// allowSlidePrev,
+					allowTouchMove: false,
+
+					// enabled,
+					onSlideChange: (e) => {
+						if (e.activeIndex === 0) {
+							// prevArrowRef.current.style.opacity = 0
+							// prevArrowRef.current.style.visibility = 'hidden'
+
+							// nextArrowRef.current.style.opacity = 1
+							// nextArrowRef.current.style.visibility = 'visible'
+
+							window.history.pushState(
+								{},
+								'',
+								`?section=${slideRoutes[e.activeIndex]}`
+							)
+						} else {
+							// prevArrowRef.current.style.opacity = 1
+							// prevArrowRef.current.style.visibility = 'visible'
+
+							// nextArrowRef.current.style.opacity = 0
+							// nextArrowRef.current.style.visibility = 'hidden'
+
+							window.history.pushState(
+								{},
+								'',
+								`?section=${slideRoutes[e.activeIndex]}`
+							)
+						}
+					}
+				}}
+			>
+				<Flatiron />
+				<AWSCerts />
+			</SlidesContainer>
+			{/* <Swiper
 				modules={[Navigation]}
 				direction='vertical'
 				autoplay={false}
@@ -61,12 +102,6 @@ export default function Qualifications() {
 				navigation={{
 					nextEl: '#swiperButtonNextID',
 					prevEl: '#swiperButtonPrevID'
-				}}
-				pagination={{
-					bulletActiveClass: 'activeBullet',
-					bulletClass: 'bullet',
-					clickable: true,
-					verticalClass: 'paginationVertical'
 				}}
 				enabled
 				onSlideChange={(e) => {
@@ -96,8 +131,8 @@ export default function Qualifications() {
 						)
 					}
 				}}
-			>
-				<SwiperSlide className={styles['flatironSlide']}>
+			> */}
+			{/* <SwiperSlide className={styles['flatironSlide']}>
 					<Flatiron />
 				</SwiperSlide>
 				<SwiperSlide className={styles['flatironSlide']}>
@@ -116,8 +151,8 @@ export default function Qualifications() {
 					className={styles['nextArrowContainer']}
 				>
 					<div className={styles['swiper-button-next']} />
-				</div>
-			</Swiper>
+				</div> */}
+			{/* </Swiper> */}
 		</div>
 	)
 }

@@ -4,7 +4,7 @@ import './globals.scss'
 import {NavBar} from '../components/nav-bar/nav-bar'
 import styles from './page.module.scss'
 
-// import {Analytics} from '@vercel/analytics/react'
+import {Analytics} from '@vercel/analytics/react'
 
 const inter = Inter({subsets: ['latin']})
 
@@ -22,7 +22,7 @@ export default function RootLayout({children}) {
 					<div className={styles['pageContent']}>
 						<div className={styles['sizzleBorder']} />
 						{children}
-						{/* <Analytics /> */}
+						<Analytics />
 					</div>
 				</main>
 			</body>
