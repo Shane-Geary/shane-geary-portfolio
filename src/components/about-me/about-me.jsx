@@ -21,12 +21,23 @@ export const AboutMe = () => {
 					/>
 				</div>
 				<div className={styles['aboutMeText']}>
-					<span className={styles['jobTitle']}>Software Engineer</span>{' '}
-					experienced in JavaScript, ReactJS, NextJS, Typescript, HTML, CSS and
-					other frontend languages and technologies. Also experienced in and
-					geared towards cloud computing, specializing in AWS. With 3 years tech
-					startup experience, I have a proven track record of innovative
-					software solutions.
+					As a versatile{' '}
+					<span className={styles['jobTitle']}>Software Engineer</span> with a
+					robust background in both front-end development and cloud
+					infrastructure, I excel in dynamic environments that require a blend
+					of technical and problem-solving skills. With expertise in HTML, CSS,
+					JavaScript, Node.js, React.js, TypeScript, GitHub, and AWS (Amazon Web
+					Services), and many more technologies, I bring a well-rounded
+					understanding of full-stack development and cloud engineering. My
+					journey began with a coding bootcamp, and through my experience at a
+					startup, I developed a passion for{' '}
+					<span className={styles['jobTitle']}>Information Technology</span>,
+					particularly in AWS cloud services, system administration, and network
+					engineering. Now, I’m pursuing my B. S. in Information Technology at
+					Grand Canyon University, along with additional AWS certifications. I’m
+					eager to apply my technical skills in web development and IT while
+					continuing to expand my expertise in network administration and cloud
+					infrastructure.
 					<br />
 					<br />
 					When I am not coding, I enjoy my love for music, both listening and
