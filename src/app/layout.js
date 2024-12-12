@@ -9,7 +9,7 @@ import styles from './page.module.scss'
 const inter = Inter({subsets: ['latin']})
 
 export const metadata = {
-	title: 'Shane Geary',
+	title: 'Shane T Geary',
 	description: "Shane T Geary's personal website"
 }
 
