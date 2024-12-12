@@ -13,7 +13,12 @@ import SwiperCore, {Navigation} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-export default function SlidesContainer({children, swiperProps = {}}) {
+export default function SlidesContainer({
+	children,
+	swiperProps = {},
+	slideWrapperStyles = {}
+}) {
+	console.log(children)
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
@@ -27,7 +32,7 @@ export default function SlidesContainer({children, swiperProps = {}}) {
 			slidesPerView={1}
 			speed={500}
 			// initialSlide={initialSlideIndex}
-			style={{height: '100%', position: 'relative'}}
+			// style={{height: '100%', position: 'relative'}}
 			allowSlideNext
 			allowSlidePrev
 			allowTouchMove={false}
@@ -65,7 +70,9 @@ export default function SlidesContainer({children, swiperProps = {}}) {
 			// }}
 		>
 			{Children.map(children, (child, index) => (
-				<SwiperSlide key={index}>{child}</SwiperSlide>
+				<SwiperSlide style={slideWrapperStyles} key={index}>
+					{child}
+				</SwiperSlide>
 			))}
 			<div
 				ref={prevArrowRef}

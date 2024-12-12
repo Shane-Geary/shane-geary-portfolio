@@ -1,6 +1,7 @@
 'use client'
 import {useState, useRef, useEffect} from 'react'
 
+import SlidesContainer from '@/components/slides-container/slides-container.jsx'
 import {ResumeButton} from '../../components/resume-button/resume-button.jsx'
 import {AboutMe} from '../../components/about-me/about-me.jsx'
 
@@ -18,34 +19,78 @@ export default function HomePage() {
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
-	useEffect(() => {
-		setViewportWidth(window.innerWidth)
+	// useEffect(() => {
+	// 	setViewportWidth(window.innerWidth)
 
-		nextArrowRef.current = document.getElementById('swiperButtonNextID')
-		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+	// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
+	// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-		if (viewportWidth <= 480) {
-			nextArrowRef.current.style.visibility = 'visible'
-			nextArrowRef.current.style.opacity = 1
-		} else {
-			nextArrowRef.current.style.visibility = 'hidden'
-			nextArrowRef.current.style.opacity = 0
-		}
+	// 	if (viewportWidth <= 480) {
+	// 		nextArrowRef.current.style.visibility = 'visible'
+	// 		nextArrowRef.current.style.opacity = 1
+	// 	} else {
+	// 		nextArrowRef.current.style.visibility = 'hidden'
+	// 		nextArrowRef.current.style.opacity = 0
+	// 	}
 
-		const handleResize = () => {
-			setViewportWidth(window.innerWidth)
-		}
+	// 	const handleResize = () => {
+	// 		setViewportWidth(window.innerWidth)
+	// 	}
 
-		window.addEventListener('resize', handleResize)
+	// 	window.addEventListener('resize', handleResize)
 
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
-	}, [viewportWidth])
+	// 	return () => {
+	// 		window.removeEventListener('resize', handleResize)
+	// 	}
+	// }, [viewportWidth])
 
 	return (
 		<div className={styles['homePage']}>
-			<Swiper
+			<SlidesContainer
+				swiperProps={{
+					style: {height: '100%', position: 'relative'},
+					allowSlideNext: viewportWidth <= 480 ? true : false,
+					allowSlidePrev: viewportWidth <= 480 ? true : false
+					// onSlideChange: (e) => {
+					// 	if (e.activeIndex === 0 && viewportWidth <= 480) {
+					// 		prevArrowRef.current.style.visibility = 'hidden'
+					// 		nextArrowRef.current.style.visibility = 'visible'
+
+					// 		prevArrowRef.current.style.opacity = 0
+					// 		nextArrowRef.current.style.opacity = 1
+					// 	} else {
+					// 		prevArrowRef.current.style.visibility = 'visible'
+					// 		nextArrowRef.current.style.visibility = 'hidden'
+
+					// 		prevArrowRef.current.style.opacity = 1
+					// 		nextArrowRef.current.style.opacity = 0
+					// 	}
+					// }
+				}}
+				slideWrapperStyles={{
+					// height: viewportWidth <= 480 ? '100dvh !important' : '50% !important',
+					height: '100dvh !important',
+					border: '20px solid red'
+				}}
+			>
+				<div className={styles['heroSection']}>
+					<div className={styles['heroLeft']}>
+						<h1 className={styles['heroTitle']}>
+							Shane T<br /> Geary
+						</h1>
+					</div>
+					<div className={styles['heroRight']}>
+						<ResumeButton />
+					</div>
+				</div>
+				<div className={styles['aboutMeContainer']}>
+					<h2 className={styles['aboutMeTitle']}>About Me</h2>
+					<div className={styles['aboutMePositionWrapper']}>
+						<AboutMe />
+					</div>
+				</div>
+			</SlidesContainer>
+			{/* <Swiper
 				modules={[Navigation]}
 				direction='vertical'
 				autoplay={false}
@@ -107,7 +152,7 @@ export default function HomePage() {
 					id='swiperButtonNextID'
 					className={styles['swiperButtonNext']}
 				/>
-			</Swiper>
+			</Swiper> */}
 		</div>
 	)
 }
