@@ -19,30 +19,30 @@ export default function HomePage() {
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
-	// useEffect(() => {
-	// 	setViewportWidth(window.innerWidth)
+	useEffect(() => {
+		setViewportWidth(window.innerWidth)
 
-	// 	nextArrowRef.current = document.getElementById('swiperButtonNextID')
-	// 	prevArrowRef.current = document.getElementById('swiperButtonPrevID')
+		nextArrowRef.current = document.getElementById('swiperButtonNextID')
+		prevArrowRef.current = document.getElementById('swiperButtonPrevID')
 
-	// 	if (viewportWidth <= 480) {
-	// 		nextArrowRef.current.style.visibility = 'visible'
-	// 		nextArrowRef.current.style.opacity = 1
-	// 	} else {
-	// 		nextArrowRef.current.style.visibility = 'hidden'
-	// 		nextArrowRef.current.style.opacity = 0
-	// 	}
+		// if (viewportWidth <= 480) {
+		// 	nextArrowRef.current.style.visibility = 'visible'
+		// 	nextArrowRef.current.style.opacity = 1
+		// } else {
+		// 	nextArrowRef.current.style.visibility = 'hidden'
+		// 	nextArrowRef.current.style.opacity = 0
+		// }
 
-	// 	const handleResize = () => {
-	// 		setViewportWidth(window.innerWidth)
-	// 	}
+		const handleResize = () => {
+			setViewportWidth(window.innerWidth)
+		}
 
-	// 	window.addEventListener('resize', handleResize)
+		window.addEventListener('resize', handleResize)
 
-	// 	return () => {
-	// 		window.removeEventListener('resize', handleResize)
-	// 	}
-	// }, [viewportWidth])
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [viewportWidth])
 
 	return (
 		<div className={styles['homePage']}>
@@ -68,9 +68,9 @@ export default function HomePage() {
 					// }
 				}}
 				slideWrapperStyles={{
-					// height: viewportWidth <= 480 ? '100dvh !important' : '50% !important',
-					height: '100dvh !important',
-					border: '20px solid red'
+					height: viewportWidth <= 480 ? '100dvh !important' : '50% !important'
+					// height: '100dvh !important',
+					// border: '20px solid red'
 				}}
 			>
 				<div className={styles['heroSection']}>
