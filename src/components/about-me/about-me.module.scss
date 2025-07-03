@@ -1,9 +1,10 @@
 .aboutMeSection {
 	width: 80%;
 	max-width: var(--max-width);
-	padding-right: 2rem;
 	color: var(--header-white);
 	text-align: left;
+	position: relative;
+	top: 15dvh;
 
 	/* Hide scrollbar for IE, Edge, and Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
@@ -16,11 +17,15 @@
 		height: 0;
 	}
 
+	@media (max-width: 768px) {
+		top: 20dvh;
+		position: relative;
+	}
+
 	@media (max-width: 480px) {
-		padding-right: 0;
 		padding-left: 0;
 		position: relative;
-		top: 10dvh;
+		top: 8dvh;
 	}
 }
 
@@ -29,7 +34,7 @@
 }
 
 .aboutMeTextContainer {
-	height: 40vh;
+	height: 50dvh;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
 	box-shadow: var(--neon-shadow-light-green);
@@ -37,8 +42,12 @@
 	border-radius: 20px;
 	touch-action: pan-y;
 
+	@media (max-width: 768px) {
+		height: 40dvh;
+	}
+
 	@media (max-width: 480px) {
-		height: 40vh;
+		height: 45dvh;
 	}
 }
 
@@ -72,6 +81,7 @@
 	color: var(--header-white);
 	@media (max-width: 768px) {
 		font-size: 10px;
+		line-height: 1.8;
 	}
 
 	@media (max-width: 480px) {

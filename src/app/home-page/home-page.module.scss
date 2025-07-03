@@ -18,7 +18,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 4rem 0 2rem 0;
+	padding: 0 0 4rem 0;
 	color: var(--header-white);
 	height: 100%;
 	position: relative;
@@ -27,6 +27,7 @@
 		height: 100%;
 		flex-direction: column;
 		justify-content: space-between;
+		padding: 4rem 0 4rem 0;
 	}
 }
 
@@ -35,7 +36,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 3rem;
+	// font-size: 3rem;
 }
 
 .heroRight {
@@ -46,11 +47,12 @@
 
 	@media (max-width: 480px) {
 		align-items: flex-start;
+		margin-top: 1rem;
 	}
 }
 
 .heroTitle {
-	font-size: 3rem;
+	font-size: 5rem;
 	font-weight: bold;
 	line-height: 1.2;
 	text-align: left;
@@ -74,25 +76,28 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 2rem 0 0rem 0;
+	padding: 2rem 0 0 0;
 	color: var(--header-white);
-	height: 100%;
+	height: 100dvh;
 	position: relative;
 
+	@media (max-width: 768px) {
+		padding: 0 0 1rem 0;
+	}
+
 	@media (max-width: 480px) {
-		height: 100%;
-		padding: 0;
+		padding: 0 0 1rem 0;
 		flex-direction: column;
 		justify-content: center;
 	}
 }
 
 .aboutMeTitle {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin-bottom: 1.5rem;
 	text-align: left;
 	position: absolute;
-	top: 15%;
+	top: 12%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
@@ -101,23 +106,32 @@
 	background-clip: text;
 	color: transparent;
 	@media (max-width: 768px) {
-		font-size: 1rem;
+		font-size: 2rem;
+		white-space: nowrap;
+		top: 10%;
+		margin-bottom: 1rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1rem;
+		font-size: 1.5rem;
 		text-align: center;
 		position: relative;
-		// top: 15%;
-		margin-top: 1rem;
+		top: 10%;
+		margin-bottom: 2rem;
+		// padding-bottom: 1rem;
 	}
 }
 
 .aboutMePositionWrapper {
 	flex: 1;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
+
+	@media (max-width: 768px) {
+		align-items: flex-start;
+	}
+
 	@media (max-width: 480px) {
 		align-items: flex-start;
 	}

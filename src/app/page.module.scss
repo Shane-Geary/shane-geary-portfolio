@@ -5,6 +5,10 @@
 	height: 100dvh;
 	align-items: center;
 	padding: 8rem 2rem 0 2rem;
+
+	@media (max-width: 480px) {
+		padding: 6rem 2rem 0 2rem;
+	}
 }
 
 .pageContent {
