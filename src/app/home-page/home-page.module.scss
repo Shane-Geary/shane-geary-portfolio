@@ -23,8 +23,11 @@
 	height: 100%;
 	position: relative;
 
+	@media (max-width: 768px) {
+		padding: 4rem 0 4rem 0;
+	}
+
 	@media (max-width: 480px) {
-		height: 100%;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 4rem 0 4rem 0;
@@ -37,6 +40,16 @@
 	align-items: center;
 	justify-content: center;
 	// font-size: 3rem;
+	margin-left: 4rem;
+
+	@media (max-width: 768px) {
+		padding: 4rem 0 4rem 0;
+	}
+
+	@media (max-width: 480px) {
+		margin-left: 0;
+		padding: 0 1rem 0 1rem;
+	}
 }
 
 .heroRight {
