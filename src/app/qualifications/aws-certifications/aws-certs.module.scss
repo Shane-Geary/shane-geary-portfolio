@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 80%;
 	height: 100%;
 	max-width: var(--max-width);
 	margin: 2.5rem auto 0 auto;
@@ -30,12 +30,16 @@
 	height: 50dvh;
 	flex-direction: column;
 	@media (max-width: 768px) {
-		// max-height: 35dvh;
+		max-height: 35dvh;
+		flex-direction: row;
+		margin-bottom: 3rem;
 	}
 
 	@media (max-width: 480px) {
-		// max-height: 30dvh;
-		padding: 1rem;
+		max-height: 45dvh;
+		flex-direction: column;
+		padding: 1rem 1rem 0.5rem 1rem;
+		margin: 0 auto 0.5rem auto;
 	}
 }
 
@@ -62,8 +66,11 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	overflow-y: auto;
 	@media (max-width: 768px) {
 		font-size: 10px;
+		align-items: flex-start;
+		max-height: 100%;
 	}
 
 	@media (max-width: 480px) {
@@ -71,6 +78,17 @@
 		align-items: flex-start;
 		height: 25dvh;
 	}
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.awsText::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.awsText {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .verifyWrapper {
@@ -85,14 +103,14 @@
 
 	@media (max-width: 768px) {
 		font-size: 0.45rem;
-		top: auto;
+		bottom: 25%;
 		margin-top: 0.8rem;
 	}
 
 	@media (max-width: 480px) {
 		font-size: 0.4rem;
 		margin-top: 0.8rem;
-		bottom: 12%;
+		bottom: 2.5rem;
 	}
 
 	&:hover {
@@ -115,15 +133,16 @@
 	background-repeat: no-repeat;
 	object-fit: contain;
 	position: relative;
+
 	@media (max-width: 768px) {
 		width: 100%;
-		min-width: 50px;
+		max-width: 30%;
 		margin: 0 0.8rem 0 0;
 	}
 
 	@media (max-width: 480px) {
-		margin: 1rem 0.5rem 1rem 0.5rem;
-		max-width: 70%;
+		margin: 0rem 0.5rem 1rem 0.5rem;
+		max-width: 50%;
 		height: auto;
 		object-fit: contain;
 	}
