@@ -7,7 +7,7 @@
 	position: absolute;
 	text-wrap: nowrap;
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 3rem;
 	width: 100%;
 	top: 10%;
 	left: 50%;
@@ -26,10 +26,29 @@
 	@media (max-width: 768px) {
 		font-size: 1.6rem;
 		margin-top: 0.5rem;
+		top: 5%;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1rem;
+		font-size: 1.2rem;
+		top: 2.5%;
+	}
+}
+
+.mediaLinksPositionWrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	bottom: 5%;
+	margin-top: 1rem;
+
+	@media (max-width: 768px) {
+		top: 30%;
+		transform: translateY(-50%);
+	}
+
+	@media (max-width: 480px) {
+		transform: translateY(-40%);
 	}
 }
 
@@ -45,7 +64,7 @@
 	top: 20%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, auto);
-	grid-gap: 1.5rem;
+	row-gap: 1.5rem;
 
 	@media (max-width: 768px) {
 		grid-template-rows: repeat(4, auto);
@@ -53,13 +72,12 @@
 
 	@media (max-width: 480px) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(4, auto);
+		grid-template-rows: repeat(2, auto);
 		height: 70%;
 		width: 100%;
 		margin: 0;
-		top: 5%;
-		grid-gap: 0;
-		// margin-bottom: 2rem;
+		top: 0%;
+		row-gap: 0;
 	}
 }
 
@@ -84,8 +102,8 @@
 	}
 
 	@media (max-width: 480px) {
-		width: 22vw;
-		height: 22vw;
+		width: 20vw;
+		height: 20vw;
 	}
 
 	&:hover .text {
@@ -119,8 +137,8 @@
 	@media (max-width: 480px) {
 		grid-column: 1;
 		grid-row: 3;
-		width: 22vw;
-		height: 22vw;
+		width: 20vw;
+		height: 20vw;
 	}
 
 	&:hover .text {
@@ -154,8 +172,8 @@
 	@media (max-width: 480px) {
 		grid-column: 2;
 		grid-row: 2;
-		width: 22vw;
-		height: 22vw;
+		width: 20vw;
+		height: 20vw;
 	}
 
 	&:hover .text {
@@ -187,8 +205,8 @@
 	}
 
 	@media (max-width: 480px) {
-		width: 22vw;
-		height: 22vw;
+		width: 20vw;
+		height: 20vw;
 		grid-column: 2;
 		grid-row: 4;
 	}
@@ -225,6 +243,6 @@
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1.8vw;
+		font-size: 1.5vw;
 	}
 }
