@@ -6,7 +6,7 @@
 .projectsTitleWrapper {
 	position: absolute;
 	font-size: 3rem;
-	top: 10%;
+	top: 6%;
 	left: 50%;
 	transform: translateX(-50%);
 	margin-top: 1.2rem;
@@ -21,8 +21,9 @@
 	}
 
 	@media (max-width: 768px) {
-		font-size: 2rem;
+		font-size: 1.6rem;
 		margin-top: 0.5rem;
+		top: 5%;
 	}
 
 	@media (max-width: 480px) {
@@ -33,6 +34,7 @@
 
 .glowstikProjectContainer {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -42,10 +44,11 @@
 	padding: 0 0 6rem 0;
 	color: var(--header-white);
 	position: relative;
-
+	transform: translateY(-5%);
 	@media (max-width: 768px) {
 		padding: 0;
-		height: 90%;
+		height: 75%;
+		transform: translateY(0%);
 	}
 
 	@media (max-width: 480px) {
@@ -60,8 +63,9 @@
 	flex: 1;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-
+	justify-content: flex-end;
+	flex-direction: column;
+	position: relative;
 	@media (max-width: 768px) {
 		flex: 1;
 	}
@@ -72,11 +76,14 @@
 }
 
 .glowstikFontLogoWrapper {
-	width: 60%;
-	max-width: 400px;
-
+	width: 40vw;
+	max-width: 600px;
+	position: relative;
+	right: 5%;
+	margin-left: 2rem;
 	@media (max-width: 768px) {
-		width: 75%;
+		width: 35vw;
+		bottom: 20%;
 	}
 
 	@media (max-width: 480px) {
@@ -91,7 +98,6 @@
 	padding-right: 2rem;
 	text-align: left;
 	position: relative;
-
 	@media (max-width: 768px) {
 		padding-right: 1rem;
 	}
@@ -109,20 +115,16 @@
 	position: absolute;
 	font-size: 1rem;
 	max-width: var(--max-width);
-	bottom: 100%;
-	left: 40%;
-	transform: translateX(-40%);
-	margin-bottom: 2rem;
 	text-decoration: underline;
-
+	top: 100%;
 	@media (max-width: 768px) {
 		font-size: 0.45rem;
-		bottom: 90%;
+		bottom: 25%;
 	}
 
 	@media (max-width: 480px) {
 		font-size: 0.4rem;
-		bottom: 20vh;
+		top: 85%;
 		left: 50%;
 		transform: translateX(-50%);
 	}

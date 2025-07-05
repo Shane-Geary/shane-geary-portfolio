@@ -80,8 +80,6 @@ export default function Projects() {
 									layout='responsive'
 								/>
 							</div>
-						</div>
-						<div className={styles['glowstikTextSection']}>
 							<Link
 								className={styles['glowstikUrlWrapper']}
 								href={'https://www.glowstik.com/'}
@@ -89,6 +87,8 @@ export default function Projects() {
 							>
 								https://www.glowstik.com/
 							</Link>
+						</div>
+						<div className={styles['glowstikTextSection']}>
 							<div className={styles['glowstikTextContainer']}>
 								<div className={styles['glowstikLogoWrapper']}>
 									<Image
