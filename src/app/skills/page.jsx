@@ -5,9 +5,9 @@ import Image from 'next/legacy/image'
 
 import SlidesContainer from '@/components/slides-container/slides-container'
 import Flatiron from './flatiron/page'
-import AWSCerts from './aws-certifications/aws-certifications'
+import AWSCerts from './aws-certifications/page'
 
-import styles from './qualifications.module.scss'
+import styles from './skills.module.scss'
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper/modules'
@@ -15,7 +15,7 @@ import SwiperCore, {Navigation} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-export default function Qualifications() {
+export default function Skills() {
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 	const searchParams = useSearchParams()
@@ -45,8 +45,8 @@ export default function Qualifications() {
 	// }, [])
 
 	return (
-		<div className={styles['qualificationsWrapper']}>
-			<div className={styles['qualificationsTitleWrapper']}>Qualifications</div>
+		<div className={styles['skillsWrapper']}>
+			<div className={styles['skillsTitleWrapper']}>Skills</div>
 			<SlidesContainer
 				swiperProps={{
 					style: {height: '100%', position: 'relative'},

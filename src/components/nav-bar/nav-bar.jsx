@@ -24,8 +24,8 @@ export const NavBar = () => {
 			href: {pathname: '/projects'}
 		},
 		{
-			name: 'Qualifications',
-			href: {pathname: '/qualifications', query: {section: 'flatiron'}}
+			name: 'Skills',
+			href: {pathname: '/skills', query: {section: 'flatiron'}}
 		},
 		{
 			name: 'Contact',

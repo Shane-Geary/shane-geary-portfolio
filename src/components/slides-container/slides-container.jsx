@@ -2,8 +2,8 @@
 import {useRef, useEffect, Children} from 'react'
 import {useSearchParams} from 'next/navigation'
 
-import Flatiron from '@/app/qualifications/flatiron/page'
-import AWSCerts from '@/app/qualifications/aws-certifications/aws-certifications'
+import Flatiron from '@/app/skills/flatiron/page'
+import AWSCerts from '@/app/skills/aws-certifications/page'
 
 import styles from './slides-container.module.scss'
 import classNames from 'classnames'
