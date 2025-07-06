@@ -2,6 +2,8 @@
 import {useState} from 'react'
 import Image from 'next/legacy/image'
 
+import {Dialog} from '@mui/material'
+
 import classNames from 'classnames'
 
 import styles from './flatiron.module.scss'
