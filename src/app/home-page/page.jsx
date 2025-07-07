@@ -83,12 +83,12 @@ export default function HomePage() {
 						<ResumeButton />
 					</div>
 				</div>
-				<div className={styles['aboutMeContainer']}>
-					<h2 className={styles['aboutMeTitle']}>About Me</h2>
-					<div className={styles['aboutMePositionWrapper']}>
-						<AboutMe />
-					</div>
+				{/* <div className={styles['aboutMeContainer']}>
+					<h2 className={styles['aboutMeTitle']}>About Me</h2> */}
+				<div className={styles['aboutMePositionWrapper']}>
+					<AboutMe />
 				</div>
+				{/* </div> */}
 			</SlidesContainer>
 			{/* <Swiper
 				modules={[Navigation]}

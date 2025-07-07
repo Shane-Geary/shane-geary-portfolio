@@ -1,10 +1,88 @@
-.aboutMeSection {
+.aboutMeContainer {
+	display: flex;
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 2rem 0 0 0;
+	color: var(--header-white);
+	height: 100dvh;
+	position: relative;
+
+	@media (max-width: 768px) {
+		padding: 0 0 1rem 0;
+	}
+
+	@media (max-width: 480px) {
+		padding: 0 0 1rem 0;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.aboutMeTitle {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	@media (max-width: 768px) {
+		font-size: 2rem;
+		white-space: nowrap;
+		top: 10%;
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1.5rem;
+		text-align: center;
+		position: relative;
+		top: 10%;
+		margin-bottom: 2rem;
+		// padding-bottom: 1rem;
+	}
+}
+
+.aboutMePositionWrapper {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (max-width: 768px) {
+		align-items: flex-start;
+	}
+
+	@media (max-width: 480px) {
+		align-items: flex-start;
+	}
+}
+
+.jobTitle {
+	color: var(--neutral-green);
+}
+
+.aboutMeTextContainer {
+	max-height: 50dvh;
+	overflow-y: auto;
+	border: 2px solid var(--light-green);
+	box-shadow: var(--neon-shadow-light-green);
+	padding: 0.8rem;
+	border-radius: 20px;
+	touch-action: pan-y;
+
 	width: 80%;
 	max-width: var(--max-width);
 	color: var(--header-white);
 	text-align: left;
 	position: relative;
-	top: 15dvh;
+	bottom: 10dvh;
 
 	/* Hide scrollbar for IE, Edge, and Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
@@ -18,36 +96,17 @@
 	}
 
 	@media (max-width: 768px) {
+		max-height: 35dvh;
+		bottom: 0;
 		top: 20dvh;
 		position: relative;
 	}
 
 	@media (max-width: 480px) {
-		padding-left: 0;
+		max-height: 45dvh;
 		position: relative;
-		top: 8dvh;
-	}
-}
-
-.jobTitle {
-	color: var(--neutral-green);
-}
-
-.aboutMeTextContainer {
-	height: 50dvh;
-	overflow-y: auto;
-	border: 2px solid var(--light-green);
-	box-shadow: var(--neon-shadow-light-green);
-	padding: 0.8rem;
-	border-radius: 20px;
-	touch-action: pan-y;
-
-	@media (max-width: 768px) {
-		height: 40dvh;
-	}
-
-	@media (max-width: 480px) {
-		height: 45dvh;
+		bottom: 0;
+		top: 10dvh;
 	}
 }
 
