@@ -115,3 +115,30 @@
 	// 	margin-bottom: 2rem;
 	// }
 }
+
+.flatironCertImageWrapperFull {
+	height: auto;
+	width: 75%;
+	@media (max-width: 768px) {
+	}
+
+	@media (max-width: 480px) {
+		width: 100%;
+	}
+}
+
+.dialogPaper {
+	background-color: rgba(0, 0, 0, 0.8) !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: 768px) {
+	}
+
+	@media (max-width: 480px) {
+	}
+}
+
+.dialogBackdrop {
+	// background-color: transparent !important;
+}

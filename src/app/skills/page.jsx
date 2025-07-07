@@ -16,8 +16,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 export default function Skills() {
-	const nextArrowRef = useRef(null)
-	const prevArrowRef = useRef(null)
+	// const nextArrowRef = useRef(null)
+	// const prevArrowRef = useRef(null)
 	const searchParams = useSearchParams()
 
 	const slideRoutes = ['flatiron', 'aws-certifications']

@@ -2,13 +2,11 @@
 import {useState} from 'react'
 import Image from 'next/legacy/image'
 
+import {FlatironCertImage} from '@/components/server-side-renders/flatiron-cert-image'
+
 import {Dialog} from '@mui/material'
 
-import classNames from 'classnames'
-
 import styles from './flatiron.module.scss'
-
-import FlatironCertificate from '../../../../public/shane-flatiron-certificate.png'
 
 export default function Flatiron() {
 	const [imageFullscreen, setImageFullscreen] = useState(false)
@@ -17,21 +15,37 @@ export default function Flatiron() {
 		<div className={styles['flatironContainer']}>
 			<div className={styles['flatironTextSection']}>
 				<div
-					className={classNames(styles['flatironCertImageWrapper'], {
-						[styles['fullscreenImage']]: imageFullscreen
-					})}
+					className={styles['flatironCertImageWrapper']}
 					onClick={() => {
 						setImageFullscreen(!imageFullscreen)
 					}}
 				>
-					<Image
-						alt='Flatiron Certificate'
-						src={FlatironCertificate}
-						// width={100}
-						// height={100}
-						layout='responsive'
-					/>
+					<FlatironCertImage />
 				</div>
+				<Dialog
+					open={imageFullscreen}
+					fullScreen
+					hideBackdrop
+					classes={{
+						// container: styles['flatironCertImageWrapperFull'],
+						paperFullScreen: styles['dialogPaper']
+					}}
+					slots={{
+						backdrop: {styles: styles['dialogBackdrop']}
+					}}
+					onClick={() => {
+						setImageFullscreen(!imageFullscreen)
+					}}
+				>
+					<div
+						className={styles['flatironCertImageWrapperFull']}
+						onClick={() => {
+							setImageFullscreen(!imageFullscreen)
+						}}
+					>
+						<FlatironCertImage />
+					</div>
+				</Dialog>
 				<div className={styles['flatironText']}>
 					Rigorous coding bootcamp where I learned the fundamentals of web
 					development languages. Such as HTML, CSS, JavaScript, ReactJS, etc.
