@@ -78,12 +78,16 @@ export const NavBar = () => {
 						setIsHamburgerOpen(false)
 
 						for (let navItem of navArray) {
-							if (event.target.innerText !== navItem.name) {
-								event.target.parentElement.children[
-									navArray.indexOf(navItem)
-								].style.color = 'var(--header-white)'
-							} else {
-								event.target.style.color = 'var(--header-green)'
+							try {
+								if (event.target.innerText !== navItem.name) {
+									event.target.parentElement.children[
+										navArray.indexOf(navItem)
+									].style.color = 'var(--header-white)'
+								} else {
+									event.target.style.color = 'var(--header-green)'
+								}
+							} catch {
+								console.log(event.target)
 							}
 						}
 					}}

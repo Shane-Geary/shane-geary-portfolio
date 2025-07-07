@@ -18,7 +18,6 @@ export default function SlidesContainer({
 	swiperProps = {},
 	slideWrapperStyles = {}
 }) {
-	console.log(children)
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 

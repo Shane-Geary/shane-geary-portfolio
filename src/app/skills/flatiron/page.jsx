@@ -25,13 +25,8 @@ export default function Flatiron() {
 				<Dialog
 					open={imageFullscreen}
 					fullScreen
-					hideBackdrop
 					classes={{
-						// container: styles['flatironCertImageWrapperFull'],
 						paperFullScreen: styles['dialogPaper']
-					}}
-					slots={{
-						backdrop: {styles: styles['dialogBackdrop']}
 					}}
 					onClick={() => {
 						setImageFullscreen(!imageFullscreen)

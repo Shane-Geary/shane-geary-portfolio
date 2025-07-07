@@ -1,20 +1,47 @@
 'use client'
-import Image from 'next/legacy/image'
+import {useState} from 'react'
+
+import {AwsCcpImage} from '@/components/server-side-renders/aws-ccp-image'
+
+import {Dialog} from '@mui/material'
+
 import styles from './aws-certs.module.scss'
 
 import AWSCCPCert from '../../../../public/aws-certified-cloud-practitioner.png'
 
 export default function AWSCerts() {
+	const [imageFullscreen, setImageFullscreen] = useState(false)
+
 	return (
 		<div className={styles['awsContainer']}>
 			<div className={styles['awsTextSection']}>
-				<div className={styles['awsCCPContainer']}>
-					<Image
-						alt='AWS Certified Cloud Practitioner'
-						src={AWSCCPCert}
-						layout='responsive'
-					/>
+				<div
+					className={styles['awsCCPContainer']}
+					onClick={() => {
+						setImageFullscreen(!imageFullscreen)
+					}}
+				>
+					<AwsCcpImage />
 				</div>
+				<Dialog
+					open={imageFullscreen}
+					fullScreen
+					classes={{
+						paperFullScreen: styles['dialogPaper']
+					}}
+					onClick={() => {
+						setImageFullscreen(!imageFullscreen)
+					}}
+				>
+					<div
+						className={styles['awsCertImageWrapperFull']}
+						onClick={() => {
+							setImageFullscreen(!imageFullscreen)
+						}}
+					>
+						<AwsCcpImage />
+					</div>
+				</Dialog>
 				<div className={styles['awsText']}>
 					"Earners of this certification have a fundamental understanding of IT
 					services and their uses in the AWS Cloud. They demonstrated cloud
