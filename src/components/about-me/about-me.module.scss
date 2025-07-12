@@ -138,6 +138,7 @@
 	max-width: 800px;
 	margin: 0 auto;
 	color: var(--header-white);
+	overflow: auto;
 
 	/* Hide scrollbar for IE, Edge, and Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
