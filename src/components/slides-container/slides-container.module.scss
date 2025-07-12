@@ -12,6 +12,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	z-index: 100;
 }
 
 .swiper-button-prev {
@@ -42,6 +43,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	z-index: 100;
 }
 
 .swiper-button-next {
@@ -57,6 +59,7 @@
 	z-index: 10;
 	position: absolute;
 	bottom: 10%;
+	pointer-events: none;
 }
 
 .swiper-button-next::after {

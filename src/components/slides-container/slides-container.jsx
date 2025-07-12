@@ -1,5 +1,5 @@
 'use client'
-import {useRef, useEffect, Children} from 'react'
+import {useRef, useEffect, useState, Children} from 'react'
 import {useSearchParams} from 'next/navigation'
 
 import Flatiron from '@/app/skills/flatiron/page'
@@ -21,6 +21,8 @@ export default function SlidesContainer({
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
+	const [swiperInstance, setSwiperInstance] = useState(null)
+
 	return (
 		<Swiper
 			{...swiperProps}
@@ -39,7 +41,6 @@ export default function SlidesContainer({
 				nextEl: '#swiperButtonNextID',
 				prevEl: '#swiperButtonPrevID'
 			}}
-			// enabled
 			// onSlideChange={(e) => {
 			// 	if (e.activeIndex === 0) {
 			// 		// prevArrowRef.current.style.opacity = 0
