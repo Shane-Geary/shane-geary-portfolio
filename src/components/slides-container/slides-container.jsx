@@ -1,6 +1,5 @@
 'use client'
 import {useRef, useEffect, useState, Children} from 'react'
-import {useSearchParams} from 'next/navigation'
 
 import Flatiron from '@/app/skills/flatiron/page'
 import AWSCerts from '@/app/skills/aws-certifications/page'
@@ -21,7 +20,8 @@ export default function SlidesContainer({
 	const nextArrowRef = useRef(null)
 	const prevArrowRef = useRef(null)
 
-	const [swiperInstance, setSwiperInstance] = useState(null)
+	const [activePrevArrowIcon, setActivePrevArrowIcon] = useState(false)
+	const [activeNextArrowIcon, setActiveNextArrowIcon] = useState(true)
 
 	return (
 		<Swiper
@@ -32,8 +32,6 @@ export default function SlidesContainer({
 			spaceBetween={10}
 			slidesPerView={1}
 			speed={500}
-			// initialSlide={initialSlideIndex}
-			// style={{height: '100%', position: 'relative'}}
 			allowSlideNext
 			allowSlidePrev
 			allowTouchMove={false}
@@ -41,33 +39,10 @@ export default function SlidesContainer({
 				nextEl: '#swiperButtonNextID',
 				prevEl: '#swiperButtonPrevID'
 			}}
-			// onSlideChange={(e) => {
-			// 	if (e.activeIndex === 0) {
-			// 		// prevArrowRef.current.style.opacity = 0
-			// 		// prevArrowRef.current.style.visibility = 'hidden'
-
-			// 		// nextArrowRef.current.style.opacity = 1
-			// 		// nextArrowRef.current.style.visibility = 'visible'
-
-			// 		window.history.pushState(
-			// 			{},
-			// 			'',
-			// 			`?section=${slideRoutes[e.activeIndex]}`
-			// 		)
-			// 	} else {
-			// 		// prevArrowRef.current.style.opacity = 1
-			// 		// prevArrowRef.current.style.visibility = 'visible'
-
-			// 		// nextArrowRef.current.style.opacity = 0
-			// 		// nextArrowRef.current.style.visibility = 'hidden'
-
-			// 		window.history.pushState(
-			// 			{},
-			// 			'',
-			// 			`?section=${slideRoutes[e.activeIndex]}`
-			// 		)
-			// 	}
-			// }}
+			onSlideChange={(e) => {
+				setActivePrevArrowIcon(e.isBeginning === false)
+				setActiveNextArrowIcon(e.isEnd === false)
+			}}
 		>
 			{Children.map(children, (child, index) => (
 				<SwiperSlide style={slideWrapperStyles} key={index}>
@@ -79,14 +54,22 @@ export default function SlidesContainer({
 				id='swiperButtonPrevID'
 				className={styles['prevArrowContainer']}
 			>
-				<div className={styles['swiper-button-prev']} />
+				<div
+					className={classNames(styles['swiper-button-prev'], {
+						[styles['swiper-button-prev-active']]: activePrevArrowIcon
+					})}
+				/>
 			</div>
 			<div
 				ref={nextArrowRef}
 				id='swiperButtonNextID'
 				className={styles['nextArrowContainer']}
 			>
-				<div className={styles['swiper-button-next']} />
+				<div
+					className={classNames(styles['swiper-button-next'], {
+						[styles['swiper-button-next-active']]: activeNextArrowIcon
+					})}
+				/>
 			</div>
 		</Swiper>
 	)

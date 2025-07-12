@@ -27,6 +27,25 @@
 	z-index: 10;
 	position: absolute;
 	top: 10%;
+
+	&.swiper-button-prev-active {
+		filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(490%)
+			hue-rotate(86deg) brightness(103%) contrast(101%);
+		animation: glowPulse 1s ease-in-out infinite;
+	}
+}
+
+@keyframes glowPulse {
+	0%,
+	100% {
+		filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(490%)
+			hue-rotate(86deg) brightness(103%) contrast(101%);
+	}
+	50% {
+		filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(490%)
+			hue-rotate(86deg) brightness(103%) contrast(101%)
+			drop-shadow(0 0 6px #02f74c);
+	}
 }
 
 .nextArrowContainer {
@@ -60,6 +79,12 @@
 	position: absolute;
 	bottom: 10%;
 	pointer-events: none;
+
+	&.swiper-button-next-active {
+		filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(490%)
+			hue-rotate(86deg) brightness(103%) contrast(101%);
+		animation: glowPulse 1s ease-in-out infinite;
+	}
 }
 
 .swiper-button-next::after {
