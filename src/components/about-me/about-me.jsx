@@ -32,15 +32,28 @@ export const AboutMe = () => {
 						CSS, JavaScript, Node.js, React.js, TypeScript, GitHub, and AWS
 						(Amazon Web Services), and many more technologies, I bring a
 						well-rounded understanding of full-stack development and cloud
-						engineering. My journey began with a coding bootcamp, and through my
-						experience at a startup, I developed a passion for{' '}
+						engineering.
+						<br />
+						<br />
+						My journey began with a coding bootcamp and deepened through
+						hands-on experience at a startup, where I discovered a passion for
+						Information Technology—particularly AWS technologies, system
+						administration, and network engineering. I initially pursued my
+						degree at Grand Canyon University, maintaining a 4.0 GPA, before
+						successfully transferring into the competitive{' '}
+						<span className={styles['jobTitle']}>Informatics </span>program at
+						the University at Albany. I'm now continuing my studies there,
+						working toward a B.S. in Informatics with a focus on systems design
+						and IT infrastructure.
+						{/* My journey began with a coding bootcamp, and through my experience
+						at a startup, I developed a passion for{' '}
 						<span className={styles['jobTitle']}>Information Technology</span>,
 						particularly in AWS cloud services, system administration, and
 						network engineering. Now, I’m pursuing my B. S. in Information
 						Technology at Grand Canyon University, along with additional AWS
 						certifications. I’m eager to apply my technical skills in web
 						development and IT while continuing to expand my expertise in
-						network administration and cloud infrastructure.
+						network administration and cloud infrastructure. */}
 						<br />
 						{/* <br />
 					When I am not coding, I enjoy my love for music, both listening and
