@@ -9,10 +9,10 @@
 	text-align: center;
 	font-size: 3rem;
 	width: 100%;
-	top: 10%;
+	top: 5%;
 	left: 50%;
 	transform: translateX(-50%);
-	margin-top: 1.2rem;
+	margin-top: 0.5rem;
 	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -39,8 +39,8 @@
 	height: 100%;
 	width: 100%;
 	position: relative;
-	bottom: 5%;
-	margin-top: 1rem;
+	bottom: 10%;
+	margin-top: 0.5rem;
 
 	@media (max-width: 768px) {
 		top: 30%;
@@ -58,14 +58,14 @@
 	justify-items: center;
 	width: auto;
 	margin: 0 1rem 0 1rem;
-	padding: 6rem 0 0 0;
+	padding: 6rem 0 6rem 0;
 	color: var(--header-white);
-	height: 75%;
+	height: 100%;
 	position: relative;
 	top: 20%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, auto);
-	row-gap: 1.5rem;
+	row-gap: 0.1rem;
 
 	@media (max-width: 768px) {
 		grid-template-rows: repeat(4, auto);
@@ -86,8 +86,8 @@
 	cursor: pointer;
 	grid-column: 1;
 	grid-row: 1;
-	width: 12vw;
-	height: 12vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid var(--light-green);
@@ -119,8 +119,8 @@
 	cursor: pointer;
 	grid-column: 2;
 	grid-row: 2;
-	width: 12vw;
-	height: 12vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid var(--light-green);
@@ -154,8 +154,8 @@
 	cursor: pointer;
 	grid-column: 3;
 	grid-row: 1;
-	width: 12vw;
-	height: 12vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid var(--light-green);
@@ -189,8 +189,8 @@
 	cursor: pointer;
 	grid-column: 4;
 	grid-row: 2;
-	width: 12vw;
-	height: 12vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid var(--light-green);
