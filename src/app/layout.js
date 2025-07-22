@@ -3,6 +3,7 @@ import './globals.scss'
 
 import {NavBar} from '../components/nav-bar/nav-bar'
 import styles from './page.module.scss'
+// import OrientationAdjuster from '@/components/orientation-adjuster'
 
 import {Analytics} from '@vercel/analytics/react'
 
@@ -17,6 +18,7 @@ export default function RootLayout({children}) {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
+				{/* <OrientationAdjuster /> */}
 				<div id='orientation-lock'>
 					Please rotate your device back to portrait mode.
 				</div>

@@ -55,6 +55,10 @@ a {
 	text-decoration: none;
 }
 
+#orientation-lock {
+	display: none;
+}
+
 @media screen and (orientation: landscape) and (max-width: 768px) {
 	body {
 		overflow: hidden;
