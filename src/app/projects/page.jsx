@@ -114,7 +114,7 @@ export default function Projects() {
 						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide>YO</SwiperSlide>
+				{/* <SwiperSlide>YO</SwiperSlide> */}
 				<div
 					ref={prevArrowRef}
 					id='swiperButtonPrevID'

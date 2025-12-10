@@ -39,9 +39,8 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	max-width: var(--max-width);
-	margin: 0 auto;
-	padding: 0 0 6rem 0;
+	max-width: calc(var(--max-width) * 1.5);
+	padding: 0 1rem 6rem 0;
 	color: var(--header-white);
 	position: relative;
 	transform: translateY(-5%);
@@ -113,18 +112,18 @@
 
 .glowstikUrlWrapper {
 	position: absolute;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	max-width: var(--max-width);
 	text-decoration: underline;
 	top: 100%;
 	margin-top: 1rem;
 	@media (max-width: 768px) {
-		font-size: 0.45rem;
+		font-size: 0.75rem;
 		bottom: 25%;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 0.4rem;
+		font-size: 0.75rem;
 		top: 85%;
 		left: 50%;
 		transform: translateX(-50%);
@@ -186,17 +185,17 @@
 }
 
 .glowstikText {
-	font-size: 12px;
+	font-size: 22px;
 	line-height: 1.8;
 	max-width: 800px;
 	margin: 0 auto;
 	color: var(--header-white);
 	@media (max-width: 768px) {
-		font-size: 10px;
+		font-size: 12px;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 8px;
+		font-size: 10px;
 		line-height: 1.6;
 	}
 }
