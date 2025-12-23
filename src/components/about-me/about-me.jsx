@@ -26,8 +26,17 @@ export const AboutMe = () => {
 					</div>
 					<div className={styles['aboutMeText']}>
 						As a versatile{' '}
-						<span className={styles['jobTitle']}>Software Engineer</span> with a
-						robust background in both front-end development and cloud
+						<span className={styles['jobTitle']}>
+							<Link
+								href={{
+									pathname: '/skills',
+									query: {section: 'flatiron'}
+								}}
+							>
+								Software Engineer
+							</Link>
+						</span>{' '}
+						with a robust background in both front-end development and cloud
 						infrastructure, I excel in dynamic environments that require a blend
 						of technical and problem-solving skills. With expertise in HTML,
 						CSS, JavaScript, Node.js, React.js, TypeScript, GitHub, and AWS
@@ -55,10 +64,20 @@ export const AboutMe = () => {
 						certification. I initially pursued my degree at Grand Canyon
 						University, maintaining a 4.0 GPA, before successfully transferring
 						into the competitive{' '}
-						<span className={styles['jobTitle']}>Informatics </span>program at
-						the University at Albany. I'm now continuing my studies there,
-						working toward a B.S. in Informatics with a focus on systems design
-						and IT infrastructure.
+						<span className={styles['jobTitle']}>
+							<Link
+								href={{
+									pathname:
+										'https://www.albany.edu/cehc/programs/bs-informatics'
+								}}
+								target='_blank'
+							>
+								Informatics
+							</Link>{' '}
+						</span>
+						program at the University at Albany. I'm now continuing my studies
+						there, working toward a B.S. in Informatics with a focus on systems
+						design and IT infrastructure.
 						{/* My journey began with a coding bootcamp, and through my experience
 						at a startup, I developed a passion for{' '}
 						<span className={styles['jobTitle']}>Information Technology</span>,
