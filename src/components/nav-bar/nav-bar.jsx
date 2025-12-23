@@ -2,6 +2,7 @@
 import {useState, useEffect, useRef} from 'react'
 
 import Link from 'next/link'
+import {usePathname} from 'next/navigation'
 import Image from 'next/legacy/image'
 import styles from './nav-bar.module.scss'
 
@@ -11,6 +12,8 @@ import logoSrc from '../../../public/gearz.JPG'
 
 export const NavBar = () => {
 	const navLinkRef = useRef(null)
+
+	const pathname = usePathname()
 
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
@@ -34,12 +37,20 @@ export const NavBar = () => {
 	]
 
 	useEffect(() => {
-		for (let navItem of navLinkRef.current.children) {
-			if (window.location.pathname === navItem.pathname) {
-				navItem.style.color = 'var(--header-green)'
+		for (let navItem of navArray) {
+			try {
+				if (pathname !== navItem.href.pathname) {
+					navLinkRef.current.children[navArray.indexOf(navItem)].style.color =
+						'var(--header-white)'
+				} else {
+					navLinkRef.current.children[navArray.indexOf(navItem)].style.color =
+						'var(--header-green)'
+				}
+			} catch {
+				console.log(navLinkRef.current.children[navArray.indexOf(navItem)])
 			}
 		}
-	}, [])
+	}, [pathname])
 
 	return (
 		<header className={styles['navbar']}>
@@ -50,9 +61,7 @@ export const NavBar = () => {
 						width={512}
 						height={512}
 						alt='Shane AI'
-						// priority={true}
 						layout='responsive'
-						// objectFit='contain'
 						style={{borderRadius: '50%'}}
 					/>
 				</div>
@@ -76,20 +85,6 @@ export const NavBar = () => {
 					})}
 					onClick={(event) => {
 						setIsHamburgerOpen(false)
-
-						for (let navItem of navArray) {
-							try {
-								if (event.target.innerText !== navItem.name) {
-									event.target.parentElement.children[
-										navArray.indexOf(navItem)
-									].style.color = 'var(--header-white)'
-								} else {
-									event.target.style.color = 'var(--header-green)'
-								}
-							} catch {
-								console.log(event.target)
-							}
-						}
 					}}
 				>
 					{navArray.map((navItem, index) => {

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import headshot from '../../../public/shane-headshot.jpeg'
 
@@ -37,10 +38,23 @@ export const AboutMe = () => {
 						<br />
 						My journey began with a coding bootcamp and deepened through
 						hands-on experience at a startup, where I discovered a passion for
-						Information Technology—particularly AWS technologies, system
-						administration, and network engineering. I initially pursued my
-						degree at Grand Canyon University, maintaining a 4.0 GPA, before
-						successfully transferring into the competitive{' '}
+						Information Technology—particularly cloud technologies, system
+						administration, and network engineering. Along with my coding
+						bootcamp software engineering certification, I also currently hold
+						an active{' '}
+						<span className={styles['jobTitle']}>
+							<Link
+								href={{
+									pathname: '/skills',
+									query: {section: 'aws-certifications'}
+								}}
+							>
+								AWS Certified Cloud Practioner (CCP)
+							</Link>
+						</span>{' '}
+						certification. I initially pursued my degree at Grand Canyon
+						University, maintaining a 4.0 GPA, before successfully transferring
+						into the competitive{' '}
 						<span className={styles['jobTitle']}>Informatics </span>program at
 						the University at Albany. I'm now continuing my studies there,
 						working toward a B.S. in Informatics with a focus on systems design
@@ -67,7 +81,6 @@ export const AboutMe = () => {
 					as a solo performer and as part of street teams. */}
 					</div>
 				</div>
-				{/* //{' '} */}
 			</div>
 		</div>
 	)
