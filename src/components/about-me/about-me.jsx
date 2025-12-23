@@ -8,7 +8,7 @@ export const AboutMe = () => {
 	return (
 		// <div className={styles['aboutMeSection']}>
 		<div className={styles['aboutMeContainer']}>
-			<h2 className={styles['aboutMeTitle']}>ABOUT ME</h2>
+			<h2 className={styles['aboutMeTitle']}>About Me</h2>
 			<div className={styles['aboutMePositionWrapper']}>
 				<div className={styles['aboutMeTextContainer']}>
 					<div className={styles['headshotContainer']}>
