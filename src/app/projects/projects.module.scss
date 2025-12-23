@@ -5,7 +5,7 @@
 
 .projectsTitleWrapper {
 	position: absolute;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	top: 6%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -17,17 +17,17 @@
 	color: transparent;
 
 	@media (min-width: 1024px) {
-		font-size: 3rem;
+		font-size: 3.6rem;
 	}
 
 	@media (max-width: 768px) {
-		font-size: 1.6rem;
+		font-size: 2.4rem;
 		margin-top: 0.5rem;
 		top: 5%;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		top: 2.5%;
 	}
 }
@@ -39,9 +39,8 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	max-width: var(--max-width);
-	margin: 0 auto;
-	padding: 0 0 6rem 0;
+	max-width: calc(var(--max-width) * 1.5);
+	padding: 0 1rem 6rem 0;
 	color: var(--header-white);
 	position: relative;
 	transform: translateY(-5%);
@@ -72,6 +71,7 @@
 
 	@media (max-width: 480px) {
 		flex: 1;
+		justify-content: center;
 	}
 }
 
@@ -113,19 +113,19 @@
 
 .glowstikUrlWrapper {
 	position: absolute;
-	font-size: 1rem;
+	font-size: 1.8rem;
 	max-width: var(--max-width);
 	text-decoration: underline;
 	top: 100%;
 	margin-top: 1rem;
 	@media (max-width: 768px) {
-		font-size: 0.45rem;
+		font-size: 1.5rem;
 		bottom: 25%;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 0.4rem;
-		top: 85%;
+		font-size: 1.2rem;
+		top: 70%;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -186,24 +186,24 @@
 }
 
 .glowstikText {
-	font-size: 12px;
+	font-size: 22px;
 	line-height: 1.8;
 	max-width: 800px;
 	margin: 0 auto;
 	color: var(--header-white);
 	@media (max-width: 768px) {
-		font-size: 10px;
+		font-size: 14px;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 8px;
+		font-size: 12px;
 		line-height: 1.6;
 	}
 }
 
 .projectTitleWrapper {
 	position: absolute;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	top: 100%;
 	left: 20%;
 	transform: translateX(-20%);
@@ -211,13 +211,13 @@
 	color: var(--neutral-green);
 
 	@media (max-width: 768px) {
-		font-size: 0.35rem;
+		font-size: 1rem;
 		top: auto;
 		margin-top: 0.8rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 0.5rem;
+		font-size: 0.75rem;
 		top: auto;
 		margin-top: 0.8rem;
 		left: 30%;

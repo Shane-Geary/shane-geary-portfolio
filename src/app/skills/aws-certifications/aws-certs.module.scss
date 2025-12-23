@@ -56,12 +56,12 @@
 
 .awsText {
 	flex: 1;
-	font-size: 15px;
-	line-height: 1.8;
+	font-size: 22px;
+	line-height: 2;
 	max-width: 100%;
 	height: auto;
 	color: var(--header-white);
-	text-align: center;
+	text-align: left;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,14 +69,14 @@
 	overflow-y: auto;
 	margin: 0 1rem 0 1rem;
 	@media (max-width: 768px) {
-		font-size: 10px;
+		font-size: 14px;
 		align-items: flex-start;
 		max-height: 100%;
 		margin: 0;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 8px;
+		font-size: 12px;
 		align-items: flex-start;
 		height: 25dvh;
 		margin: 0;
@@ -95,7 +95,7 @@
 }
 
 .verifyWrapper {
-	font-size: 1rem;
+	font-size: 1.25rem;
 	margin-top: 1rem;
 	color: var(--header-green);
 	cursor: pointer;
@@ -105,13 +105,13 @@
 	transform: translateX(-50%);
 
 	@media (max-width: 768px) {
-		font-size: 0.45rem;
+		font-size: 0.75rem;
 		bottom: 25%;
 		margin-top: 0.8rem;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 0.4rem;
+		font-size: 0.75rem;
 		margin-top: 0.8rem;
 		bottom: 15%;
 	}
@@ -136,7 +136,7 @@
 	background-repeat: no-repeat;
 	object-fit: contain;
 	position: relative;
-
+	cursor: zoom-in;
 	@media (max-width: 768px) {
 		width: 100%;
 		max-width: 30%;
