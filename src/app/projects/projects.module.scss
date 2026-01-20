@@ -1,15 +1,37 @@
 .projectsContainer {
 	width: 100%;
 	height: 100%;
+	position: relative;
+}
+
+.glowstikProjectContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+	color: var(--header-white);
+	position: relative;
+	@media (max-width: 768px) {
+		// height: 100%;
+	}
+
+	@media (max-width: 480px) {
+		padding: 1rem;
+	}
+}
+
+.projectsTitleContainer {
+	height: 15%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .projectsTitleWrapper {
-	position: absolute;
 	font-size: 3.5rem;
-	top: 6%;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-top: 1.2rem;
 	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -22,130 +44,97 @@
 
 	@media (max-width: 768px) {
 		font-size: 2.4rem;
-		margin-top: 0.5rem;
-		top: 5%;
 	}
 
 	@media (max-width: 480px) {
-		font-size: 2rem;
-		top: 2.5%;
+		// font-size: 2rem;
 	}
 }
 
-.glowstikProjectContainer {
+.glowstikContentContainer {
+	height: 85%;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	max-width: calc(var(--max-width) * 1.5);
-	padding: 0 1rem 6rem 0;
-	color: var(--header-white);
 	position: relative;
-	transform: translateY(-5%);
-	@media (max-width: 768px) {
-		padding: 0;
-		height: 75%;
-		transform: translateY(0%);
-	}
-
 	@media (max-width: 480px) {
 		flex-direction: column;
-		justify-content: center;
-		padding: 0 0 1rem 0;
-		height: 60%;
+		justify-content: space-around;
 	}
 }
 
 .logoPositionContainer {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	flex-direction: column;
 	position: relative;
+	width: 50%;
+	height: 80%;
+	text-align: center;
+	align-content: center;
+	padding-right: 1.5rem;
 	@media (max-width: 768px) {
-		flex: 1;
+		// flex: 1;
 	}
 
 	@media (max-width: 480px) {
-		flex: 1;
-		justify-content: center;
+		height: 20%;
+		width: 100%;
+		padding: 0;
 	}
 }
 
 .glowstikFontLogoWrapper {
-	width: 40vw;
-	max-width: 600px;
+	width: 100%;
+	max-width: 100%;
 	position: relative;
-	right: 5%;
-	margin-left: 2rem;
+}
+
+.glowstikURLContainer {
+	width: 100%;
+	position: relative;
+}
+
+.glowstikUrlWrapper {
+	display: block;
+	font-size: 1.5rem;
+	text-decoration: underline;
+	margin-top: 1rem;
 	@media (max-width: 768px) {
-		width: 35vw;
-		bottom: 20%;
+		font-size: 1.25rem;
 	}
 
 	@media (max-width: 480px) {
-		width: 60vw;
-		margin-top: 5dvh;
+		font-size: 1rem;
 	}
 }
 
 .glowstikTextSection {
 	width: 50%;
-	max-width: var(--max-width);
-	padding-right: 2rem;
+	height: 80%;
 	text-align: left;
 	position: relative;
+	padding-left: 1.5rem;
+	align-content: center;
 	@media (max-width: 768px) {
-		padding-right: 1rem;
+		// padding-right: 1rem;
 	}
 
 	@media (max-width: 480px) {
-		margin-right: 0;
-		margin-bottom: 0;
-		width: 90%;
-		max-height: 25dvh;
-		padding: 0.5rem;
-	}
-}
-
-.glowstikUrlWrapper {
-	position: absolute;
-	font-size: 1.8rem;
-	max-width: var(--max-width);
-	text-decoration: underline;
-	top: 100%;
-	margin-top: 1rem;
-	@media (max-width: 768px) {
-		font-size: 1.5rem;
-		bottom: 25%;
-	}
-
-	@media (max-width: 480px) {
-		font-size: 1.2rem;
-		top: 70%;
-		left: 50%;
-		transform: translateX(-50%);
+		width: 100%;
+		height: 80%;
+		padding: 0;
 	}
 }
 
 .glowstikTextContainer {
+	max-height: 80%;
 	border: 2px solid var(--glowstik-pink);
 	box-shadow: var(--neon-shadow-glowstik-pink);
 	padding: 0.8rem;
 	border-radius: 20px;
 	position: relative;
-	max-height: 30dvh;
 	overflow-y: auto;
-
-	@media (max-width: 768px) {
-		max-height: 35dvh;
-	}
-
 	@media (max-width: 480px) {
-		max-height: 30dvh;
+		max-height: 80%;
 		padding: 0.5rem;
 	}
 }
@@ -202,26 +191,19 @@
 }
 
 .projectTitleWrapper {
-	position: absolute;
+	width: 100%;
+	text-align: center;
 	font-size: 1.5rem;
-	top: 100%;
-	left: 20%;
-	transform: translateX(-20%);
 	margin-top: 1.2rem;
 	color: var(--neutral-green);
-
 	@media (max-width: 768px) {
 		font-size: 1rem;
-		top: auto;
 		margin-top: 0.8rem;
 	}
 
 	@media (max-width: 480px) {
 		font-size: 0.75rem;
-		top: auto;
 		margin-top: 0.8rem;
-		left: 30%;
-		transform: translateX(-30%);
 	}
 }
 
