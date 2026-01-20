@@ -52,21 +52,6 @@ export default function HomePage() {
 					style: {height: '100%', position: 'relative'},
 					allowSlideNext: viewportWidth <= 480 ? true : false,
 					allowSlidePrev: viewportWidth <= 480 ? true : false
-					// onSlideChange: (e) => {
-					// 	if (e.activeIndex === 0 && viewportWidth <= 480) {
-					// 		prevArrowRef.current.style.visibility = 'hidden'
-					// 		nextArrowRef.current.style.visibility = 'visible'
-
-					// 		prevArrowRef.current.style.opacity = 0
-					// 		nextArrowRef.current.style.opacity = 1
-					// 	} else {
-					// 		prevArrowRef.current.style.visibility = 'visible'
-					// 		nextArrowRef.current.style.visibility = 'hidden'
-
-					// 		prevArrowRef.current.style.opacity = 1
-					// 		nextArrowRef.current.style.opacity = 0
-					// 	}
-					// }
 				}}
 				slideWrapperStyles={{
 					height: viewportWidth <= 480 ? '100dvh !important' : '50% !important'
@@ -87,12 +72,7 @@ export default function HomePage() {
 						<ResumeButton />
 					</div>
 				</div>
-				{/* <div className={styles['aboutMeContainer']}>
-					<h2 className={styles['aboutMeTitle']}>About Me</h2> */}
-				<div className={styles['aboutMePositionWrapper']}>
-					<AboutMe />
-				</div>
-				{/* </div> */}
+				<AboutMe />
 			</SlidesContainer>
 		</div>
 	)

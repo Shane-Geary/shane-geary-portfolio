@@ -9,7 +9,9 @@ export const AboutMe = () => {
 	return (
 		// <div className={styles['aboutMeSection']}>
 		<div className={styles['aboutMeContainer']}>
-			<h2 className={styles['aboutMeTitle']}>About Me</h2>
+			<div className={styles['aboutMeTitleContainer']}>
+				<h2 className={styles['aboutMeTitle']}>About Me</h2>
+			</div>
 			<div className={styles['aboutMePositionWrapper']}>
 				<div className={styles['aboutMeTextContainer']}>
 					<div className={styles['headshotContainer']}>
