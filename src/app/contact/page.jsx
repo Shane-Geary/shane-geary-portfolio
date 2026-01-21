@@ -6,9 +6,12 @@ import styles from './contact.module.scss'
 export default function Contact() {
 	return (
 		<div className={styles['contactPageWrapper']}>
-			<div className={styles['contactTitleWrapper']}>Get in Touch</div>
-			<div className={styles['mediaLinksPositionWrapper']}>
-				<div className={styles['mediaLinksContainer']}>
+			<div className={styles['contactTitleContainer']}>
+				<div className={styles['contactTitleWrapper']}>Get in Touch</div>
+			</div>
+			<div className={styles['mediaLinksPositionContainer']}>
+				<div className={styles['mediaLinksWrapper']}>
+					{/* <div className={styles['circleOneContainer']}> */}
 					<div
 						className={styles['circleOne']}
 						onClick={() => {
@@ -20,6 +23,7 @@ export default function Contact() {
 						</div>
 						<div className={styles['text']}>LinkedIn</div>
 					</div>
+					{/* </div> */}
 					<div
 						className={styles['circleTwo']}
 						onClick={() => {
