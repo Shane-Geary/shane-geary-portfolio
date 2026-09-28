@@ -1,9 +1,6 @@
 'use client'
 import {useRef, useEffect, useState, Children} from 'react'
 
-import Flatiron from '@/app/skills/flatiron/page'
-import AWSCerts from '@/app/skills/aws-certifications/page'
-
 import styles from './slides-container.module.scss'
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
