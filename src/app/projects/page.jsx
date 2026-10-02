@@ -4,6 +4,7 @@ import {useSearchParams} from 'next/navigation'
 
 import SlidesContainer from '@/components/slides-container/slides-container'
 import GlowstikProject from './glowstik/page'
+import ScamScannerProject from './job-scam-scanner/page'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -17,7 +18,7 @@ export default function Projects() {
 
 	const searchParams = useSearchParams()
 
-	const slideRoutes = ['glowstik']
+	const slideRoutes = ['glowstik', 'scam-scanner']
 
 	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
 	// console.log('initialSlideIndex', initialSlideIndex)
@@ -47,7 +48,7 @@ export default function Projects() {
 				}}
 			>
 				<GlowstikProject />
-				<div style={{color: 'whitesmoke'}}>Hello World</div>
+				<ScamScannerProject />
 			</SlidesContainer>
 		</div>
 	)
