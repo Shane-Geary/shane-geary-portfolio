@@ -16,7 +16,7 @@ export default function ScamScannerProject() {
 							width='100%'
 							height='100%'
 							poster='/ScamScanner-Thumbnail.png'
-							autoPlay
+							// autoPlay
 							playsInline
 							loop
 						>
@@ -38,23 +38,22 @@ export default function ScamScannerProject() {
 				</div>
 				<div className={styles['scamScannerTextSection']}>
 					<div className={styles['scamScannerTextContainer']}>
-						{/* <div className={styles['scamScannerLogoWrapper']}>
-							<Image
-								alt='Glowstik Logo'
-								src={GlowstikLogo}
-								width={1024}
-								height={1024}
-								layout='responsive'
-							/>
-						</div> */}
-						{/* <div className={styles['scamScannerText']}>
-							Glowstiks patented technology cloaks your location and doesn’t
-							share personal information. As a result, all the opportunities are
-							matched and shown on a map so people can go to areas of
-							opportunity. People can safely broadcast messages in real-time to
-							other people in their area, so they can find anything, sell
-							anything, meet anyone or share anything.
-						</div> */}
+						<div className={styles['scamScannerText']}>
+							Job Scam Scanner is a Chrome extension designed to help job
+							seekers recognize potential scam warning signs before applying. It
+							lets users scan a job posting directly in their browser and review
+							a risk assessment without interrupting their search.
+							<br />
+							<br />
+							Inspired by the uncertainty I’ve encountered during my own job
+							search, I’m building this tool to make evaluating listings easier
+							and help applicants make more informed decisions about where to
+							invest their time and share their information.
+							<br />
+							<br />
+							Currently in development, with a working prototype supporting
+							LinkedIn job postings.
+						</div>
 					</div>
 					{/* <div className={styles['projectTitleWrapper']}>
 						Software Engineer - Founding Team
