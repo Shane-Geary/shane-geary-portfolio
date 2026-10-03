@@ -24,7 +24,7 @@ export const NavBar = () => {
 		},
 		{
 			name: 'Projects',
-			href: {pathname: '/projects'}
+			href: {pathname: '/projects', query: {section: 'glowstik'}}
 		},
 		{
 			name: 'Skills',

@@ -18,7 +18,6 @@ export default function Skills() {
 	const slideRoutes = ['flatiron', 'aws-certifications']
 
 	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
-	console.log('initialSlideIndex', initialSlideIndex)
 
 	return (
 		<div className={styles['skillsWrapper']}>
@@ -28,19 +27,11 @@ export default function Skills() {
 					style: {height: '100%', position: 'relative'},
 					initialSlide: initialSlideIndex,
 					onSlideChange: (e) => {
-						if (e.activeIndex === 0) {
-							window.history.pushState(
-								{},
-								'',
-								`?section=${slideRoutes[e.activeIndex]}`
-							)
-						} else {
-							window.history.pushState(
-								{},
-								'',
-								`?section=${slideRoutes[e.activeIndex]}`
-							)
-						}
+						window.history.pushState(
+							{},
+							'',
+							`?section=${slideRoutes[e.activeIndex]}`
+						)
 					}
 				}}
 			>

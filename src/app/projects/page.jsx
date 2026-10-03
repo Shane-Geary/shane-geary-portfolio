@@ -21,7 +21,6 @@ export default function Projects() {
 	const slideRoutes = ['glowstik', 'scam-scanner']
 
 	const initialSlideIndex = slideRoutes.indexOf(searchParams.get('section'))
-	// console.log('initialSlideIndex', initialSlideIndex)
 
 	return (
 		<div className={styles['projectsContainer']}>
@@ -31,19 +30,11 @@ export default function Projects() {
 					style: {height: '100%', position: 'relative'},
 					initialSlide: initialSlideIndex,
 					onSlideChange: (e) => {
-						if (e.activeIndex === 0) {
-							window.history.pushState(
-								{},
-								'',
-								`?section=${slideRoutes[e.activeIndex]}`
-							)
-						} else {
-							window.history.pushState(
-								{},
-								'',
-								`?section=${slideRoutes[e.activeIndex]}`
-							)
-						}
+						window.history.pushState(
+							{},
+							'',
+							`?section=${slideRoutes[e.activeIndex]}`
+						)
 					}
 				}}
 			>

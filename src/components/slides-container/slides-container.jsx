@@ -1,5 +1,5 @@
 'use client'
-import {useRef, useEffect, useState, Children} from 'react'
+import {useRef, useState, Children} from 'react'
 
 import styles from './slides-container.module.scss'
 import classNames from 'classnames'
@@ -36,9 +36,11 @@ export default function SlidesContainer({
 				nextEl: '#swiperButtonNextID',
 				prevEl: '#swiperButtonPrevID'
 			}}
-			onSlideChange={(e) => {
-				setActivePrevArrowIcon(e.isBeginning === false)
-				setActiveNextArrowIcon(e.isEnd === false)
+			onSlideChange={(swiper) => {
+				setActivePrevArrowIcon(swiper.isBeginning === false)
+				setActiveNextArrowIcon(swiper.isEnd === false)
+
+				swiperProps.onSlideChange?.(swiper)
 			}}
 		>
 			{Children.map(children, (child, index) => (
