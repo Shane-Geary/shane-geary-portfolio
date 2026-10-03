@@ -3,9 +3,6 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 
-import GlowstikFontLogo from '../../../../public/Glowstik_Logo_Door.svg'
-import GlowstikLogo from '../../../../public/Glowstik_Logo.svg'
-
 import styles from './job-scam-scanner.module.scss'
 
 export default function ScamScannerProject() {
