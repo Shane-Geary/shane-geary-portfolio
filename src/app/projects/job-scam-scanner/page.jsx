@@ -9,16 +9,20 @@ export default function ScamScannerProject() {
 	return (
 		<div className={styles['scamScannerProjectContainer']}>
 			<div className={styles['scamScannerContentContainer']}>
-				<div className={styles['logoPositionContainer']}>
+				<div className={styles['videoPositionContainer']}>
+					<div className={styles['scamScannerTitleContainer']}>
+						<div className={styles['aboutMeTitle']}>Job Scam Scanner</div>
+					</div>
 					<div className={styles['scamScannerFontLogoWrapper']}>
 						<video
 							muted
 							width='100%'
 							height='100%'
 							poster='/ScamScanner-Thumbnail.png'
-							// autoPlay
+							autoPlay
 							playsInline
 							loop
+							className={styles['scamScannerVideoElement']}
 						>
 							<source
 								src='/ScamScanner-Portfolio-Demo-Privacy.mp4'
@@ -26,15 +30,6 @@ export default function ScamScannerProject() {
 							/>
 						</video>
 					</div>
-					{/* <div className={styles['glowstikURLContainer']}>
-						<Link
-							className={styles['glowstikUrlWrapper']}
-							href={'https://www.glowstik.com/'}
-							target='_blank'
-						>
-							https://www.glowstik.com/
-						</Link>
-					</div> */}
 				</div>
 				<div className={styles['scamScannerTextSection']}>
 					<div className={styles['scamScannerTextContainer']}>

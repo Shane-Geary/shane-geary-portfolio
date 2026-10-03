@@ -15,15 +15,6 @@
 	}
 }
 
-.projectsTitleContainer {
-	height: 15%;
-	width: 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .scamScannerContentContainer {
 	height: 100%;
 	width: 100%;
@@ -37,7 +28,64 @@
 	}
 }
 
-.logoPositionContainer {
+// .aboutMeTitleContainer {
+// 	position: absolute;
+// 	font-size: 2.5rem;
+// 	top: 15%;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	margin-top: 1.2rem;
+// 	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
+// 	-webkit-background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	background-clip: text;
+// 	color: transparent;
+
+// 	@media (min-width: 1024px) {
+// 		font-size: 2.6rem;
+// 	}
+
+// 	@media (max-width: 768px) {
+// 		font-size: 1.4rem;
+// 		margin-top: 0.5rem;
+// 		top: 5%;
+// 	}
+
+// 	@media (max-width: 480px) {
+// 		font-size: 1rem;
+// 		top: 6%;
+// 	}
+// }
+
+.scamScannerTitleContainer {
+	width: 100%;
+	position: relative;
+}
+
+.aboutMeTitle {
+	text-align: center;
+	font-size: 3.5rem;
+	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+
+	@media (min-width: 1024px) {
+		font-size: 3.6rem;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 2.4rem;
+		margin-top: 0.5rem;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 2rem;
+	}
+}
+
+.videoPositionContainer {
 	position: relative;
 	width: 50%;
 	height: 80%;
@@ -59,6 +107,10 @@
 	width: 100%;
 	max-width: 100%;
 	position: relative;
+}
+
+.scamScannerVideoElement {
+	border-radius: 20px;
 }
 
 .scamScannerURLContainer {
