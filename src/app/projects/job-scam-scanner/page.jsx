@@ -18,7 +18,7 @@ export default function ScamScannerProject() {
 							muted
 							width='100%'
 							height='100%'
-							// controls
+							poster='/ScamScanner-Thumbnail.png'
 							autoPlay
 							playsInline
 							loop
