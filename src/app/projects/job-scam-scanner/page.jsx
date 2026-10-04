@@ -10,10 +10,10 @@ export default function ScamScannerProject() {
 		<div className={styles['scamScannerProjectContainer']}>
 			<div className={styles['scamScannerContentContainer']}>
 				<div className={styles['videoPositionContainer']}>
-					<div className={styles['scamScannerTitleContainer']}>
-						<div className={styles['aboutMeTitle']}>Job Scam Scanner</div>
-					</div>
 					<div className={styles['scamScannerFontLogoWrapper']}>
+						<div className={styles['scamScannerTitleContainer']}>
+							<div className={styles['aboutMeTitle']}>Job Scam Scanner</div>
+						</div>
 						<video
 							muted
 							width='100%'
