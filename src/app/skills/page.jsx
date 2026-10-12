@@ -21,8 +21,8 @@ export default function Skills() {
 
 	return (
 		<div className={styles['skillsWrapper']}>
-			<div className={styles['skillsTitleWrapper']}>Skills</div>
 			<SlidesContainer
+				title={<div className={styles['skillsTitleWrapper']}>Skills</div>}
 				swiperProps={{
 					style: {height: '100%', position: 'relative'},
 					initialSlide: initialSlideIndex,

@@ -4,13 +4,14 @@ import {useRef, useState, Children} from 'react'
 import styles from './slides-container.module.scss'
 import classNames from 'classnames'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import SwiperCore, {Navigation} from 'swiper/modules'
+import {Navigation} from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 
 export default function SlidesContainer({
 	children,
+	title,
 	swiperProps = {},
 	slideWrapperStyles = {}
 }) {
@@ -20,7 +21,34 @@ export default function SlidesContainer({
 	const [activePrevArrowIcon, setActivePrevArrowIcon] = useState(false)
 	const [activeNextArrowIcon, setActiveNextArrowIcon] = useState(true)
 
-	return (
+	const previousArrow = (
+		<div
+			ref={prevArrowRef}
+			id='swiperButtonPrevID'
+			className={styles.prevArrowContainer}
+		>
+			<div
+				className={classNames(styles['swiper-button-prev'], {
+					[styles['swiper-button-prev-active']]: activePrevArrowIcon
+				})}
+			/>
+		</div>
+	)
+	const nextArrow = (
+		<div
+			ref={nextArrowRef}
+			id='swiperButtonNextID'
+			className={styles.nextArrowContainer}
+		>
+			<div
+				className={classNames(styles['swiper-button-next'], {
+					[styles['swiper-button-next-active']]: activeNextArrowIcon
+				})}
+			/>
+		</div>
+	)
+
+	const slides = (
 		<Swiper
 			{...swiperProps}
 			modules={[Navigation]}
@@ -48,28 +76,19 @@ export default function SlidesContainer({
 					{child}
 				</SwiperSlide>
 			))}
-			<div
-				ref={prevArrowRef}
-				id='swiperButtonPrevID'
-				className={styles['prevArrowContainer']}
-			>
-				<div
-					className={classNames(styles['swiper-button-prev'], {
-						[styles['swiper-button-prev-active']]: activePrevArrowIcon
-					})}
-				/>
-			</div>
-			<div
-				ref={nextArrowRef}
-				id='swiperButtonNextID'
-				className={styles['nextArrowContainer']}
-			>
-				<div
-					className={classNames(styles['swiper-button-next'], {
-						[styles['swiper-button-next-active']]: activeNextArrowIcon
-					})}
-				/>
-			</div>
+			{!title && previousArrow}
+			{!title && nextArrow}
 		</Swiper>
+	)
+
+	return title ? (
+		<div className={styles.titledContainer}>
+			{previousArrow}
+			<div className={styles.title}>{title}</div>
+			<div className={styles.content}>{slides}</div>
+			{nextArrow}
+		</div>
+	) : (
+		slides
 	)
 }

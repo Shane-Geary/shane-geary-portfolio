@@ -1,26 +1,19 @@
 .aboutMeContainer {
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: 7% auto minmax(0, 1fr) 7%;
+	row-gap: 1.5%;
 	width: 100%;
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding: 2rem 0 0 0;
+	min-width: 0;
+	min-height: 0;
 	color: var(--header-white);
 	height: 100%;
 	position: relative;
-
-	@media (max-width: 768px) {
-		padding: 0 0 1rem 0;
-	}
-
-	@media (max-width: 480px) {
-		padding: 0 0 1rem 0;
-	}
 }
 
 .aboutMeTitleContainer {
-	height: 20%;
+	grid-row: 2;
 	width: 100%;
 	position: relative;
 	display: flex;
@@ -31,7 +24,7 @@
 .aboutMeTitle {
 	text-align: center;
 	font-size: 3.5rem;
-	margin-top: 1.2rem;
+	line-height: 1.2;
 	background: linear-gradient(30deg, var(--header-white), var(--diluted-green));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -44,7 +37,6 @@
 
 	@media (max-width: 768px) {
 		font-size: 2.4rem;
-		margin-top: 0.5rem;
 	}
 
 	@media (max-width: 480px) {
@@ -53,19 +45,14 @@
 }
 
 .aboutMePositionWrapper {
+	grid-row: 3;
 	display: flex;
 	justify-content: center;
-	height: 80%;
+	min-width: 0;
+	min-height: 0;
+	height: 100%;
 	width: 100%;
 	position: relative;
-
-	@media (max-width: 768px) {
-		align-items: flex-start;
-	}
-
-	@media (max-width: 480px) {
-		align-items: flex-start;
-	}
 }
 
 .jobTitle {
@@ -73,7 +60,9 @@
 }
 
 .aboutMeTextContainer {
-	max-height: 80%;
+	height: 100%;
+	min-width: 0;
+	min-height: 0;
 	overflow-y: auto;
 	border: 2px solid var(--light-green);
 	box-shadow: var(--neon-shadow-light-green);
@@ -96,18 +85,6 @@
 		display: none;
 		width: 0;
 		height: 0;
-	}
-
-	@media (max-width: 768px) {
-		max-height: 80%;
-		bottom: 0;
-		position: relative;
-	}
-
-	@media (max-width: 480px) {
-		max-height: 80%;
-		position: relative;
-		bottom: 0;
 	}
 }
 
