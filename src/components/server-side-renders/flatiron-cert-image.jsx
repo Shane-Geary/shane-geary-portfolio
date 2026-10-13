@@ -2,13 +2,14 @@ import Image from 'next/legacy/image'
 
 import FlatironCertificate from '../../../public/shane-flatiron-certificate.png'
 
-export const FlatironCertImage = ({fit = false}) => {
+export const FlatironCertImage = () => {
 	return (
 		<Image
 			alt='Flatiron Certificate'
 			src={FlatironCertificate}
-			layout={fit ? 'fill' : 'responsive'}
-			objectFit={fit ? 'contain' : undefined}
+			// width={100}
+			// height={100}
+			layout='responsive'
 		/>
 	)
 }

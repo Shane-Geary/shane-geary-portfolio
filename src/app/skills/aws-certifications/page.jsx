@@ -21,7 +21,7 @@ export default function AWSCerts() {
 						setImageFullscreen(!imageFullscreen)
 					}}
 				>
-					<AwsCcpImage fit />
+					<AwsCcpImage />
 				</div>
 				<Dialog
 					open={imageFullscreen}

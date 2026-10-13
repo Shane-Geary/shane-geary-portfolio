@@ -20,7 +20,7 @@ export default function Flatiron() {
 						setImageFullscreen(!imageFullscreen)
 					}}
 				>
-					<FlatironCertImage fit />
+					<FlatironCertImage />
 				</div>
 				<Dialog
 					open={imageFullscreen}

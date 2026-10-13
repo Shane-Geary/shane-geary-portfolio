@@ -17,8 +17,9 @@ export default function GlowstikProject() {
 						<Image
 							alt='Glowstik Font Logo'
 							src={GlowstikFontLogo}
-							layout='fill'
-							objectFit='contain'
+							// width={1100}
+							// height={260}
+							layout='responsive'
 						/>
 					</div>
 					<div className={styles['glowstikURLContainer']}>
